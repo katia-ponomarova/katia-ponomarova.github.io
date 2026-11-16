@@ -180,6 +180,19 @@ button { font: inherit; color: inherit; }
 .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: var(--cream); padding: 10px 16px; border-radius: 8px; }
 .skip:focus { top: 12px; }
+
+html { -webkit-tap-highlight-color: transparent; }
+a, button, summary, [role="tab"] { touch-action: manipulation; }
+button, summary, [role="tab"], .btn, .case-media, .mini-case, .lang-menu a { -webkit-user-select: none; user-select: none; }
+.nav > a:not(.btn):active, .contact-value:active, .legal-card a:active, .brand:active { color: var(--ink-press); }
+.brand:active img { scale: 0.97; }
+.lang-toggle:active, .lang-menu a:active { background: var(--peach-press); }
+.job summary:active { background: var(--peach); }
+.rs-name:not([aria-current="true"]):active { background: var(--peach-press); color: var(--ink); }
+.ft-tab:active { border-bottom-color: var(--orange); }
+.ft-tab:active .ft-title { color: var(--ink-press); }
+.cj-pt:not([aria-current="true"]):active { scale: 1.08; border-color: var(--orange); }
+.case-media:active .case-plate { outline-color: var(--orange); }
 .is-resizing *, .is-resizing *::before, .is-resizing *::after { transition: none !important; }
 
 .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 1; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pink-ink); }
@@ -628,7 +641,7 @@ button { font: inherit; color: inherit; }
 @media (hover: hover) and (pointer: fine) { .mc-item:hover .crop { translate: 0 -10px; rotate: -1.5deg; } }
 @keyframes mc-loop { to { transform: translate3d(-50%, 0, 0); } }
 .mc-track.is-js { animation: none; }
-.mc-row.is-draggable { cursor: grab; -webkit-user-select: none; user-select: none; }
+.mc-row.is-draggable { cursor: grab; -webkit-user-select: none; user-select: none; touch-action: pan-y; -webkit-touch-callout: none; }
 .mc-row.is-dragging { cursor: grabbing; }
 @media (hover: hover) and (pointer: fine) {
   .mc-row.is-dragging .mc-item:hover .crop, .mc-row.is-dragging .mc-item:hover .mc-dev { translate: none; rotate: none; }

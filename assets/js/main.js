@@ -536,43 +536,57 @@ function loopRows(gsap) {
     });
     row.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hover = true; });
     row.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hover = false; });
-    const proxy = document.createElement('div');
-    let from = 0;
-    let trail = [];
-    Draggable.create(proxy, {
-      type: 'x',
-      trigger: row,
-      allowNativeTouchScrolling: true,
-      dragClickables: true,
-      cursor: 'grab',
-      activeCursor: 'grabbing',
-      onPress() {
-        gsap.set(proxy, { x: 0 });
-        this.update();
-        from = x;
-        v = 0;
-        trail = [];
-        held = true;
-        row.classList.add('is-dragging');
-      },
-      onDrag() {
-        x = from + this.x;
-        place();
-        const now = performance.now();
-        trail.push([now, this.x]);
-        while (trail.length > 2 && now - trail[0][0] > 100) trail.shift();
-      },
-      onRelease() {
+    let drag = null;
+    const start = (e) => {
+      held = true;
+      v = 0;
+      drag.on = true;
+      drag.from = x;
+      drag.x0 = e.clientX;
+      drag.trail = [[performance.now(), e.clientX]];
+      row.classList.add('is-dragging');
+      try { row.setPointerCapture(e.pointerId); } catch (err) { /* the pointer may already be gone */ }
+    };
+    const stop = (e, keepSpeed) => {
+      if (!drag) return;
+      if (drag.on) {
         row.classList.remove('is-dragging');
-        const last = trail[trail.length - 1];
-        const first = trail[0];
-        const span = last && first ? (last[0] - first[0]) / 1000 : 0;
-        const fresh = last && performance.now() - last[0] < 80;
-        const speed = span > 0.01 && fresh ? (last[1] - first[1]) / span : 0;
+        const t = drag.trail;
+        const last = t[t.length - 1];
+        const first = t[0];
+        const span = (last[0] - first[0]) / 1000;
+        const fresh = performance.now() - last[0] < 80;
+        const speed = keepSpeed && span > 0.01 && fresh ? (last[1] - first[1]) / span : 0;
         v = reduceMotion ? 0 : gsap.utils.clamp(-3000, 3000, speed);
         held = false;
-      },
+        try { row.releasePointerCapture(e.pointerId); } catch (err) { /* already released */ }
+      }
+      drag = null;
+    };
+    row.addEventListener('pointerdown', (e) => {
+      if (drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+      drag = { id: e.pointerId, sx: e.clientX, sy: e.clientY, on: false };
+      if (e.pointerType === 'mouse') { e.preventDefault(); start(e); }
     });
+    row.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      if (!drag.on) {
+        const dx = e.clientX - drag.sx;
+        const dy = e.clientY - drag.sy;
+        if (Math.hypot(dx, dy) < 6) return;
+        if (Math.abs(dy) > Math.abs(dx)) { drag = null; return; }
+        start(e);
+      }
+      x = drag.from + (e.clientX - drag.x0);
+      place();
+      const now = performance.now();
+      drag.trail.push([now, e.clientX]);
+      while (drag.trail.length > 2 && now - drag.trail[0][0] > 100) drag.trail.shift();
+    });
+    row.addEventListener('pointerup', (e) => { if (drag && e.pointerId === drag.id) stop(e, true); });
+    row.addEventListener('pointercancel', (e) => { if (drag && e.pointerId === drag.id) stop(e, false); });
+    row.addEventListener('lostpointercapture', (e) => { if (drag && drag.on && e.pointerId === drag.id) stop(e, true); });
+    row.addEventListener('dragstart', (e) => e.preventDefault());
     row.classList.add('is-draggable');
     row.addEventListener('wheel', (e) => {
       if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
