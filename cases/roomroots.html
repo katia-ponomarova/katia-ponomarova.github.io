@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/roomroots.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/roomroots.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <title>RoomRoots, AI-assisted plant selection app · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI case study by Kateryna Ponomarova: RoomRoots, an MVP e-commerce app that matches plants to a person’s light, room, care experience and pets, from research and a persona to four user flows, a UI kit and a hi-fi prototype.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="RoomRoots, AI-assisted plant selection app · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI case study by Kateryna Ponomarova: RoomRoots, an MVP e-commerce app that matches plants to a person’s light, room, care experience and pets, from research and a persona to four user flows, a UI kit and a hi-fi prototype.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page case-rr">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Back to all projects">
+        <img src="../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Main" data-nav>
+        <a href="../index.html#work">Projects</a>
+        <a href="../index.html#approach">How I work</a>
+        <a href="#contact">Contact</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Language: English">
+            <img src="../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>EN</span>
+            <img class="lang-chev" src="../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="roomroots.html" translate="no" lang="en" hreflang="en" aria-current="true" data-code="EN" aria-label="English"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="../de/cases/roomroots.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="../ua/cases/roomroots.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Let’s connect</span>
+          <img src="../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Let’s connect</span>
+          <img src="../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI case study</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>RoomRoots</span></h1>
+          <p class="cs-promise" data-hero-in>AI plant matching by light, room type, care level and pets</p>
+          <p class="cs-lead" data-hero-in>An MVP e-commerce mobile app that helps people choose and buy plants based on their space, lighting, care experience and preferences. Personalised recommendations and AI-Vision reduce uncertainty and guide users from discovery to checkout.</p>
+          <ul class="cs-tags" role="list" aria-label="What I did" data-hero-in>
+            <li>UX research</li><li>Persona and scenario</li><li>User flows</li><li>Wireframes</li><li>UI kit</li><li>Hi-fi prototype</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Project type</span><span class="f-val">MVP concept</span></span></li>
+            <li><img src="../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Platform</span><span class="f-val">Mobile app</span></span></li>
+            <li><img src="../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Role</span><span class="f-val">UX/UI designer</span></span></li>
+            <li><img src="../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Scope</span><span class="f-val">From research to MVP</span></span></li>
+          </ul>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">RoomRoots · App screens</span>
+          <span class="case-plate"><img src="../assets/img/roomroots/hero-mockup.webp" alt="RoomRoots on two phones: the home screen with plant categories and the Top 5 with Peace Lily, and the Monstera Deliciosa product page" width="1821" height="1551"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>The project in numbers</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>25–40</strong><span>core audience age</span></li>
+          <li class="glance"><strong>4</strong><span>key barriers</span></li>
+          <li class="glance"><strong>4</strong><span>matching criteria</span></li>
+          <li class="glance"><strong>6</strong><span>core MVP functions</span></li>
+          <li class="glance"><strong>4</strong><span>user flows</span></li>
+          <li class="glance"><strong>27</strong><span>components</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-showcase" aria-label="Key screens of the RoomRoots prototype">
+      <div class="container">
+        <div class="mcards" data-loop>
+          <div class="mc-row"><div class="mc-track">
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-3.webp" alt="Home screen: search, categories Low Light, Easy Care and Pet Friendly, and the Top 5 with Peace Lily" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-4.webp" alt="Catalog with filter chips and plant cards: Monstera Deliciosa and Yucca" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-1.webp" alt="Product page of Monstera Deliciosa: size, light and water tags, photos and the price" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-4.webp" alt="AI-Vision: “See your space come alive”, your perfect match, plants tailored to your space" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-2.webp" alt="AI-Vision: your AI recommendations for a living room, plants that fit the space and the lighting" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-3.webp" alt="Product page of Fiddle Leaf Fig: large size, sun worshipper, moderate water" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 584; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-2.webp" alt="Empty wishlist: “Start saving your favorite plants” with a Find my plants button" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-1.webp" alt="Empty shopping cart: “No plants here yet” with a Start exploring button" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-3.webp" alt="" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-1.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-3.webp" alt="" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 584; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-1.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · The problem</span></p>
+          <h2 class="h2" id="problem-title" data-split>Plenty of plants, no <em>guidance</em></h2>
+        </div>
+        <p class="section-note" data-rise>The plant market is growing and there is plenty to choose from, but most shops show everyone the same catalogue and ignore the buyer’s conditions. This hits beginners hardest: they make mistakes and lose interest in buying.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Three questions a buyer can’t answer</h3>
+        <ul class="notes is-three" role="list" data-stagger>
+          <li class="note"><p>Will I manage to care for it?</p></li>
+          <li class="note"><p>Will it suit my space?</p></li>
+          <li class="note"><p>Is there enough light in the room?</p></li>
+        </ul>
+
+        <h3 class="cs-sub">Four barriers to buying</h3>
+        <ol class="hypo-grid is-four" role="list" data-stagger>
+          <li class="hypo-card">
+            <span class="hc-num">01</span>
+            <h4 class="hc-title">Lack of personalisation</h4>
+            <p class="hc-text">Light, room type and experience level are not taken into account. Everyone sees the same catalogue.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">02</span>
+            <h4 class="hc-title">Too many options</h4>
+            <p class="hc-text">A wide choice makes the decision harder: people get lost among the options.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">03</span>
+            <h4 class="hc-title">No contextual guidance</h4>
+            <p class="hc-text">Nothing explains which plant suits this particular space. The decision is left to the buyer.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">04</span>
+            <h4 class="hc-title">Fear of making a mistake</h4>
+            <p class="hc-text">Plants that died before make people afraid to buy again, so they avoid choosing at all.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Research</span></p>
+          <h2 class="h2" id="research-title" data-split>What the research <em>revealed</em></h2>
+        </div>
+        <p class="section-note" data-rise>The main problem is not a lack of choice, but a lack of confidence. Users need fewer, more relevant options and clear guidance connected to their space, care experience and everyday conditions.</p>
+      </div>
+
+      <div class="container">
+        <div class="research-grid">
+          <div class="chart-card aud-card" data-rise>
+            <h3 class="cs-sub">Target audience</h3>
+            <dl class="aud-list">
+              <div><dt>Age and home</dt><dd><strong class="aud-big">25–40</strong>living in flats or houses</dd></div>
+              <div><dt>Three kinds of buyers</dt><dd><ul class="aud-types" role="list"><li>Beginners with no experience</li><li>People with basic knowledge</li><li>People who design interiors</li></ul></dd></div>
+              <div><dt>Shared motivation</dt><dd>Whatever their experience, they want a plant that fits the interior, suits the room’s conditions and needs no complicated care.</dd></div>
+            </dl>
+            <p class="aud-key">They want to be sure the plant will <em>survive and look good</em>.</p>
+          </div>
+          <div class="research-img rr-trio cs-rock" role="img" aria-label="Three RoomRoots screens: the catalog with filter chips, AI-Vision “See your space come alive” and the AI recommendations for a living room">
+            <span class="crop rr-ph" style="--w: 581; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span>
+            <span class="crop rr-ph" style="--w: 581; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span>
+            <span class="crop rr-ph" style="--w: 584; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Research foundation</h3>
+          <ol class="insight-list is-grid" role="list" data-stagger>
+            <li><span class="il-num">1</span><div><h4>Context analysis</h4><p>A growing plant market, and catalogues that ignore the buyer’s conditions.</p></div></li>
+            <li><span class="il-num">2</span><div><h4>Target audience</h4><p>People aged 25–40 at home in flats or houses, from beginners to interior designers.</p></div></li>
+            <li><span class="il-num">3</span><div><h4>Persona</h4><p>Anna, 29, an office manager in Köln who has lost plants before.</p></div></li>
+            <li><span class="il-num">4</span><div><h4>User scenario</h4><p>From a room that feels empty after work to a placed order.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Users</span></p>
+          <h2 class="h2" id="users-title" data-split>Who I designed <em>for</em></h2>
+        </div>
+        <p class="section-note" data-rise>A persona and a user scenario: Anna wants a plant that will make her flat cosier and survive her conditions.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">User persona</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo is-square cs-rock"><img src="../assets/img/roomroots/persona.webp" alt="Portrait generated with AI for the persona" width="1254" height="1254" loading="lazy"><span class="ai-note">Portrait generated with AI</span></div>
+          <div class="plist">
+            <h4>Pain points</h4>
+            <ul role="list">
+              <li>I don’t understand which plants suit the lighting</li>
+              <li>I’ve had plants die quickly</li>
+              <li>It’s hard to judge the care level in advance</li>
+              <li>I’m afraid of making the wrong choice again</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Needs</h4>
+            <ul role="list">
+              <li>Simple recommendations for my conditions</li>
+              <li>Clear care instructions</li>
+              <li>Confidence that the plant won’t die</li>
+              <li>A visual idea of how it will look at home</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Goals</h4>
+            <ul role="list">
+              <li>Make the interior cosier</li>
+              <li>Add “life” to the space</li>
+              <li>Choose a plant without mistakes</li>
+              <li>Find a solution that doesn’t need complicated care</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>About me<span class="persona-tag">Anna, 29 · Office manager · Köln</span></figcaption>
+            <blockquote><p>“I live in a flat and work in an office. It’s important to me that my home is cosy and beautiful, especially after a workday. I often save interior ideas on Pinterest and want my space to look just as neat and stylish. I’ve bought plants before, but I don’t always know which ones will suit my conditions.”</p></blockquote>
+          </figure>
+        </div>
+
+        <div class="cs-quotes-head rr-scn-head">
+          <h3 class="cs-sub">User scenario</h3>
+          <p class="cs-caption">In Anna’s words, translated from Russian</p>
+        </div>
+        <div class="scenario">
+          <div class="sc-cards" data-stagger>
+            <div class="sc-card"><span class="sm-k">Situation</span><p>After work I notice that my room looks empty and not very cosy. I want to add a plant, but I don’t know which one suits my conditions.</p></div>
+            <div class="sc-card"><span class="sm-k">Motivation</span><p>Plants I bought before died quickly. This time I want to avoid a mistake and choose a reliable option.</p></div>
+          </div>
+          <ol class="insight-list" role="list" aria-label="What Anna does" data-stagger>
+            <li><span class="il-num">1</span><div><h4>Opens the app</h4><p>to get a recommendation instead of choosing blindly</p></div></li>
+            <li><span class="il-num">2</span><div><h4>Takes a short quiz</h4><p>light, room type, care level and pets</p></div></li>
+            <li><span class="il-num">3</span><div><h4>Gets suitable plants</h4><p>the app suggests the ones that fit</p></div></li>
+            <li><span class="il-num">4</span><div><h4>Checks the product card</h4><p>conditions and description at a glance</p></div></li>
+            <li><span class="il-num">5</span><div><h4>Adds it to the cart</h4><p>and places the order</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="scope" aria-labelledby="scope-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · MVP scope</span></p>
+          <h2 class="h2" id="scope-title" data-split>The MVP in six <em>functions</em></h2>
+        </div>
+        <p class="section-note" data-rise>For the MVP I kept only the key functions needed to test the purchase hypothesis.</p>
+      </div>
+
+      <div class="container">
+        <ol class="mvp-grid" role="list" data-stagger>
+          <li><span class="mvp-num">01</span><h3>Catalog</h3><p>Browse the available plants with basic information and a quick choice.</p></li>
+          <li><span class="mvp-num">02</span><h3>Product card</h3><p>Everything about the plant: conditions, care and recommendations.</p></li>
+          <li><span class="mvp-num">03</span><h3>Cart</h3><p>Check the chosen plants before placing the order.</p></li>
+          <li class="is-key"><span class="mvp-num">04</span><h3>AI-Vision</h3><p>Plants matched to the user’s conditions or to a photo of their space.</p></li>
+          <li><span class="mvp-num">05</span><h3>Checkout</h3><p>Enter the details and complete the purchase.</p></li>
+          <li><span class="mvp-num">06</span><h3>Confirmation</h3><p>A notice that the order went through, with its details.</p></li>
+        </ol>
+      </div>
+    </section>
+
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · User flows</span></p>
+          <h2 class="h2" id="flow-title" data-split>From the first tap to <em>checkout</em></h2>
+        </div>
+        <p class="section-note" data-rise>Four flows map the whole shopping journey, from catalog discovery and AI matching to personalised recommendations and checkout, with the key interactions and decisions at each stage.</p>
+      </div>
+
+      <div class="container">
+        <div class="flow-tabs" data-tabs>
+          <div class="ft-list" role="tablist" aria-label="User flows">
+            <button type="button" class="ft-tab" id="ft-1-tab" role="tab" aria-controls="ft-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Catalog discovery</span></button>
+            <button type="button" class="ft-tab" id="ft-2-tab" role="tab" aria-controls="ft-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">AI matching</span></button>
+            <button type="button" class="ft-tab" id="ft-3-tab" role="tab" aria-controls="ft-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Recommendations</span></button>
+            <button type="button" class="ft-tab" id="ft-4-tab" role="tab" aria-controls="ft-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Cart and checkout</span></button>
+          </div>
+
+          <div class="ft-panel" id="ft-1-panel" role="tabpanel" aria-labelledby="ft-1-tab" tabindex="0">
+            <div class="fp-head">
+              <p class="fp-steps"><span>MVP functions 01 · 02 · 03</span></p>
+              <p class="fp-lead">From app launch the user applies the Medium Light filter, selects Monstera Deliciosa in the filtered catalog, adds it to the cart and returns to the home screen.</p>
+              <p class="fp-screens">Screens: app entry · home · filters · catalog · product page</p>
+            </div>
+            <div class="fv" data-flow="catalog">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Start</li><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Action</li><li class="lg lg-main"><span></span>Main path</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 30; --vbw: 1380; --vbh: 330">
+                  <svg class="fvc-svg" viewBox="10 30 1380 330" focusable="false"><path class="e e-main" d="M190 220 L266 220" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="266,220 255,225.5 255,214.5" style="--i: 0"></polygon><text class="e-label" x="228" y="208" text-anchor="middle" style="--i: 0">Launch</text><path class="e e-main" d="M426 220 L502 220" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="502,220 491,225.5 491,214.5" style="--i: 1"></polygon><text class="e-label" x="464" y="208" text-anchor="middle" style="--i: 1">Filter</text><path class="e e-main" d="M662 220 L738 220" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="738,220 727,225.5 727,214.5" style="--i: 2"></polygon><path class="e e-main" d="M898 220 L974 220" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="974,220 963,225.5 963,214.5" style="--i: 3"></polygon><text class="e-label" x="936" y="208" text-anchor="middle" style="--i: 3">Select</text><path class="e e-main" d="M1134 220 L1210 220" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1210,220 1199,225.5 1199,214.5" style="--i: 4"></polygon><path class="e e-main" d="M1290 182 L1290 118" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1290,118 1295.5,129 1284.5,129" style="--i: 5"></polygon><text class="e-label" x="1302" y="156" text-anchor="start" style="--i: 5">Add</text><path class="e e-main" d="M1210 80 L346 80 L346 182" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="346,182 340.5,171 351.5,171" style="--i: 6"></polygon><text class="e-label" x="778" y="68" text-anchor="middle" style="--i: 6">Return</text><path class="e" d="M346 258 L346 316" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="346,316 340.5,305 351.5,305" style="--i: 7"></polygon><text class="e-label" x="358" y="294" text-anchor="start" style="--i: 7">Scroll</text><text class="e-note" x="346" y="344" text-anchor="middle">Next: 02 · AI matching</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="5.00s" begin="indefinite" fill="freeze" path="M110 220 L1290 220 L1290 80 L346 80 L346 220"></animateMotion></circle></svg>
+                  <div class="fvc-node t-start" style="--x: 110; --y: 220; --nw: 160; --i: 0"><span>App Launch</span></div><div class="fvc-node t-screen" style="--x: 346; --y: 220; --nw: 160; --i: 1"><span>Home Screen</span></div><div class="fvc-node t-action" style="--x: 582; --y: 220; --nw: 160; --i: 2"><span>Apply “Medium Light” filter</span></div><div class="fvc-node t-screen" style="--x: 818; --y: 220; --nw: 160; --i: 3"><span>Filtered Catalog Screen</span></div><div class="fvc-node t-action" style="--x: 1054; --y: 220; --nw: 160; --i: 4"><span>Select “Monstera Deliciosa”</span></div><div class="fvc-node t-screen" style="--x: 1290; --y: 220; --nw: 160; --i: 5"><span>Product Detail Page</span></div><div class="fvc-node t-action" style="--x: 1290; --y: 80; --nw: 160; --i: 6"><span>Add to Cart</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Start</span><b class="fsl-title">App Launch</b></span></li><li class="fsl-i t-screen" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Home Screen</b></span></li><li class="fsl-i t-action" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Apply “Medium Light” filter</b></span></li><li class="fsl-i t-screen" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Filtered Catalog Screen</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Select “Monstera Deliciosa”</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Product Detail Page</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Add to Cart</b><ul class="fl-br" role="list"><li class="is-main"><span>Return</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Home Screen</span></li></ul><small class="fsl-note">Next: 02 · AI matching</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-2-panel" role="tabpanel" aria-labelledby="ft-2-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>MVP function 04 · AI-Vision</span></p>
+              <p class="fp-lead">From the AI-Vision banner on the home screen through onboarding and the quiz to a photo of the room. If the photo is not valid, the user goes back to the upload screen; if it is, the AI processes it.</p>
+              <p class="fp-screens">Screens: home · AI-Vision · onboarding · quiz · photo upload · loading</p>
+            </div>
+            <div class="fv" data-flow="ai">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Action</li><li class="lg t-system"><span></span>System</li><li class="lg t-decision"><span></span>Decision</li><li class="lg lg-main"><span></span>Main path</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 50; --vbw: 1380; --vbh: 400">
+                  <svg class="fvc-svg" viewBox="10 50 1380 400" focusable="false"><path class="e e-main" d="M190 110 L265 110" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="265,110 254,115.5 254,104.5" style="--i: 0"></polygon><text class="e-label" x="227" y="98" text-anchor="middle" style="--i: 0">Scroll</text><path class="e e-main" d="M425 110 L480 110" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="480,110 469,115.5 469,104.5" style="--i: 1"></polygon><path class="e e-main" d="M640 110 L710 110" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="710,110 699,115.5 699,104.5" style="--i: 2"></polygon><text class="e-label" x="675" y="98" text-anchor="middle" style="--i: 2">Click</text><path class="e e-main" d="M870 110 L925 110" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="925,110 914,115.5 914,104.5" style="--i: 3"></polygon><path class="e e-main" d="M1085 110 L1220 110" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1220,110 1209,115.5 1209,104.5" style="--i: 4"></polygon><text class="e-label" x="1152" y="98" text-anchor="middle" style="--i: 4">Complete</text><path class="e e-main" d="M1300 148 L1300 262" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1300,262 1294.5,251 1305.5,251" style="--i: 5"></polygon><path class="e e-main" d="M1220 300 L1144 300" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="1144,300 1155,294.5 1155,305.5" style="--i: 6"></polygon><text class="e-label" x="1182" y="288" text-anchor="middle" style="--i: 6">Upload</text><path class="e e-main" d="M984 300 L924 300" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="924,300 935,294.5 935,305.5" style="--i: 7"></polygon><path class="e e-main" d="M732 300 L672 300" pathLength="1" style="--i: 8"></path><polygon class="e e-main e-head" points="672,300 683,294.5 683,305.5" style="--i: 8"></polygon><text class="e-label" x="702" y="288" text-anchor="middle" style="--i: 8">YES</text><path class="e" d="M828 364 L828 420 L1300 420 L1300 338" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="1300,338 1305.5,349 1294.5,349" style="--i: 9"></polygon><text class="e-label" x="1064" y="408" text-anchor="middle" style="--i: 9">NO</text><text class="e-note" x="592" y="370" text-anchor="middle">Next: 03 · Recommendations</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="4.60s" begin="indefinite" fill="freeze" path="M110 110 L1300 110 L1300 300 L592 300"></animateMotion></circle></svg>
+                  <div class="fvc-node t-screen" style="--x: 110; --y: 110; --nw: 160; --i: 0"><span>Home Screen</span></div><div class="fvc-node t-action" style="--x: 345; --y: 110; --nw: 160; --i: 1"><span>Scroll to AI Banner</span></div><div class="fvc-node t-screen" style="--x: 560; --y: 110; --nw: 160; --i: 2"><span>AI-Vision Banner</span></div><div class="fvc-node t-action" style="--x: 790; --y: 110; --nw: 160; --i: 3"><span>Click “Get My Match”</span></div><div class="fvc-node t-screen" style="--x: 1005; --y: 110; --nw: 160; --i: 4"><span>Onboarding Screens</span></div><div class="fvc-node t-action" style="--x: 1300; --y: 110; --nw: 160; --i: 5"><span>Complete Quiz</span></div><div class="fvc-node t-screen" style="--x: 1300; --y: 300; --nw: 160; --i: 6"><span>Photo Upload Screen</span></div><div class="fvc-node t-action" style="--x: 1064; --y: 300; --nw: 160; --i: 7"><span>Upload Room Photo</span></div><div class="fvc-node t-decision" style="--x: 828; --y: 300; --nw: 160; --i: 8"><span>Is photo valid?</span></div><div class="fvc-node t-system" style="--x: 592; --y: 300; --nw: 160; --i: 9"><span>System: AI Processing</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Home Screen</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Scroll to AI Banner</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">AI-Vision Banner</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Click “Get My Match”</b></span></li><li class="fsl-i t-screen" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Onboarding Screens</b></span></li><li class="fsl-i t-action" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Complete Quiz</b></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Photo Upload Screen</b></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Upload Room Photo</b></span></li><li class="fsl-i t-decision" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Decision</span><b class="fsl-title">Is photo valid?</b><ul class="fl-br" role="list"><li class="is-main"><span>YES</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>System: AI Processing</span></li><li><span>NO</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Back to the Photo Upload Screen</span></li></ul></span></li><li class="fsl-i t-system" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">System</span><b class="fsl-title">System: AI Processing</b><small class="fsl-note">Next: 03 · Recommendations</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-3-panel" role="tabpanel" aria-labelledby="ft-3-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>MVP functions 04 · 02 · 03</span></p>
+              <p class="fp-lead">Two parallel paths from the AI results: select Fiddle Leaf Fig or Bird of Paradise, open its product page and add it to the cart. From there the user returns to the results or goes on to the cart through the navigation bar.</p>
+              <p class="fp-screens">Screens: AI recommendations · product pages</p>
+            </div>
+            <div class="fv" data-flow="recommendations">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Action</li><li class="lg lg-main"><span></span>Main path</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: -60; --vby: 0; --vbw: 1380; --vbh: 460">
+                  <svg class="fvc-svg" viewBox="-60 0 1380 460" focusable="false"><path class="e e-main" d="M190 215 L228 215 L228 90 L266 90" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="266,90 255,95.5 255,84.5" style="--i: 0"></polygon><text class="e-label" x="236" y="150" text-anchor="start" style="--i: 0">Select</text><path class="e e-main" d="M426 90 L502 90" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="502,90 491,95.5 491,84.5" style="--i: 1"></polygon><path class="e e-main" d="M662 90 L738 90" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="738,90 727,95.5 727,84.5" style="--i: 2"></polygon><text class="e-label" x="700" y="78" text-anchor="middle" style="--i: 2">Add</text><path class="e e-main" d="M898 90 L980 90 L980 230 L1070 230" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="1070,230 1059,235.5 1059,224.5" style="--i: 3"></polygon><text class="e-label" x="990" y="166" text-anchor="start" style="--i: 3">Next step</text><path class="e" d="M818 52 L818 20 L110 20 L110 192" pathLength="1" style="--i: 4"></path><polygon class="e e-head" points="110,192 104.5,181 115.5,181" style="--i: 4"></polygon><text class="e-label" x="464" y="40" text-anchor="middle" style="--i: 4">Return</text><path class="e" d="M190 245 L228 245 L228 370 L266 370" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="266,370 255,375.5 255,364.5" style="--i: 5"></polygon><text class="e-label" x="236" y="318" text-anchor="start" style="--i: 5">Select</text><path class="e" d="M426 370 L502 370" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="502,370 491,375.5 491,364.5" style="--i: 6"></polygon><path class="e" d="M662 370 L738 370" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="738,370 727,375.5 727,364.5" style="--i: 7"></polygon><text class="e-label" x="700" y="358" text-anchor="middle" style="--i: 7">Add</text><path class="e" d="M898 370 L980 370 L980 230" pathLength="1" style="--i: 8"></path><text class="e-label" x="990" y="306" text-anchor="start" style="--i: 8">Next step</text><path class="e" d="M818 408 L818 440 L110 440 L110 268" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="110,268 115.5,279 104.5,279" style="--i: 9"></polygon><text class="e-label" x="464" y="432" text-anchor="middle" style="--i: 9">Return</text><text class="e-note" x="1150" y="300" text-anchor="middle">Next: 04 · Checkout</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="4.20s" begin="indefinite" fill="freeze" path="M110 215 L228 215 L228 90 L980 90 L980 230 L1150 230"></animateMotion></circle></svg>
+                  <div class="fvc-node t-screen" style="--x: 110; --y: 230; --nw: 160; --i: 0"><span>AI Results Visualization</span></div><div class="fvc-node t-action" style="--x: 346; --y: 90; --nw: 160; --i: 1"><span>Select “Fiddle Leaf Fig”</span></div><div class="fvc-node t-screen" style="--x: 582; --y: 90; --nw: 160; --i: 2"><span>Product Detail Page</span></div><div class="fvc-node t-action" style="--x: 818; --y: 90; --nw: 160; --i: 3"><span>Add to Cart</span></div><div class="fvc-node t-action" style="--x: 346; --y: 370; --nw: 160; --i: 4"><span>Select “Bird of Paradise”</span></div><div class="fvc-node t-screen" style="--x: 582; --y: 370; --nw: 160; --i: 5"><span>Product Detail Page</span></div><div class="fvc-node t-action" style="--x: 818; --y: 370; --nw: 160; --i: 6"><span>Add to Cart</span></div><div class="fvc-node t-action" style="--x: 1150; --y: 230; --nw: 160; --i: 7"><span>Tap “Navigation Bar”</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">AI Results Visualization</b><ul class="fl-br" role="list"><li class="is-main"><span>Select</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>“Fiddle Leaf Fig”</span></li><li><span>Select</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>“Bird of Paradise”</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Select “Fiddle Leaf Fig”</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Product Detail Page</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Add to Cart</b><ul class="fl-br" role="list"><li class="is-main"><span>Next step</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Tap “Navigation Bar”</span></li><li><span>Return</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>AI Results Visualization</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Select “Bird of Paradise”</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Product Detail Page</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Add to Cart</b><ul class="fl-br" role="list"><li class="is-main"><span>Next step</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Tap “Navigation Bar”</span></li><li><span>Return</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>AI Results Visualization</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Tap “Navigation Bar”</b><small class="fsl-note">Next: 04 · Checkout</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-4-panel" role="tabpanel" aria-labelledby="ft-4-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>MVP functions 03 · 05 · 06</span></p>
+              <p class="fp-lead">From the navigation bar to the shopping cart, where a swipe deletes Monstera Deliciosa, through the shipping form with “Use App Data” and the payment screen to a successful payment.</p>
+              <p class="fp-screens">Screens: cart · shipping · payment · payment successful</p>
+            </div>
+            <div class="fv" data-flow="checkout">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Action</li><li class="lg t-end"><span></span>End</li><li class="lg lg-main"><span></span>Main path</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 50; --vbw: 1380; --vbh: 310">
+                  <svg class="fvc-svg" viewBox="10 50 1380 310" focusable="false"><path class="e e-main" d="M190 110 L240 110" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="240,110 229,115.5 229,104.5" style="--i: 0"></polygon><path class="e e-main" d="M400 110 L470 110" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="470,110 459,115.5 459,104.5" style="--i: 1"></polygon><text class="e-label" x="435" y="98" text-anchor="middle" style="--i: 1">Swipe</text><path class="e e-main" d="M670 110 L720 110" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="720,110 709,115.5 709,104.5" style="--i: 2"></polygon><path class="e e-main" d="M880 110 L975 110" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="975,110 964,115.5 964,104.5" style="--i: 3"></polygon><text class="e-label" x="927" y="98" text-anchor="middle" style="--i: 3">Checkout</text><path class="e e-main" d="M1135 110 L1220 110" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1220,110 1209,115.5 1209,104.5" style="--i: 4"></polygon><text class="e-label" x="1177" y="98" text-anchor="middle" style="--i: 4">Toggle</text><path class="e e-main" d="M1300 148 L1300 262" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1300,262 1294.5,251 1305.5,251" style="--i: 5"></polygon><path class="e e-main" d="M1220 300 L1144 300" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="1144,300 1155,294.5 1155,305.5" style="--i: 6"></polygon><text class="e-label" x="1182" y="288" text-anchor="middle" style="--i: 6">Pay</text><path class="e e-main" d="M984 300 L926 300" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="926,300 937,294.5 937,305.5" style="--i: 7"></polygon><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="3.60s" begin="indefinite" fill="freeze" path="M110 110 L1300 110 L1300 300 L828 300"></animateMotion></circle></svg>
+                  <div class="fvc-node t-action" style="--x: 110; --y: 110; --nw: 160; --i: 0"><span>Tap “Navigation Bar”</span></div><div class="fvc-node t-screen" style="--x: 320; --y: 110; --nw: 160; --i: 1"><span>Shopping Cart</span></div><div class="fvc-node t-action" style="--x: 570; --y: 110; --nw: 200; --i: 2"><span>Swipe to delete “Monstera Deliciosa”</span></div><div class="fvc-node t-screen" style="--x: 800; --y: 110; --nw: 160; --i: 3"><span>Updated Cart</span></div><div class="fvc-node t-screen" style="--x: 1055; --y: 110; --nw: 160; --i: 4"><span>Shipping Form</span></div><div class="fvc-node t-action" style="--x: 1300; --y: 110; --nw: 160; --i: 5"><span>Toggle “Use App Data”</span></div><div class="fvc-node t-screen" style="--x: 1300; --y: 300; --nw: 160; --i: 6"><span>Payment Screen</span></div><div class="fvc-node t-action" style="--x: 1064; --y: 300; --nw: 160; --i: 7"><span>Click “Pay”</span></div><div class="fvc-node t-end" style="--x: 828; --y: 300; --nw: 196; --i: 8"><span>Payment Successful</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-action" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Tap “Navigation Bar”</b></span></li><li class="fsl-i t-screen" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Shopping Cart</b></span></li><li class="fsl-i t-action" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Swipe to delete “Monstera Deliciosa”</b></span></li><li class="fsl-i t-screen" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Updated Cart</b></span></li><li class="fsl-i t-screen" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Shipping Form</b></span></li><li class="fsl-i t-action" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Toggle “Use App Data”</b></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Payment Screen</b></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Click “Pay”</b></span></li><li class="fsl-i t-end" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">End</span><b class="fsl-title">Payment Successful</b></span></li></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block wf-block">
+          <h3 class="cs-sub">Wireframes</h3>
+          <div class="wf-board" data-stagger>
+            <div class="case-media wf-f" style="--r: -1.5deg"><span class="frame-name">Home</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-home.png" alt="Wireframe of the home screen: greeting, search, sections, top picks and plant categories" width="642" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Product card</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-product.png" alt="Wireframe of the Monstera Deliciosa product page: photo, care tags, gallery and add to cart" width="642" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">AI-Vision</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-ai.png" alt="Wireframe of AI-Vision: “Turn your space into a green oasis” with a Try AI button" width="656" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1.5deg"><span class="frame-name">Wishlist</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-wishlist.png" alt="Wireframe of the empty wishlist with a Find my plants button" width="656" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Cart · empty</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-cart-empty.png" alt="Wireframe of the empty shopping cart with a Start exploring button" width="656" height="1415" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Cart</span><span class="case-plate"><img src="../assets/figma/roomroots/wireframe-cart.png" alt="Wireframe of the shopping cart with four plants and proceed to checkout" width="643" height="1432" loading="lazy"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="system" aria-labelledby="system-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · UI kit</span></p>
+          <h2 class="h2" id="system-title" data-split>A UI kit and a <em>hi-fi prototype</em></h2>
+        </div>
+        <p class="section-note" data-rise>Key components from a larger UI kit: colour, typography, icons, buttons and product cards.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>27</strong><span>components with their variants</span></li>
+          <li class="bt bt-wide"><strong>21</strong><span>colours in the palette, 17 named: primary greens, neutrals, error, success, white</span></li>
+          <li class="bt"><strong>8</strong><span>text styles, one typeface: Lexend</span></li>
+          <li class="bt"><strong>2</strong><span>button styles: primary and secondary</span></li>
+          <li class="bt bt-wide">
+            <strong>5</strong><span>sections in the tab bar</span>
+            <span class="bt-langs" aria-label="Home, Catalog, AI-Vision, Wishlist, Cart"><b>Home</b><b>Catalog</b><b>AI-Vision</b><b>Wishlist</b><b>Cart</b></span>
+          </li>
+          <li class="bt bt-wide bt-note bt-text"><b>Hi-fi prototype</b><span>in Figma, with an animated onboarding carousel and cart</span></li>
+          <li class="bt bt-wide bt-text"><b>Product card</b><span>photo, name, a short line, price, add to cart and a wishlist heart</span></li>
+          <li class="bt bt-text"><b>Icons</b><span>one line style, in several sizes</span></li>
+          <li class="bt bt-text"><b>Filter chips</b><span>Low Light, Easy Care, Pet Friendly</span></li>
+          <li class="bt bt-wide bt-text"><b>Reviews</b><span>review cards with one to five stars</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib" aria-labelledby="lib-title">
+      <div class="container">
+        <h3 class="cs-sub" id="lib-title">Inside the UI kit</h3>
+        <div class="ds-canvas">
+          <p class="dsc-hint">Drag the frames</p>
+          <div class="dsc-board">
+            <div class="case-media dsc-f dsc-type" data-case-frame style="--r: -1.5deg"><span class="frame-name">Colour and type</span><span class="case-plate"><img src="../assets/img/roomroots/ds-frame-512936.svg" alt="Colour palette of five colours from cream to brown and lime green; typography in Lexend: heading 24px, button 16px, body 16px" width="791" height="321" loading="lazy"></span></div>
+            <div class="case-media dsc-f dsc-parts" data-case-frame style="--r: 1.5deg"><span class="frame-name">Icons, buttons, product cards</span><span class="case-plate"><img src="../assets/img/roomroots/ds-frame-512938.webp" alt="Eighteen line icons, primary and secondary buttons, and two product cards: Boston Fern and Cactus Mix at €24.99" width="796" height="1606" loading="lazy"></span></div>
+            <div class="dsc-phones">
+              <div class="case-media dsc-f dsc-p1" data-case-frame style="--r: -3deg"><span class="frame-name">Home · Top 5</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../assets/img/roomroots/screens-col-3.webp" alt="Home screen with categories and the Top 5" width="575" height="4960" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p2" data-case-frame style="--r: 2deg"><span class="frame-name">AI-Vision · Results</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-2.webp" alt="AI-Vision recommendations for a living room" width="584" height="4960" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p3" data-case-frame style="--r: -1deg"><span class="frame-name">Product · Fiddle Leaf Fig</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../assets/img/roomroots/screens-col-3.webp" alt="Product page of Fiddle Leaf Fig" width="575" height="4960" loading="lazy"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Outcome</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Project <em>conclusions</em></h2>
+        </div>
+        <p class="section-note" data-rise>The MVP focuses on making the choice simpler and less uncertain.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">The project in short</h3>
+        <ol class="summary" role="list" data-stagger>
+          <li><span class="sm-k">01 · Problem</span><strong>Confidence</strong><p>Buyers need fewer, better-matched plants and clear care guidance.</p></li>
+          <li><span class="sm-k">02 · Solution</span><strong>RoomRoots</strong><p>A short quiz and AI-Vision narrow the catalog by light, room conditions, care experience and pets.</p></li>
+          <li><span class="sm-k">03 · MVP</span><strong>6</strong><p>core functions on one UI kit, from the catalog to the order confirmation, in a hi-fi prototype.</p></li>
+        </ol>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Four conclusions</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">The whole path, from the first tap to a paid order, is mapped and prototyped, and one UI kit keeps the interface consistent so it can grow with the product.</p>
+              <p class="end-statement">RoomRoots turns plant shopping into a <em>simple, personalised and confident</em> experience.</p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Simplicity builds confidence</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Personalisation makes the choice relevant</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Context supports better decisions</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>A clear flow strengthens trust</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>More cases</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="mayak.html"><span class="mini-thumb"><img src="../assets/img/cover-mayak.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Mayak</span><span class="mini-sub">Multilingual emotional support for immigrants</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="db-navigator.html"><span class="mini-thumb"><img src="../assets/img/cover-db.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">DB Navigator</span><span class="mini-sub">Unsolicited redesign of the journey planner</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Editorial website for an artisan bakery</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Based in Hachenburg, Germany</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Let’s design for <em>real needs</em></h2>
+          <p class="contact-note" data-rise>I’m open to UX/UI designer roles in Germany. Email or call me, or write to me on LinkedIn or Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="Email"><span>Copy</span><img src="../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Phone</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Phone number"><span>Copy</span><img src="../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Connect on</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI design" width="187" height="89">
+          <p>UX/UI designer in Germany: research, user flows, prototypes and design systems.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Menu</span></p>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="../index.html#work">Projects</a>
+            <a href="../index.html#approach">How I work</a>
+            <a href="#contact">Contact</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Language: English">
+                <img src="../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>EN</span><img class="lang-chev" src="../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="roomroots.html" translate="no" lang="en" hreflang="en" aria-current="true" data-code="EN" aria-label="English"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="../de/cases/roomroots.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="../ua/cases/roomroots.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Connect on</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

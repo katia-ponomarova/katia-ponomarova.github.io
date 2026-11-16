@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1077" width="1400" height="1077">
+  <!-- Tablet mockup (landscape) for the Muka case: silver edge, black bezel, the screen left transparent
+       (54, 54, 1292 × 969, 4:3) so her landing shows through from below. Drawn for the portfolio, 2026-11-13 -->
+  <defs>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e2e3e6"/>
+      <stop offset="0.5" stop-color="#aeb0b5"/>
+      <stop offset="1" stop-color="#85878c"/>
+    </linearGradient>
+    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.09"/>
+      <stop offset="0.42" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path fill-rule="evenodd" d="M74,0 H1326 A74,74 0 0 1 1400,74 V1003 A74,74 0 0 1 1326,1077 H74 A74,74 0 0 1 0,1003 V74 A74,74 0 0 1 74,0 Z M76,54 H1324 A22,22 0 0 1 1346,76 V1001 A22,22 0 0 1 1324,1023 H76 A22,22 0 0 1 54,1001 V76 A22,22 0 0 1 76,54 Z" fill="url(#rim)"/>
+  <rect x="1150" y="1" width="96" height="4" rx="2" fill="#8f9196"/>
+  <path fill="#0d0d0f" fill-rule="evenodd" d="M74,8 H1326 A66,66 0 0 1 1392,74 V1003 A66,66 0 0 1 1326,1069 H74 A66,66 0 0 1 8,1003 V74 A66,66 0 0 1 74,8 Z M76,54 H1324 A22,22 0 0 1 1346,76 V1001 A22,22 0 0 1 1324,1023 H76 A22,22 0 0 1 54,1001 V76 A22,22 0 0 1 76,54 Z"/>
+  <circle cx="700" cy="31" r="6" fill="#1b2130"/>
+  <circle cx="698.5" cy="29.5" r="1.8" fill="#4b5874"/>
+  <path d="M76,54 H1324 A22,22 0 0 1 1346,76 V1001 A22,22 0 0 1 1324,1023 H76 A22,22 0 0 1 54,1001 V76 A22,22 0 0 1 76,54 Z" fill="url(#glare)"/>
+</svg>

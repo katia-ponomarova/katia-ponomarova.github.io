@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/db-navigator.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/db-navigator.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <title>DB Navigator, редизайн планувальника подорожей з власної ініціативи · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI-кейс Kateryna Ponomarova: концепт редизайну DB Navigator з власної ініціативи, від чотирьох гіпотез, конкурентного аналізу та юзабіліті-тестування з двома учасниками до карти шляху, user flow і перших перероблених екранів. Редизайн триває.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/ua/cases/db-navigator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="DB Navigator, редизайн планувальника подорожей з власної ініціативи · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI-кейс Kateryna Ponomarova: концепт редизайну DB Navigator з власної ініціативи, від чотирьох гіпотез, конкурентного аналізу та юзабіліті-тестування з двома учасниками до карти шляху, user flow і перших перероблених екранів. Редизайн триває.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/ua/cases/db-navigator.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-uk.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page case-db">
+  <a class="skip" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Назад до всіх проєктів">
+        <img src="../../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Головне меню" data-nav>
+        <a href="../index.html#work">Проєкти</a>
+        <a href="../index.html#approach">Як я працюю</a>
+        <a href="#contact">Контакти</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Мова: українська">
+            <img src="../../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>UA</span>
+            <img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="../../cases/db-navigator.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="../../de/cases/db-navigator.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="db-navigator.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI-кейс · Концептуальна робота</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>DB Navigator</span></h1>
+          <p class="cs-promise" data-hero-in>Редизайн планувальника подорожей Deutsche Bahn з власної ініціативи</p>
+          <p class="cs-lead" data-hero-in>DB Navigator – застосунок Deutsche Bahn для планування маршрутів, купівлі квитків і орієнтації в поїздах та громадському транспорті. У цьому незалежному кейсі я досліджувала, як зробити бронювання зрозумілішим, передбачуванішим і простішим. Дослідження й тестування завершено; редизайн триває.</p>
+          <ul class="cs-tags" role="list" aria-label="Що я робила" data-hero-in>
+            <li>UX-дослідження</li><li>UX-аналіз</li><li>Юзабіліті-тестування</li><li>User flow</li><li>CJM</li><li>UI-дизайн</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Тип проєкту</span><span class="f-val">Редизайн з власної ініціативи</span></span></li>
+            <li><img src="../../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Платформа</span><span class="f-val">Мобільний застосунок</span></span></li>
+            <li><img src="../../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Роль</span><span class="f-val">UX/UI-дизайнерка</span></span></li>
+            <li><img src="../../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Обсяг</span><span class="f-val">Дослідження, тестування, редизайн</span></span></li>
+          </ul>
+          <p class="cs-disclaimer" data-hero-in>Незалежний концепт. Deutsche Bahn AG його не замовляла й не пов’язана з ним.</p>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">DB Navigator · Редизайн триває</span>
+          <span class="case-plate"><img src="../../assets/img/db/hero-mockup.webp" alt="Два перероблені екрани DB Navigator на нахилених телефонах: пошук з одним полем дати й блоком Trip filters і деталі з’єднання з попередженням про коротку пересадку й типом пересадки Bus to Train" width="1779" height="2001"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Проєкт у цифрах</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>4</strong><span>початкові гіпотези</span></li>
+          <li class="glance"><strong>3</strong><span>застосунки в порівнянні</span></li>
+          <li class="glance"><strong>2</strong><span>учасники тестування</span></li>
+          <li class="glance"><strong>6</strong><span>етапів карти шляху</span></li>
+          <li class="glance"><strong>4</strong><span>точки рішень у флоу</span></li>
+          <li class="glance"><strong>3</strong><span>екрани, перероблені на цей момент</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · Проблема</span></p>
+          <h2 class="h2" id="problem-title" data-split>Затримки, короткі пересадки й жодних <em>зрозумілих підказок</em></h2>
+        </div>
+        <p class="section-note" data-rise>У реальних поїздках люди постійно стикаються з невизначеністю: затримки потягів, мінімальний час на пересадку й брак зрозумілих підказок. Я сформулювала з цього чотири гіпотези щодо DB Navigator, і вони стали основою юзабіліті-тестування.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Чотири гіпотези, всі підтверджені тестуванням</h3>
+        <ol class="hypo-grid is-four" role="list" data-stagger>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H1</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Застосунок не пропонує альтернативний маршрут, коли потяг затримується або пересадку пропущено.</p>
+            <p class="hc-proof"><span class="hc-label">На тестуванні</span>Одна учасниця сприйняла затримку як загрозу для всього маршруту й не знала, що робити далі; інший учасник не отримав від застосунку альтернативи й змінив маршрут сам.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H2</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Застосунок не привертає уваги до критично коротких пересадок.</p>
+            <p class="hc-proof"><span class="hc-label">На тестуванні</span>Пересадка за три хвилини на незнайомому вокзалі змусила одну учасницю засумніватися, що вона встигне; інший від початку не був певен щодо пересадок.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H3</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Фільтри маршрутів незручні й нелогічно побудовані.</p>
+            <p class="hc-proof"><span class="hc-label">На тестуванні</span>Коли змінювалася дата, час залишався колишнім. Жодного з учасників не попередили, а щоб виправити, доводилося повертатися до фільтрів.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H4</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Позначки потягів незрозумілі й не допомагають орієнтуватися на маршруті.</p>
+            <p class="hc-proof"><span class="hc-label">На тестуванні</span>Жоден не міг розрізнити потяги чи зрозуміти, чи наступна ділянка – потяг або автобус.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="market" aria-labelledby="market-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Конкурентний аналіз</span></p>
+          <h2 class="h2" id="market-title" data-split>Пошук, список і деталі в <em>трьох застосунках</em></h2>
+        </div>
+        <p class="section-note" data-rise>Я порівняла пошук маршруту, список маршрутів і деталі маршруту у FlixBus, Trainline та Укрзалізниці. З кожним із них простіше почати. DB Navigator дає більше деталей і контролю, але його важче читати.</p>
+      </div>
+
+      <div class="container">
+        <div class="rival-slider" data-slider data-rise>
+          <div class="rs-bar">
+            <div class="rs-names" role="group" aria-label="Оберіть застосунок">
+              <button type="button" class="rs-name" data-go="0" aria-current="true">FlixBus</button>
+              <button type="button" class="rs-name" data-go="1">Trainline</button>
+              <button type="button" class="rs-name" data-go="2">Укрзалізниця</button>
+            </div>
+            <div class="rs-controls">
+              <span class="rs-count" aria-hidden="true"><b data-count>01</b> / 03</span>
+              <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Попередній застосунок"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              <button type="button" class="rs-arrow" data-next aria-label="Наступний застосунок"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+            </div>
+          </div>
+          <div class="rs-track" data-track tabindex="0" aria-label="Застосунки в порівнянні, гортайте або користуйтеся стрілками" aria-roledescription="карусель">
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="1 з 3: FlixBus / FlixTrain">
+              <div class="rs-text">
+                <h3>FlixBus / FlixTrain</h3>
+                <dl>
+                  <div><dt>Пошук маршруту</dt><dd>Швидкий, зрозумілий старт без зайвих кроків. Простіше, ніж у DB, але менш гнучко для складних поїздок.</dd></div>
+                  <div><dt>Список маршрутів</dt><dd>Картки легко читаються, головне видно одразу. Інформацію про пересадки видно гірше, ніж у DB.</dd></div>
+                  <div><dt>Деталі маршруту</dt><dd>Маршрут викладено в одну лінію, він читається без зусиль, але з меншою глибиною й контролем деталей, ніж у DB Navigator.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/db/flix-0.webp" alt="Пошук FlixBus: із Зігена до Берліна, дата й пасажири" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/flix-1.webp" alt="Список маршрутів FlixBus: картки FlixBus і FlixTrain з часом, пересадками й цінами" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/flix-2.webp" alt="Деталі маршруту FlixBus: зупинки й пересадка в одну лінію" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="2 з 3: Trainline">
+              <div class="rs-text">
+                <h3>Trainline</h3>
+                <dl>
+                  <div><dt>Пошук маршруту</dt><dd>Ціна й час видно одразу. Вирішити простіше, ніж у DB, але контексту про пересадки менше.</dd></div>
+                  <div><dt>Список маршрутів</dt><dd>Сценарій поділено на логічні кроки, і люди проходять їх по черзі.</dd></div>
+                  <div><dt>Деталі маршруту</dt><dd>Вибір спирається на чіткі відмінності між варіантами. Інформація в DB глибша, але її важче сприйняти.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/db/tl-1.webp" alt="Пошук Trainline: куди, коли й пасажири" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/tl-0.webp" alt="Список маршрутів Trainline із Зігена до Берліна з цінами й кількістю пересадок" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/tl-2.webp" alt="Варіанти квитків Trainline: поїздка туди й класи для кожної ділянки" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="3 з 3: Укрзалізниця">
+              <div class="rs-text">
+                <h3>Укрзалізниця</h3>
+                <dl>
+                  <div><dt>Пошук маршруту</dt><dd>Пошук починається одразу й обмежений базовими параметрами: простий сценарій без налаштування маршруту. Менше свободи, ніж у DB.</dd></div>
+                  <div><dt>Список маршрутів</dt><dd>Люди проходять його по черзі.</dd></div>
+                  <div><dt>Деталі маршруту</dt><dd>Візуальний вибір місця зменшує невизначеність: умови поїздки й вільні місця видно одразу.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/db/uz-0.webp" alt="Пошук Укрзалізниці: з Києва до Одеси, дата й кнопка «Знайти»" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/uz-1.webp" alt="Список потягів Укрзалізниці з позначками на кшталт «найдешевший» і «найшвидший»" width="1241" height="2555" loading="lazy">
+                <img src="../../assets/img/db/uz-2.webp" alt="Вибір місця Укрзалізниці на схемі вагона" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+          </div>
+          <div class="rs-dots" aria-hidden="true"><i data-dot></i><i data-dot></i><i data-dot></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Юзабіліті-тестування</span></p>
+          <h2 class="h2" id="research-title" data-split>Що показало <em>тестування</em></h2>
+        </div>
+        <p class="section-note" data-rise>Двоє учасників планували реальну поїздку в DB Navigator: маршрути з пересадками, зміни налаштувань пошуку й перепланування після затримок. Їхні дії та коментарі показали, де маршрут, налаштування чи наступний крок важко зрозуміти.</p>
+      </div>
+
+      <div class="container">
+        <div class="db-method">
+          <div class="chart-card db-why" data-rise>
+            <h3 class="cs-sub">Чому юзабіліті-тестування</h3>
+            <p class="db-why-lead">Воно показує, як люди насправді планують маршрут, а не що вони припускають чи кажуть теоретично. Проблеми проявляються в момент, коли виникають, без викривлень пам’яті.</p>
+            <dl class="aud-list">
+              <div><dt>Воно зафіксувало,</dt><dd><ul class="aud-types" role="list"><li>як люди будують маршрут</li><li>де стикаються з труднощами</li><li>де починають сумніватися у своєму виборі</li></ul></dd></div>
+            </dl>
+          </div>
+          <div class="db-task" data-rise>
+            <div class="cs-quotes-head">
+              <h3 class="cs-sub">Завдання</h3>
+              <p class="cs-caption">Переклад з російської</p>
+            </div>
+            <p class="db-task-context">Реальна далека поїздка з кількома варіантами маршруту й можливими пересадками: люди орієнтуються на час у дорозі, типи потягів і зручність маршруту.</p>
+            <p class="db-task-text">«Сплануйте поїздку з Гахенбурга до Берліна на сьогодні. Оберіть маршрут, який здається вам найкращим, і ухваліть рішення про поїздку, спираючись лише на те, що показує інтерфейс.»</p>
+            <ol class="insight-list" role="list">
+              <li><span class="il-num">1</span><div><h4>Спланувати поїздку</h4></div></li>
+              <li><span class="il-num">2</span><div><h4>Вивчити варіанти маршруту</h4></div></li>
+              <li><span class="il-num">3</span><div><h4>Зважити запропоновані варіанти</h4></div></li>
+              <li><span class="il-num">4</span><div><h4>Обрати відповідний маршрут</h4></div></li>
+              <li><span class="il-num">5</span><div><h4>Ухвалити рішення про поїздку</h4></div></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Чотири знахідки із записами</h3>
+          <div class="flow-tabs db-finds" data-tabs>
+            <div class="ft-list" role="tablist" aria-label="Знахідки тестування">
+              <button type="button" class="ft-tab" id="tf-1-tab" role="tab" aria-controls="tf-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Пересадки</span></button>
+              <button type="button" class="ft-tab" id="tf-2-tab" role="tab" aria-controls="tf-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">Фільтри й потяги</span></button>
+              <button type="button" class="ft-tab" id="tf-3-tab" role="tab" aria-controls="tf-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Зміни маршруту</span></button>
+              <button type="button" class="ft-tab" id="tf-4-tab" role="tab" aria-controls="tf-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Затримки й зрозумілість</span></button>
+            </div>
+
+            <div class="ft-panel" id="tf-1-panel" role="tabpanel" aria-labelledby="tf-1-tab" tabindex="0">
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: -1.5deg">
+                  <span class="frame-name">Запис · Учасниця 1</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../../assets/img/db/test-1.jpg" aria-label="Запис екрана із сесії: пошук з’єднань з Гахенбурга до Берліна"><source src="../../assets/img/db/test-1.mp4" type="video/mp4"></video></span><img class="db-frame" src="../../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Відтворити</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Учасниця 1 · Maria</p>
+                  <h4>Короткі пересадки створюють невизначеність</h4>
+                  <dl class="db-did">
+                    <div><dt>Що вона робила</dt><dd>Планувала маршрут з пересадками й оцінювала час на пересадки та надійність поїздки.</dd></div>
+                    <div><dt>Де стало складно</dt><dd>Короткі пересадки між різними маршрутами й незрозуміло, що затримка означає для поїздки.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>«Тут завжди пересадка за три хвилини. Як я маю встигнути, якщо не знаю вокзалу?»</p></blockquote></li>
+                    <li><blockquote><p>«Стільки пересадок мене лякає.»</p></blockquote></li>
+                    <li><blockquote><p>«Це стресова ситуація.»</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Підтверджує H1</dt><dd>Вона сприйняла затримку як загрозу для всього маршруту й не знала, що робити далі і наскільки маршрут ще надійний.</dd></div>
+                    <div><dt>Підтверджує H2</dt><dd>Вона сумнівалася, що фізично встигне на пересадку; незнайомий вокзал тривожив її, навіть коли часу на папері вистачало.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-2-panel" role="tabpanel" aria-labelledby="tf-2-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: 1.5deg">
+                  <span class="frame-name">Запис · Учасниця 1</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../../assets/img/db/test-2.jpg" aria-label="Запис екрана із сесії: зміна налаштувань пошуку й порівняння потягів"><source src="../../assets/img/db/test-2.mp4" type="video/mp4"></video></span><img class="db-frame" src="../../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Відтворити</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Учасниця 1 · Maria</p>
+                  <h4>Фільтрам і позначкам бракує ясності</h4>
+                  <dl class="db-did">
+                    <div><dt>Що вона робила</dt><dd>Змінила дату й час поїздки, виправила маршрут після помилки й порівняла потяги.</dd></div>
+                    <div><dt>Де стало складно</dt><dd>Помилка фільтра при зміні дати, логіка фільтрів і те, чим відрізняються потяги.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>«Під час першого пошуку я пропустила фільтри.»</p></blockquote></li>
+                    <li><blockquote><p>«Виявляється, можна навіть позначити, що їдеш з велосипедом.»</p></blockquote></li>
+                    <li><blockquote><p>«Мені не завжди зрозуміло, яким транспортом я поїду.»</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Підтверджує H3</dt><dd>Вона помилилася, змінюючи налаштування. Застосунок не попередив, що дата й час не збігаються, і щоб виправити, довелося повертатися й налаштовувати все знову.</dd></div>
+                    <div><dt>Підтверджує H4</dt><dd>Вона не могла розрізнити типи потягів: позначки не казали, що це за транспорт, і не допомагали вирішити.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-3-panel" role="tabpanel" aria-labelledby="tf-3-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: -1deg">
+                  <span class="frame-name">Запис · Учасник 2</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../../assets/img/db/test-3.jpg" aria-label="Запис екрана із сесії: зміна дати поїздки з пересадками"><source src="../../assets/img/db/test-3.mp4" type="video/mp4"></video></span><img class="db-frame" src="../../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Відтворити</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Учасник 2 · Daniel</p>
+                  <h4>Зміна планів потребує зайвих кроків</h4>
+                  <dl class="db-did">
+                    <div><dt>Що він робив</dt><dd>Змінив дату поїздки у фільтрах, спланував маршрут з пересадками й повернувся до фільтрів, щоб виправити помилку.</dd></div>
+                    <div><dt>Де стало складно</dt><dd>Після зміни дати час лишився поточним, тож маршрут був неправильний, і йому довелося вручну повертатися до налаштувань.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>«Потяги ніколи не приходять вчасно, особливо коли живеш у Гахенбурзі.»</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Підтверджує H1</dt><dd>Застосунок не запропонував йому альтернативи: щоб продовжити поїздку, він змінив маршрут сам.</dd></div>
+                    <div><dt>Підтверджує H2</dt><dd>Він від початку не був певен щодо маршруту з пересадками.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-4-panel" role="tabpanel" aria-labelledby="tf-4-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: 1deg">
+                  <span class="frame-name">Запис · Учасник 2</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 500; --sx: 108"><span class="db-screen"><video muted loop playsinline preload="none" poster="../../assets/img/db/test-4.jpg" aria-label="Запис екрана із сесії: налаштування дати й часу відправлення"><source src="../../assets/img/db/test-4.mp4" type="video/mp4"></video></span><img class="db-frame" src="../../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Відтворити</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Учасник 2 · Daniel</p>
+                  <h4>Через затримки незрозумілий наступний крок</h4>
+                  <dl class="db-did">
+                    <div><dt>Що він робив</dt><dd>Покидав маршрут, коли потяг затримувався, будував новий з того місця, де був, і повторював це при кожній затримці.</dd></div>
+                    <div><dt>Де стало складно</dt><dd>Не було як зрозуміти, чи маршрут ще дійсний, коли він прибуде і наскільки довгою може бути затримка.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>«Я ніколи не певен, що доїду вчасно.»</p></blockquote></li>
+                    <li><blockquote><p>«Допомогло б знати хоча б приблизне вікно часу.»</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Підтверджує H3</dt><dd>Фільтри дали йому помилитися при зміні дати, без жодного попередження.</dd></div>
+                    <div><dt>Підтверджує H4</dt><dd>При зміні транспорту не завжди було зрозуміло, чекати потяг чи йти до автобуса; пересадку показано нечітко.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Що показало тестування</h3>
+          <p class="db-showed">Люди планують поїздки з невизначеністю й тривогою, найбільше через затримки, короткі пересадки й зміни умов маршруту.</p>
+          <ul class="notes is-three" role="list" data-stagger>
+            <li class="note"><p>Мінімальний час на пересадку без підказок сприймається як небезпечний вибір.</p></li>
+            <li class="note"><p>Без чітких акцентів люди менше довіряють маршруту.</p></li>
+            <li class="note"><p>Позначки при зміні транспорту не підказують, що робити далі.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · Користувачі</span></p>
+          <h2 class="h2" id="users-title" data-split>Для кого я <em>проєктувала</em></h2>
+        </div>
+        <p class="section-note" data-rise>Профіль клієнта й карта шляху тієї самої поїздки від відкриття застосунку до місця призначення: що люди роблять, відчувають і чого потребують на кожному етапі.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Профіль клієнта</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo is-square cs-rock"><img src="../../assets/img/db/persona.webp" alt="Портрет для профілю клієнта, створений за допомогою ШІ" width="1254" height="1254" loading="lazy"><span class="ai-note">Портрет створено за допомогою ШІ</span></div>
+          <div class="plist">
+            <h4>Больові точки</h4>
+            <ul role="list">
+              <li>Короткі пересадки мене тривожать</li>
+              <li>Через затримки маршрут швидко застаріває</li>
+              <li>При зміні транспорту не завжди зрозуміло, чекати потяг чи йти до автобуса</li>
+              <li>Фільтри дати й часу легко призводять до помилок</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Потреби</h4>
+            <ul role="list">
+              <li>Розуміти, чи встигну я вчасно</li>
+              <li>Бачити ризики пересадки заздалегідь</li>
+              <li>Знати, що робити, коли потяг затримується</li>
+              <li>Орієнтир щодо часу прибуття, хоча б приблизний</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Цілі</h4>
+            <ul role="list">
+              <li>Їздити до родини на вихідних без хвилювань</li>
+              <li>Планувати поїздки на події без постійного стресу</li>
+              <li>Контролювати маршрут навіть із затримками</li>
+              <li>Приблизно знати, коли я прибуду, а не гадати до останнього</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>Про мене<span class="persona-tag">24 · Перукарська справа · Гахенбург</span></figcaption>
+            <blockquote><p>«Я живу в Німеччині й працюю в перукарській сфері. Я часто їжджу в інші міста: моя родина живе в іншому регіоні, тож я їжджу до них майже щовихідних. Також регулярно буваю на фестивалях, ярмарках і подіях, найчастіше в Кельні. Громадський транспорт – мій основний спосіб пересування.»</p></blockquote>
+          </figure>
+          <figure class="about-me db-scn">
+            <figcaption>Сценарій<span class="persona-tag">Переклад з російської</span></figcaption>
+            <blockquote><p>«Я планую поїздку в інше місто в DB Navigator, щоб побачитися з родиною або поїхати на подію. Обираю маршрут з пересадками й перевіряю час. У дорозі потяг затримується, і маршрут більше не дійсний. Я покидаю його й будую новий з того місця, де я є. Під час пересадки не завжди зрозуміло, куди йти далі. Зрештою я їду невпевнено, аби тільки доїхати.»</p></blockquote>
+          </figure>
+        </div>
+
+        <div class="cs-block cjm">
+          <div class="cs-quotes-head">
+            <h3 class="cs-sub">Карта шляху клієнта</h3>
+            <p class="cs-caption">Від відкриття застосунку до місця призначення, переклад з російської</p>
+          </div>
+          <div class="cjm-card" data-journey style="--n: 6">
+            <div class="cj-curve">
+              <span class="cj-band" data-band aria-hidden="true"></span>
+              <svg class="cj-line" viewBox="0 0 1100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="91.67,32 275,50 458.33,68 641.67,68 825,86 1008.33,14"></polyline></svg>
+              <div class="cj-pts" role="group" aria-label="Перейти до етапу">
+                <button type="button" class="cj-pt" data-tone="up" data-go="0" style="--i: 0; --lv: 1" aria-current="true" aria-label="Етап 01, Відкриває застосунок: готовність"><span>01</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="1" style="--i: 1; --lv: 0" aria-label="Етап 02, Вводить звідки й куди: сумнів"><span>02</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="2" style="--i: 2; --lv: -1" aria-label="Етап 03, Відкриває фільтри поїздки: розгубленість"><span>03</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="3" style="--i: 3; --lv: -1" aria-label="Етап 04, Переглядає список маршрутів: невпевненість"><span>04</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="4" style="--i: 4; --lv: -2" aria-label="Етап 05, Відкриває обраний маршрут: тривога"><span>05</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="5" style="--i: 5; --lv: 2" aria-label="Етап 06, Їде маршрутом до місця призначення: полегшення"><span>06</span></button>
+              </div>
+            </div>
+            <div class="cj-bar">
+              <p class="cj-legend" aria-hidden="true"><span class="lg-up">Краще</span><span class="lg-mid">Нейтрально</span><span class="lg-down">Важче</span></p>
+              <div class="rs-controls">
+                <span class="rs-count" aria-hidden="true"><b data-count>01–04</b> / 06</span>
+                <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Попередній етап"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+                <button type="button" class="rs-arrow" data-next aria-label="Наступний етап"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              </div>
+            </div>
+            <div class="cj-scroll" data-track tabindex="0" role="region" aria-label="Карта шляху клієнта, 6 етапів, прокручується вбік">
+              <ol class="cj-board" role="list">
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">01</span><h4>Відкриває застосунок</h4><span class="cj-word">Готовність</span></div>
+                  <p class="cj-story">Збирається в поїздку й відкриває DB Navigator.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Запускає застосунок.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Головна навігація застосунку</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Тут проблем немає.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Це стресова штука.»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Зробити головний екран із пошуком простішим і доступнішим.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">02</span><h4>Вводить звідки й куди</h4><span class="cj-word">Сумнів</span></div>
+                  <p class="cj-story">Вводить початок і кінець маршруту.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Натискає «Звідки» й вводить адресу чи станцію, потім те саме в полі «Куди».</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Поля «Звідки» й «Куди», автодоповнення, кнопка пошуку</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Немає певності, що маршрут узагалі можна встигнути вчасно.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Я ніколи не певен, що доїду вчасно.»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Виділити найпростіші й найшвидші маршрути.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">03</span><h4>Відкриває фільтри поїздки</h4><span class="cj-word">Розгубленість</span></div>
+                  <p class="cj-story">Шукає, як залишити лише маршрути з меншою кількістю пересадок і зрозумілішою логікою.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває екран фільтрів і налаштовує час відправлення.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Кнопка фільтрів, екран фільтрів, «Застосувати» й «Скинути»</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Коли змінюється дата, час лишається, і його доводиться вводити знову.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Спочатку я взагалі не помітила фільтрів…»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Запобігти помилкам і повторному введенню налаштувань.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">04</span><h4>Переглядає список маршрутів</h4><span class="cj-word">Невпевненість</span></div>
+                  <p class="cj-story">Порівнює варіанти маршруту в списку.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває варіанти й дивиться на час і пересадки.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Список маршрутів, позначки пересадок і типи транспорту</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Незрозуміло, чим відрізняються потяги і наскільки надійний кожен варіант.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Я не зрозуміла, чим ці потяги відрізняються один від одного.»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Окремий блок для наступної ділянки: тип транспорту й пересадка.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">05</span><h4>Відкриває обраний маршрут</h4><span class="cj-word">Тривога</span></div>
+                  <p class="cj-story">Порівнює маршрути, стежачи за часом і пересадками.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває деталі маршруту й перевіряє порядок поїздки.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Блоки пересадок із часом, інформація про платформи</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Пересадки надто короткі й лякають, особливо на незнайомих вокзалах.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Як я встигну за 3 хвилини, якщо не знаю цього вокзалу?»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Показувати найближчі відправлення, коли є затримка.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">06</span><h4>Їде маршрутом до місця призначення</h4><span class="cj-word">Полегшення</span></div>
+                  <p class="cj-story">У дорозі намагається стежити за маршрутом.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває маршрут під час поїздки й перевіряє поточну ділянку.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Екран активного маршруту чи поїздки</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Через затримки маршрут застаріває.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Думає</dt><dd>«Якщо потяг запізнюється, маршрут уже не дійсний.»</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Надсилати сповіщення, коли маршрут змінюється.</dd></dl>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · User flow</span></p>
+          <h2 class="h2" id="flow-title" data-split>Де планування маршруту <em>ламається</em></h2>
+        </div>
+        <p class="section-note" data-rise>Тестова поїздка як user flow, від відкриття застосунку до місця призначення. Примітки показують, що учасники пропустили, а пропущена пересадка повертає мандрівника на початок.</p>
+      </div>
+
+      <div class="container">
+        <div class="fv" data-flow="trip">
+          <div class="fvc">
+            <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Початок і кінець</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-system"><span></span>Система</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg t-risk"><span></span>Ризик</li><li class="lg lg-main"><span></span>Основний шлях</li><li class="lg lg-back"><span></span>Шлях назад</li></ul>
+            <div class="fvc-board" aria-hidden="true" style="--vbx: 0; --vby: 0; --vbw: 1500; --vbh: 780">
+              <svg class="fvc-svg" viewBox="0 0 1500 780" focusable="false"><path class="e e-main" d="M170 190 L212 190" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="212,190 201,195.5 201,184.5" style="--i: 0"></polygon><path class="e e-main" d="M388 190 L424 190" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="424,190 413,195.5 413,184.5" style="--i: 1"></polygon><path class="e" d="M520 126 L520 98" pathLength="1" style="--i: 2"></path><polygon class="e e-head" points="520,98 525.5,109 514.5,109" style="--i: 2"></polygon><text class="e-label" x="534" y="118" text-anchor="start" style="--i: 2">Інша дата</text><path class="e e-main" d="M520 254 L520 292" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="520,292 514.5,281 525.5,281" style="--i: 3"></polygon><text class="e-label" x="534" y="278" text-anchor="start" style="--i: 3">Сьогодні</text><path class="e" d="M608 60 L760 60 L760 152" pathLength="1" style="--i: 4"></path><polygon class="e e-head" points="760,152 754.5,141 765.5,141" style="--i: 4"></polygon><path class="e e-main" d="M608 330 L720 330 L720 228" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="720,228 725.5,239 714.5,239" style="--i: 5"></polygon><path class="e e-main" d="M848 190 L894 190" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="894,190 883,195.5 883,184.5" style="--i: 6"></polygon><path class="e" d="M990 254 L990 292" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="990,292 984.5,281 995.5,281" style="--i: 7"></polygon><text class="e-label" x="1004" y="278" text-anchor="start" style="--i: 7">Ні</text><path class="e" d="M902 330 L800 330 L800 228" pathLength="1" style="--i: 8"></path><polygon class="e e-head" points="800,228 805.5,239 794.5,239" style="--i: 8"></polygon><path class="e e-main" d="M1086 190 L1142 190" pathLength="1" style="--i: 9"></path><polygon class="e e-main e-head" points="1142,190 1131,195.5 1131,184.5" style="--i: 9"></polygon><text class="e-label" x="1114" y="174" text-anchor="middle" style="--i: 9">Так</text><path class="e e-main" d="M1230 228 L1230 516" pathLength="1" style="--i: 10"></path><polygon class="e e-main e-head" points="1230,516 1224.5,505 1235.5,505" style="--i: 10"></polygon><path class="e" d="M1230 644 L1230 682" pathLength="1" style="--i: 11"></path><polygon class="e e-head" points="1230,682 1224.5,671 1235.5,671" style="--i: 11"></polygon><text class="e-label" x="1244" y="668" text-anchor="start" style="--i: 11">Ні</text><path class="e e-main" d="M1134 580 L1088 580" pathLength="1" style="--i: 12"></path><polygon class="e e-main e-head" points="1088,580 1099,574.5 1099,585.5" style="--i: 12"></polygon><text class="e-label" x="1111" y="564" text-anchor="middle" style="--i: 12">Так</text><path class="e e-main" d="M912 580 L856 580" pathLength="1" style="--i: 13"></path><polygon class="e e-main e-head" points="856,580 867,574.5 867,585.5" style="--i: 13"></polygon><path class="e e-main" d="M664 580 L618 580" pathLength="1" style="--i: 14"></path><polygon class="e e-main e-head" points="618,580 629,574.5 629,585.5" style="--i: 14"></polygon><text class="e-label" x="641" y="564" text-anchor="middle" style="--i: 14">Так</text><path class="e e-back" d="M760 644 L760 740 L300 740 L300 228" pathLength="1" style="--i: 15"></path><polygon class="e e-back e-head" points="300,228 305.5,239 294.5,239" style="--i: 15"></polygon><text class="e-label" x="530" y="726" text-anchor="middle" style="--i: 15">Ні: ввести все знову з нової точки відправлення</text><text class="e-note" x="776" y="110" text-anchor="start">Не помічає, що час не змінився</text><text class="e-note" x="1000" y="652" text-anchor="middle">Пропускає коротку пересадку</text><text class="e-note" x="1000" y="674" text-anchor="middle">Потяг запізнюється</text><text class="e-note" x="1000" y="696" text-anchor="middle">Усе йде добре</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="6.00s" begin="indefinite" fill="freeze" path="M95 190 L520 190 L520 330 L720 330 L720 190 L1230 190 L1230 580 L520 580"></animateMotion></circle></svg>
+              <div class="fvc-node t-start" style="--x: 95; --y: 190; --nw: 150; --i: 0"><span>Відкриває застосунок</span></div><div class="fvc-node t-action" style="--x: 300; --y: 190; --i: 1"><span>Вводить звідки й куди</span></div><div class="fvc-node t-decision" style="--x: 520; --y: 190; --i: 2"><span>Дата й час відправлення?</span></div><div class="fvc-node t-action is-side" style="--x: 520; --y: 60; --i: 3"><span>Змінює дату</span></div><div class="fvc-node t-action" style="--x: 520; --y: 330; --i: 4"><span>Залишає автоматично встановлені дату й час</span></div><div class="fvc-node t-system" style="--x: 760; --y: 190; --i: 5"><span>Отримує список маршрутів</span></div><div class="fvc-node t-decision" style="--x: 990; --y: 190; --i: 6"><span>Час правильний?</span></div><div class="fvc-node t-action is-side" style="--x: 990; --y: 330; --i: 7"><span>Змінює час і запускає новий пошук</span></div><div class="fvc-node t-action" style="--x: 1230; --y: 190; --i: 8"><span>Переглядає й порівнює маршрути</span></div><div class="fvc-node t-decision" style="--x: 1230; --y: 580; --i: 9"><span>Пересадки й тип транспорту зрозумілі?</span></div><div class="fvc-node t-risk is-side" style="--x: 1230; --y: 720; --nw: 250; --i: 10"><span>Поїздка може піти не так, або мандрівник перевіряє деталі сам</span></div><div class="fvc-node t-action" style="--x: 1000; --y: 580; --i: 11"><span>Вирушає в дорогу</span></div><div class="fvc-node t-decision" style="--x: 760; --y: 580; --i: 12"><span>Встиг на наступну пересадку?</span></div><div class="fvc-node t-end" style="--x: 520; --y: 580; --nw: 196; --i: 13"><span>Дістається місця призначення</span></div>
+            </div>
+            <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Старт</span><b class="fsl-title">Відкриває застосунок</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Вводить звідки й куди</b></span></li><li class="fsl-i t-decision" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Дата й час відправлення?</b><ul class="fl-br" role="list"><li class="is-main"><span>Сьогодні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Залишає як є</span></li><li><span>Інша дата</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Змінює дату, не помічає, що час не змінився</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Залишає автоматично встановлені дату й час</b></span></li><li class="fsl-i t-system" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Система</span><b class="fsl-title">Отримує список маршрутів</b></span></li><li class="fsl-i t-decision" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Час правильний?</b><ul class="fl-br" role="list"><li class="is-main"><span>Так</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Порівнює маршрути</span></li><li><span>Ні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Змінює час і запускає новий пошук</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Переглядає й порівнює маршрути</b></span></li><li class="fsl-i t-decision" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Пересадки й тип транспорту зрозумілі?</b><ul class="fl-br" role="list"><li class="is-main"><span>Так</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Вирушає в дорогу</span></li><li><span>Ні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Поїздка може піти не так, або мандрівник перевіряє деталі сам</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Вирушає в дорогу</b><small class="fsl-note">Пропускає коротку пересадку · Потяг запізнюється · Усе йде добре</small></span></li><li class="fsl-i t-decision" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Встиг на наступну пересадку?</b><ul class="fl-br" role="list"><li class="is-main"><span>Так</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Дістається місця призначення</span></li><li><span>Ні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Вводить усе знову з нової точки відправлення</span></li></ul></span></li><li class="fsl-i t-end" style="--i: 10"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Кінець</span><b class="fsl-title">Дістається місця призначення</b></span></li></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="redesign" aria-labelledby="redesign-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · Редизайн</span></p>
+          <h2 class="h2" id="redesign-title" data-split>Редизайн, <em>у процесі</em></h2>
+        </div>
+        <p class="section-note" data-rise>Дослідження й тестування завершено, редизайн – ні. Поки перероблено три екрани, кожен відповідає на проблему з тестування. Жоден із них ще не тестувався.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>3</strong><span>екрани, перероблені на цей момент: пошук, список маршрутів і деталі з’єднання</span></li>
+          <li class="bt bt-wide bt-note bt-text"><b>У процесі</b><span>Ще не тестувалося. Далі – тестування прототипу з мандрівниками.</span></li>
+          <li class="bt bt-text"><b>Фільтри поїздки</b><span>дата й час в одному сценарії, додаткові налаштування в окремому блоці</span></li>
+          <li class="bt bt-text"><b>Бейджі маршрутів</b><span>Cheapest, Fewest transfers, Fastest, і вони поєднуються</span></li>
+          <li class="bt bt-text"><b>Тип пересадки</b><span>на таймлайні, наприклад Bus → Train</span></li>
+          <li class="bt bt-text"><b>Коротка пересадка</b><span>попередження з посиланням на альтернативні маршрути</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib db-ba-sec" aria-labelledby="ba-title">
+      <div class="container">
+        <h3 class="cs-sub" id="ba-title">До і після</h3>
+
+        <div class="ds-canvas db-ba-a">
+          <p class="dsc-hint">Перетягуйте фрейми</p>
+          <div class="ba-board">
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: -2deg"><span class="frame-name">До · Пошук</span><span class="case-plate"><img src="../../assets/figma/db/before-17.png" alt="DB Navigator зараз: пошук з датою, пасажирами й велосипедами, опціями та показом найшвидшого з’єднання окремими рядками" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: 1.5deg"><span class="frame-name">Після · Пошук</span><span class="case-plate"><img src="../../assets/figma/db/after-17.png" alt="Редизайн: From, To і одне поле Date та рядок Trip filters з See more options" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">01</span>
+                <h4>Пошук і фільтри поїздки</h4>
+                <dl>
+                  <div><dt>Що змінилося</dt><dd>Я перебудувала логіку фільтрів дати й часу в один сценарій. Коли змінюється дата, час більше не лишається неправильним, а додаткові налаштування переїхали в окремий блок Trip filters.</dd></div>
+                  <div><dt>Що це має змінити</dt><dd>Люди швидше знаходять потрібний маршрут, рідше повертаються до фільтрів і краще розуміють екран, з меншою кількістю помилок і меншим навантаженням.</dd></div>
+                  <div class="ba-from"><dt>З тестування</dt><dd>Коли змінювалася дата, час лишався, і його доводилося вводити знову.</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: 1.5deg"><span class="frame-name">До · Список маршрутів</span><span class="case-plate"><img src="../../assets/figma/db/before-19.png" alt="DB Navigator зараз: з’єднання з Гахенбурга до Берліна, кожне з часом, пересадками, потягами й ціною" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: -1.5deg"><span class="frame-name">Після · Список маршрутів</span><span class="case-plate"><img src="../../assets/figma/db/after-19.png" alt="Редизайн: бейджі Cheapest, Fewest transfers і Fastest на з’єднаннях, Trip filters угорі" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">02</span>
+                <h4>Список маршрутів</h4>
+                <dl>
+                  <div><dt>Що змінилося</dt><dd>Категорії маршрутів прямо в результатах: Cheapest, Fewest transfers і Fastest. Вони показуються як бейджі на маршрутах і можуть поєднуватися, тож головну перевагу кожного варіанта видно без відкриття фільтрів.</dd></div>
+                  <div><dt>Що це має змінити</dt><dd>Маршрути швидше порівнювати, а їхні відмінності зрозумілі без ручного перебору кожного параметра; вибір простіший і потребує менше повернень до фільтрів.</dd></div>
+                  <div class="ba-from"><dt>З тестування</dt><dd>Було незрозуміло, чим відрізняються потяги і наскільки надійний кожен варіант.</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: -1deg"><span class="frame-name">До · Деталі з’єднання</span><span class="case-plate"><img src="../../assets/figma/db/before-18.png" alt="DB Navigator зараз: деталі з’єднання з пересадкою 4 хвилини, позначеною лише як «Пересадка»" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: 2deg"><span class="frame-name">Після · Деталі з’єднання</span><span class="case-plate"><img src="../../assets/figma/db/after-18.png" alt="Редизайн: смуга Tight transfer з View alternatives і типи пересадок на кшталт Bus to Train на таймлайні" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">03</span>
+                <h4>Деталі з’єднання</h4>
+                <dl>
+                  <div><dt>Що змінилося</dt><dd>Зрозуміла підказка про тип кожної пересадки на таймлайні, наприклад Bus → Train, і попередження про коротку пересадку з посиланням на альтернативні маршрути.</dd></div>
+                  <div><dt>Що це має змінити</dt><dd>Мандрівники заздалегідь знають, що чекає на кожній пересадці, менше нервують і краще оцінюють ризики. Маршрут стає прозорішим, застосунку легше довіряти, а несподіванок у дорозі менше.</dd></div>
+                  <div class="ba-from"><dt>З тестування</dt><dd>Пересадки здавалися надто короткими й лякали, особливо на незнайомих вокзалах.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Результат</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Де зараз <em>проєкт</em></h2>
+        </div>
+        <p class="section-note" data-rise>Дослідження, тестування й аналіз завершено. Редизайн розпочато, і його ще не тестували.</p>
+      </div>
+
+      <div class="container">
+        <div class="board is-three" data-stagger>
+          <div class="board-col bc-done">
+            <p class="bc-head">Зроблено <span>5</span></p>
+            <ul role="list"><li>Чотири гіпотези</li><li>Конкурентний аналіз трьох застосунків</li><li>Юзабіліті-тестування з двома учасниками</li><li>Профіль клієнта й карта шляху</li><li>User flow тестової поїздки</li></ul>
+          </div>
+          <div class="board-col bc-next">
+            <p class="bc-head">У процесі <span>1</span></p>
+            <ul role="list"><li>Редизайн: поки пошук, список маршрутів і деталі з’єднання</li></ul>
+          </div>
+          <div class="board-col bc-goal">
+            <p class="bc-head">Далі</p>
+            <ul role="list"><li>Протестувати редизайн у прототипі</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Чотири пріоритети редизайну</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">В обох сесіях упевненість залежала не лише від часу в дорозі: учасникам потрібно було розуміти налаштування, оцінювати з’єднання й знати, що робити, коли маршрут змінюється. Наступний крок – протестувати ці напрями в прототипі й перевірити, чи помічають мандрівники ризиковане з’єднання, чи можуть виправити пошук і продовжити поїздку після затримки.</p>
+              <p class="end-statement">Далі: тестування прототипу <em>з мандрівниками</em></p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Зрозуміліша інформація про пересадки</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Видимі налаштування пошуку</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Зрозумілі позначки транспорту</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>Альтернативи під рукою</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Інші кейси</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="mayak.html"><span class="mini-thumb"><img src="../../assets/img/cover-mayak.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Mayak</span><span class="mini-sub">Багатомовна емоційна підтримка для іммігрантів</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="roomroots.html"><span class="mini-thumb"><img src="../../assets/img/cover-roomroots.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">RoomRoots</span><span class="mini-sub">Підбір рослин за допомогою ШІ</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Сайт у редакційному стилі для ремісничої пекарні</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Живу в Гахенбурзі, Німеччина</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Проєктуймо для <em>реальних потреб</em></h2>
+          <p class="contact-note" data-rise>Шукаю роботу UX/UI-дизайнерки в Німеччині. Напишіть мені на email, зателефонуйте або напишіть у LinkedIn чи Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="Email"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Телефон</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Номер телефону"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Соцмережі</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI-дизайн" width="187" height="89">
+          <p>UX/UI-дизайнерка в Німеччині: дослідження, user flow, прототипи та дизайн-системи.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Меню</span></p>
+          <nav class="footer-nav" aria-label="Нижнє меню">
+            <a href="../index.html#work">Проєкти</a>
+            <a href="../index.html#approach">Як я працюю</a>
+            <a href="#contact">Контакти</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Мова: українська">
+                <img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>UA</span><img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="../../cases/db-navigator.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="../../de/cases/db-navigator.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="db-navigator.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Соцмережі</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../../assets/vendor/gsap.min.js" defer></script>
+  <script src="../../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../../assets/vendor/lenis.min.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

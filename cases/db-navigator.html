@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/db-navigator.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/db-navigator.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <title>DB Navigator, an unsolicited redesign of the journey planner · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI case study by Kateryna Ponomarova: an unsolicited redesign concept for DB Navigator, from four hypotheses, a competitive analysis and usability testing with two participants to a journey map, a user flow and the first redesigned screens. The redesign is in progress.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="DB Navigator, an unsolicited redesign of the journey planner · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI case study by Kateryna Ponomarova: an unsolicited redesign concept for DB Navigator, from four hypotheses, a competitive analysis and usability testing with two participants to a journey map, a user flow and the first redesigned screens. The redesign is in progress.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/cases/db-navigator.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page case-db">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Back to all projects">
+        <img src="../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Main" data-nav>
+        <a href="../index.html#work">Projects</a>
+        <a href="../index.html#approach">How I work</a>
+        <a href="#contact">Contact</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Language: English">
+            <img src="../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>EN</span>
+            <img class="lang-chev" src="../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="db-navigator.html" translate="no" lang="en" hreflang="en" aria-current="true" data-code="EN" aria-label="English"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="../de/cases/db-navigator.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="../ua/cases/db-navigator.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Let’s connect</span>
+          <img src="../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Let’s connect</span>
+          <img src="../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI case study · Concept work</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>DB Navigator</span></h1>
+          <p class="cs-promise" data-hero-in>An unsolicited redesign of Deutsche Bahn’s journey planner</p>
+          <p class="cs-lead" data-hero-in>DB Navigator is Deutsche Bahn’s app for planning routes, buying tickets and finding the way on trains and public transport. In this independent case study I explored how its booking could become clearer, more predictable and easier to use. The research and testing are done; the redesign is in progress.</p>
+          <ul class="cs-tags" role="list" aria-label="What I did" data-hero-in>
+            <li>UX research</li><li>UX analysis</li><li>Usability testing</li><li>User flows</li><li>CJM</li><li>UI design</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Project type</span><span class="f-val">Unsolicited redesign</span></span></li>
+            <li><img src="../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Platform</span><span class="f-val">Mobile app</span></span></li>
+            <li><img src="../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Role</span><span class="f-val">UX/UI designer</span></span></li>
+            <li><img src="../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Scope</span><span class="f-val">Research, testing, redesign</span></span></li>
+          </ul>
+          <p class="cs-disclaimer" data-hero-in>An independent concept. Deutsche Bahn AG did not commission it and is not connected with it.</p>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">DB Navigator · Redesign in progress</span>
+          <span class="case-plate"><img src="../assets/img/db/hero-mockup.webp" alt="Two redesigned DB Navigator screens on tilted phones: the search with a single date field and a Trip filters block, and the connection details with a tight transfer warning and the transfer type Bus to Train" width="1779" height="2001"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>The project in numbers</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>4</strong><span>initial hypotheses</span></li>
+          <li class="glance"><strong>3</strong><span>apps compared</span></li>
+          <li class="glance"><strong>2</strong><span>test participants</span></li>
+          <li class="glance"><strong>6</strong><span>journey map stages</span></li>
+          <li class="glance"><strong>4</strong><span>decision points in the flow</span></li>
+          <li class="glance"><strong>3</strong><span>screens redesigned so far</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · The problem</span></p>
+          <h2 class="h2" id="problem-title" data-split>Delays, tight transfers and no <em>clear hints</em></h2>
+        </div>
+        <p class="section-note" data-rise>During real trips, people regularly face uncertainty: delayed trains, minimal transfer times and a lack of clear guidance. I turned this into four hypotheses about DB Navigator, and they became the basis for usability testing.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Four hypotheses, all confirmed in testing</h3>
+        <ol class="hypo-grid is-four" role="list" data-stagger>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H1</span><span class="chip-ok">Confirmed</span></div>
+            <p class="hc-claim">The app doesn’t offer an alternative route when a train is delayed or a transfer is missed.</p>
+            <p class="hc-proof"><span class="hc-label">In testing</span>One participant saw a delay as a threat to the whole route and didn’t know what to do next; the other got no alternative from the app and changed the route himself.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H2</span><span class="chip-ok">Confirmed</span></div>
+            <p class="hc-claim">The app doesn’t draw attention to critically short transfers.</p>
+            <p class="hc-proof"><span class="hc-label">In testing</span>A three-minute change at an unfamiliar station made one participant doubt she could make it; the other was unsure about the transfers from the start.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H3</span><span class="chip-ok">Confirmed</span></div>
+            <p class="hc-claim">Route filters are inconvenient and illogically built.</p>
+            <p class="hc-proof"><span class="hc-label">In testing</span>When the date changed, the time stayed as it was. Neither participant was warned, and fixing it meant going back to the filters.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H4</span><span class="chip-ok">Confirmed</span></div>
+            <p class="hc-claim">Train labels are unclear and don’t help people find their way along the route.</p>
+            <p class="hc-proof"><span class="hc-label">In testing</span>Neither could tell the trains apart, or whether the next leg was a train or a bus.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="market" aria-labelledby="market-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Competitive analysis</span></p>
+          <h2 class="h2" id="market-title" data-split>Search, list and details in <em>three apps</em></h2>
+        </div>
+        <p class="section-note" data-rise>I compared route search, the route list and the route details in FlixBus, Trainline and Ukrzaliznytsia. Each is simpler to start with. DB Navigator gives more detail and control, but it is harder to read.</p>
+      </div>
+
+      <div class="container">
+        <div class="rival-slider" data-slider data-rise>
+          <div class="rs-bar">
+            <div class="rs-names" role="group" aria-label="Choose an app">
+              <button type="button" class="rs-name" data-go="0" aria-current="true">FlixBus</button>
+              <button type="button" class="rs-name" data-go="1">Trainline</button>
+              <button type="button" class="rs-name" data-go="2">Ukrzaliznytsia</button>
+            </div>
+            <div class="rs-controls">
+              <span class="rs-count" aria-hidden="true"><b data-count>01</b> / 03</span>
+              <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Previous app"><img src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              <button type="button" class="rs-arrow" data-next aria-label="Next app"><img src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+            </div>
+          </div>
+          <div class="rs-track" data-track tabindex="0" aria-label="Apps compared, swipe or use the arrows" aria-roledescription="carousel">
+            <article class="rs-slide" aria-roledescription="slide" aria-label="1 of 3: FlixBus / FlixTrain">
+              <div class="rs-text">
+                <h3>FlixBus / FlixTrain</h3>
+                <dl>
+                  <div><dt>Route search</dt><dd>A quick, clear start without extra steps. Simpler than DB, but less flexible for complex trips.</dd></div>
+                  <div><dt>Route list</dt><dd>The cards are easy to read and what matters is visible at once. Transfer information is less visible than in DB.</dd></div>
+                  <div><dt>Route details</dt><dd>The route is laid out in one line and reads without effort, with less depth and control of detail than DB Navigator.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../assets/img/db/flix-0.webp" alt="FlixBus search: from Siegen to Berlin, date and passengers" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/flix-1.webp" alt="FlixBus route list: FlixBus and FlixTrain cards with times, transfers and prices" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/flix-2.webp" alt="FlixBus route details: the stops and the transfer laid out in one line" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="slide" aria-label="2 of 3: Trainline">
+              <div class="rs-text">
+                <h3>Trainline</h3>
+                <dl>
+                  <div><dt>Route search</dt><dd>Price and time stand out at once. Easier to decide than in DB, but with less context about transfers.</dd></div>
+                  <div><dt>Route list</dt><dd>The scenario is split into logical steps, and people move through them in order.</dd></div>
+                  <div><dt>Route details</dt><dd>The choice rests on clear differences between the options. DB’s information goes deeper, but it is harder to take in.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../assets/img/db/tl-1.webp" alt="Trainline search: where, when and passengers" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/tl-0.webp" alt="Trainline route list from Siegen to Berlin with prices and the number of changes" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/tl-2.webp" alt="Trainline ticket options: outbound trip and classes for each leg" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="slide" aria-label="3 of 3: Ukrzaliznytsia">
+              <div class="rs-text">
+                <h3>Ukrzaliznytsia</h3>
+                <dl>
+                  <div><dt>Route search</dt><dd>The search starts at once and is limited to basic parameters: a simple scenario with no route to set up. Less freedom than in DB.</dd></div>
+                  <div><dt>Route list</dt><dd>People move through it in order.</dd></div>
+                  <div><dt>Route details</dt><dd>Choosing a seat visually reduces uncertainty: the travel conditions and free seats are clear at once.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../assets/img/db/uz-0.webp" alt="Ukrzaliznytsia search: from Kyiv to Odesa, date and the Find button" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/uz-1.webp" alt="Ukrzaliznytsia train list with labels such as cheapest and fastest" width="1241" height="2555" loading="lazy">
+                <img src="../assets/img/db/uz-2.webp" alt="Ukrzaliznytsia seat choice on a carriage plan" width="1241" height="2555" loading="lazy">
+              </div>
+            </article>
+          </div>
+          <div class="rs-dots" aria-hidden="true"><i data-dot></i><i data-dot></i><i data-dot></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Usability testing</span></p>
+          <h2 class="h2" id="research-title" data-split>What testing <em>revealed</em></h2>
+        </div>
+        <p class="section-note" data-rise>Two participants planned a real trip in DB Navigator: journeys with transfers, changes to the search settings and replanning after delays. Their actions and comments showed where the route, the settings or the next step were hard to understand.</p>
+      </div>
+
+      <div class="container">
+        <div class="db-method">
+          <div class="chart-card db-why" data-rise>
+            <h3 class="cs-sub">Why usability testing</h3>
+            <p class="db-why-lead">It shows how people actually plan a route, not what they assume or say in theory. Problems surface at the moment they happen, without the distortion of memory.</p>
+            <dl class="aud-list">
+              <div><dt>It captured</dt><dd><ul class="aud-types" role="list"><li>how people build a route</li><li>where they run into difficulties</li><li>where they start to doubt their choice</li></ul></dd></div>
+            </dl>
+          </div>
+          <div class="db-task" data-rise>
+            <div class="cs-quotes-head">
+              <h3 class="cs-sub">The task</h3>
+              <p class="cs-caption">Translated from Russian</p>
+            </div>
+            <p class="db-task-context">A real long-distance trip with several route options and possible transfers: people go by travel time, train types and how convenient the route is.</p>
+            <p class="db-task-text">“Plan a trip from Hachenburg to Berlin for today. Choose the route that seems best to you, and decide on the trip using only what the interface shows.”</p>
+            <ol class="insight-list" role="list">
+              <li><span class="il-num">1</span><div><h4>Plan the trip</h4></div></li>
+              <li><span class="il-num">2</span><div><h4>Study the route options</h4></div></li>
+              <li><span class="il-num">3</span><div><h4>Weigh up the options offered</h4></div></li>
+              <li><span class="il-num">4</span><div><h4>Choose a suitable route</h4></div></li>
+              <li><span class="il-num">5</span><div><h4>Decide on the trip</h4></div></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Four findings, with the recordings</h3>
+          <div class="flow-tabs db-finds" data-tabs>
+            <div class="ft-list" role="tablist" aria-label="Findings from testing">
+              <button type="button" class="ft-tab" id="tf-1-tab" role="tab" aria-controls="tf-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Transfers</span></button>
+              <button type="button" class="ft-tab" id="tf-2-tab" role="tab" aria-controls="tf-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">Filters and trains</span></button>
+              <button type="button" class="ft-tab" id="tf-3-tab" role="tab" aria-controls="tf-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Route changes</span></button>
+              <button type="button" class="ft-tab" id="tf-4-tab" role="tab" aria-controls="tf-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Delays and clarity</span></button>
+            </div>
+
+            <div class="ft-panel" id="tf-1-panel" role="tabpanel" aria-labelledby="tf-1-tab" tabindex="0">
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: -1.5deg">
+                  <span class="frame-name">Recording · Participant 1</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../assets/img/db/test-1.jpg" aria-label="Screen recording from the session: searching for connections from Hachenburg to Berlin"><source src="../assets/img/db/test-1.mp4" type="video/mp4"></video></span><img class="db-frame" src="../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Play</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Participant 1 · Maria</p>
+                  <h4>Short transfers create uncertainty</h4>
+                  <dl class="db-did">
+                    <div><dt>What she did</dt><dd>Planned a route with transfers and judged the transfer times and how reliable the trip was.</dd></div>
+                    <div><dt>Where it got hard</dt><dd>Short transfers between different routes, and not knowing what a delay meant for the trip.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>“It always shows a three-minute transfer. How am I supposed to make it if I don’t know the station?”</p></blockquote></li>
+                    <li><blockquote><p>“So many transfers scare me.”</p></blockquote></li>
+                    <li><blockquote><p>“It’s a stressful situation.”</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Confirms H1</dt><dd>She took a delay as a threat to the whole route and didn’t know what she could do next or how reliable the route still was.</dd></div>
+                    <div><dt>Confirms H2</dt><dd>She doubted she could physically make the transfer; not knowing the station made her anxious even when the time was enough on paper.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-2-panel" role="tabpanel" aria-labelledby="tf-2-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: 1.5deg">
+                  <span class="frame-name">Recording · Participant 1</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../assets/img/db/test-2.jpg" aria-label="Screen recording from the session: changing the search settings and comparing trains"><source src="../assets/img/db/test-2.mp4" type="video/mp4"></video></span><img class="db-frame" src="../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Play</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Participant 1 · Maria</p>
+                  <h4>Filters and labels lack clarity</h4>
+                  <dl class="db-did">
+                    <div><dt>What she did</dt><dd>Changed the date and time of the trip, corrected the route after a mistake and compared the trains.</dd></div>
+                    <div><dt>Where it got hard</dt><dd>A filter error when changing the date, the logic of the filters, and how the trains differ.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>“I missed the filters in the first search.”</p></blockquote></li>
+                    <li><blockquote><p>“Turns out you can even mark that you’re taking a bike.”</p></blockquote></li>
+                    <li><blockquote><p>“It’s not always clear to me what kind of transport I’ll be on.”</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Confirms H3</dt><dd>She made a mistake when changing the settings. The app didn’t warn her that the date and time didn’t fit, and fixing it meant going back and setting everything up again.</dd></div>
+                    <div><dt>Confirms H4</dt><dd>She couldn’t tell the train types apart: the labels didn’t say what kind of transport it was and didn’t help her decide.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-3-panel" role="tabpanel" aria-labelledby="tf-3-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: -1deg">
+                  <span class="frame-name">Recording · Participant 2</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 1280; --sx: 499"><span class="db-screen"><video muted loop playsinline preload="none" poster="../assets/img/db/test-3.jpg" aria-label="Screen recording from the session: changing the date of a journey with transfers"><source src="../assets/img/db/test-3.mp4" type="video/mp4"></video></span><img class="db-frame" src="../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Play</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Participant 2 · Daniel</p>
+                  <h4>Changing plans takes extra steps</h4>
+                  <dl class="db-did">
+                    <div><dt>What he did</dt><dd>Changed the trip date in the filters, planned a route with transfers and went back to the filters to fix a mistake.</dd></div>
+                    <div><dt>Where it got hard</dt><dd>After the date changed, the time stayed at the current one, so the route was wrong and he had to go back to the settings by hand.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>“Trains are never on time, especially when you live in Hachenburg.”</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Confirms H1</dt><dd>The app offered him no alternative: to continue the trip, he changed the route himself.</dd></div>
+                    <div><dt>Confirms H2</dt><dd>He was unsure about the route with transfers from the start.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="ft-panel" id="tf-4-panel" role="tabpanel" aria-labelledby="tf-4-tab" tabindex="0" hidden>
+              <div class="db-find">
+                <div class="case-media db-rec" data-rec style="--r: 1deg">
+                  <span class="frame-name">Recording · Participant 2</span>
+                  <span class="case-plate"><span class="db-device" style="--vw: 500; --sx: 108"><span class="db-screen"><video muted loop playsinline preload="none" poster="../assets/img/db/test-4.jpg" aria-label="Screen recording from the session: setting the date and time of departure"><source src="../assets/img/db/test-4.mp4" type="video/mp4"></video></span><img class="db-frame" src="../assets/img/db/phone-frame.png" alt="" width="564" height="1136"></span><button type="button" class="db-play" data-rec-toggle>Play</button></span>
+                </div>
+                <div class="db-find-text">
+                  <p class="sm-k">Participant 2 · Daniel</p>
+                  <h4>Delays make the next step unclear</h4>
+                  <dl class="db-did">
+                    <div><dt>What he did</dt><dd>Left the route when the train was delayed, built a new one from where he was, and did this again at every delay.</dd></div>
+                    <div><dt>Where it got hard</dt><dd>No way to tell whether the route was still valid, when he would arrive, or how long the delay might be.</dd></div>
+                  </dl>
+                  <ul class="db-quotes" role="list">
+                    <li><blockquote><p>“I’m never sure I’ll get there on time.”</p></blockquote></li>
+                    <li><blockquote><p>“It would help to know at least a rough time window.”</p></blockquote></li>
+                  </ul>
+                  <dl class="db-why-it">
+                    <div><dt>Confirms H3</dt><dd>The filters let him make a mistake when changing the date, with no warning.</dd></div>
+                    <div><dt>Confirms H4</dt><dd>At a change of transport it wasn’t always clear whether to wait for a train or walk to a bus; the change was shown unclearly.</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">What testing showed</h3>
+          <p class="db-showed">People plan trips with uncertainty and anxiety, most of all around delays, short transfers and changing route conditions.</p>
+          <ul class="notes is-three" role="list" data-stagger>
+            <li class="note"><p>A minimal transfer time without hints feels like an unsafe choice.</p></li>
+            <li class="note"><p>Without clear emphasis, people trust the route less.</p></li>
+            <li class="note"><p>Labels for a change of transport don’t tell people what to do next.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · Users</span></p>
+          <h2 class="h2" id="users-title" data-split>Who I designed <em>for</em></h2>
+        </div>
+        <p class="section-note" data-rise>A customer profile, and a journey map of the same trip from opening the app to the destination: what people do, feel and need at each stage.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Customer profile</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo is-square cs-rock"><img src="../assets/img/db/persona.webp" alt="Portrait generated with AI for the customer profile" width="1254" height="1254" loading="lazy"><span class="ai-note">Portrait generated with AI</span></div>
+          <div class="plist">
+            <h4>Pain points</h4>
+            <ul role="list">
+              <li>Short transfers make me anxious</li>
+              <li>With delays, the route quickly goes out of date</li>
+              <li>When I change transport, it isn’t always clear whether to wait for a train or walk to a bus</li>
+              <li>The date and time filters easily lead to mistakes</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Needs</h4>
+            <ul role="list">
+              <li>To understand whether I’ll make it there in time</li>
+              <li>To see the risks of a transfer in advance</li>
+              <li>To know what to do when a train is delayed</li>
+              <li>A guide to the arrival time, even a rough one</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Goals</h4>
+            <ul role="list">
+              <li>Travel to my family at weekends without worrying</li>
+              <li>Plan trips to events without constant stress</li>
+              <li>Feel in control of the route, even with delays</li>
+              <li>Know roughly when I’ll arrive instead of guessing until the last moment</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>About me<span class="persona-tag">24 · Hairdressing · Hachenburg</span></figcaption>
+            <blockquote><p>“I live in Germany and work in hairdressing. I often travel to other cities: my family lives in another region, so I go to see them almost every weekend. I also regularly travel to festivals, markets and events, most often in Cologne. Public transport is my main way of getting around.”</p></blockquote>
+          </figure>
+          <figure class="about-me db-scn">
+            <figcaption>Scenario<span class="persona-tag">Translated from Russian</span></figcaption>
+            <blockquote><p>“I plan a trip to another city in DB Navigator, to see my family or go to an event. I choose a route with transfers and check the times. On the way the train is delayed and the route is no longer valid. I leave it and build a new one from where I am. When I change between transport, it isn’t always clear where to go next. In the end I travel feeling unsure, just trying to get there.”</p></blockquote>
+          </figure>
+        </div>
+
+        <div class="cs-block cjm">
+          <div class="cs-quotes-head">
+            <h3 class="cs-sub">Customer journey map</h3>
+            <p class="cs-caption">From opening the app to the destination, translated from Russian</p>
+          </div>
+          <div class="cjm-card" data-journey style="--n: 6">
+            <div class="cj-curve">
+              <span class="cj-band" data-band aria-hidden="true"></span>
+              <svg class="cj-line" viewBox="0 0 1100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="91.67,32 275,50 458.33,68 641.67,68 825,86 1008.33,14"></polyline></svg>
+              <div class="cj-pts" role="group" aria-label="Go to a stage">
+                <button type="button" class="cj-pt" data-tone="up" data-go="0" style="--i: 0; --lv: 1" aria-current="true" aria-label="Stage 01, Opens the app: ready"><span>01</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="1" style="--i: 1; --lv: 0" aria-label="Stage 02, Enters where from and where to: doubtful"><span>02</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="2" style="--i: 2; --lv: -1" aria-label="Stage 03, Opens the trip filters: puzzled"><span>03</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="3" style="--i: 3; --lv: -1" aria-label="Stage 04, Looks through the route list: unsure"><span>04</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="4" style="--i: 4; --lv: -2" aria-label="Stage 05, Opens the chosen route: anxious"><span>05</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="5" style="--i: 5; --lv: 2" aria-label="Stage 06, Follows the route to the destination: relieved"><span>06</span></button>
+              </div>
+            </div>
+            <div class="cj-bar">
+              <p class="cj-legend" aria-hidden="true"><span class="lg-up">Better</span><span class="lg-mid">Neutral</span><span class="lg-down">Harder</span></p>
+              <div class="rs-controls">
+                <span class="rs-count" aria-hidden="true"><b data-count>01–04</b> / 06</span>
+                <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Previous stage"><img src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+                <button type="button" class="rs-arrow" data-next aria-label="Next stage"><img src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              </div>
+            </div>
+            <div class="cj-scroll" data-track tabindex="0" role="region" aria-label="Customer journey map, 6 stages, scroll sideways">
+              <ol class="cj-board" role="list">
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">01</span><h4>Opens the app</h4><span class="cj-word">Ready</span></div>
+                  <p class="cj-story">Gets ready for a trip and opens DB Navigator.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Launches the app.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>The app’s main navigation</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>No problems here.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“It’s a stressful thing.”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>Make the home screen with the search simpler and easier to reach.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">02</span><h4>Enters where from and where to</h4><span class="cj-word">Doubtful</span></div>
+                  <p class="cj-story">Enters the start and the end of the route.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Taps “From” and types an address or station, then does the same in “To”.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>From and To fields, autocomplete, the search button</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>No certainty that the route can be made on time at all.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“I’m never sure I’ll get there on time.”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>Highlight the simplest and fastest routes.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">03</span><h4>Opens the trip filters</h4><span class="cj-word">Puzzled</span></div>
+                  <p class="cj-story">Looks for a way to keep only routes with fewer transfers and a clearer logic.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Opens the filter screen and sets the departure time.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Filters button, filter screen, Apply and Reset</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>When the date changes, the time stays and has to be entered again.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“At first I missed the filters completely…”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>Prevent errors and entering the settings twice.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">04</span><h4>Looks through the route list</h4><span class="cj-word">Unsure</span></div>
+                  <p class="cj-story">Compares the route options in the list.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Opens the options and looks at the times and transfers.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Route list, transfer marks and transport types</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>Unclear how the trains differ and how reliable each option is.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“I didn’t get how these trains differ from each other.”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>A separate block for the next leg: transport type and transfer.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">05</span><h4>Opens the chosen route</h4><span class="cj-word">Anxious</span></div>
+                  <p class="cj-story">Compares routes, watching the times and transfers.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Opens the route details and checks the order of the trip.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Transfer blocks with times, platform information</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>Transfers are too short and scary, especially at unfamiliar stations.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“How can I make it in 3 minutes if I don’t know this station?”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>Show the next departures when there is a delay.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">06</span><h4>Follows the route to the destination</h4><span class="cj-word">Relieved</span></div>
+                  <p class="cj-story">On the way, tries to keep checking the route.</p>
+                  <dl class="cj-box"><dt>Doing</dt><dd>Opens the route during the trip and checks the current leg.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Active route or trip screen</dd></dl>
+                  <dl class="cj-box is-pain"><dt>In the way</dt><dd>With delays, the route goes out of date.</dd></dl>
+                  <dl class="cj-box is-thought"><dt>Thinks</dt><dd>“If the train is late, the route is no longer valid.”</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Could be better</dt><dd>Send a notification when the route changes.</dd></dl>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · User flow</span></p>
+          <h2 class="h2" id="flow-title" data-split>Where route planning <em>breaks down</em></h2>
+        </div>
+        <p class="section-note" data-rise>The test trip as a user flow, from opening the app to the destination. The notes mark what participants missed, and a missed transfer sends the traveller back to the start.</p>
+      </div>
+
+      <div class="container">
+        <div class="fv" data-flow="trip">
+          <div class="fvc">
+            <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Start and end</li><li class="lg t-action"><span></span>Action</li><li class="lg t-system"><span></span>System</li><li class="lg t-decision"><span></span>Decision</li><li class="lg t-risk"><span></span>Risk</li><li class="lg lg-main"><span></span>Main path</li><li class="lg lg-back"><span></span>Way back</li></ul>
+            <div class="fvc-board" aria-hidden="true" style="--vbx: 0; --vby: 0; --vbw: 1500; --vbh: 780">
+              <svg class="fvc-svg" viewBox="0 0 1500 780" focusable="false"><path class="e e-main" d="M170 190 L212 190" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="212,190 201,195.5 201,184.5" style="--i: 0"></polygon><path class="e e-main" d="M388 190 L424 190" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="424,190 413,195.5 413,184.5" style="--i: 1"></polygon><path class="e" d="M520 126 L520 98" pathLength="1" style="--i: 2"></path><polygon class="e e-head" points="520,98 525.5,109 514.5,109" style="--i: 2"></polygon><text class="e-label" x="534" y="118" text-anchor="start" style="--i: 2">Another date</text><path class="e e-main" d="M520 254 L520 292" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="520,292 514.5,281 525.5,281" style="--i: 3"></polygon><text class="e-label" x="534" y="278" text-anchor="start" style="--i: 3">Today</text><path class="e" d="M608 60 L760 60 L760 152" pathLength="1" style="--i: 4"></path><polygon class="e e-head" points="760,152 754.5,141 765.5,141" style="--i: 4"></polygon><path class="e e-main" d="M608 330 L720 330 L720 228" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="720,228 725.5,239 714.5,239" style="--i: 5"></polygon><path class="e e-main" d="M848 190 L894 190" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="894,190 883,195.5 883,184.5" style="--i: 6"></polygon><path class="e" d="M990 254 L990 292" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="990,292 984.5,281 995.5,281" style="--i: 7"></polygon><text class="e-label" x="1004" y="278" text-anchor="start" style="--i: 7">No</text><path class="e" d="M902 330 L800 330 L800 228" pathLength="1" style="--i: 8"></path><polygon class="e e-head" points="800,228 805.5,239 794.5,239" style="--i: 8"></polygon><path class="e e-main" d="M1086 190 L1142 190" pathLength="1" style="--i: 9"></path><polygon class="e e-main e-head" points="1142,190 1131,195.5 1131,184.5" style="--i: 9"></polygon><text class="e-label" x="1114" y="174" text-anchor="middle" style="--i: 9">Yes</text><path class="e e-main" d="M1230 228 L1230 516" pathLength="1" style="--i: 10"></path><polygon class="e e-main e-head" points="1230,516 1224.5,505 1235.5,505" style="--i: 10"></polygon><path class="e" d="M1230 644 L1230 682" pathLength="1" style="--i: 11"></path><polygon class="e e-head" points="1230,682 1224.5,671 1235.5,671" style="--i: 11"></polygon><text class="e-label" x="1244" y="668" text-anchor="start" style="--i: 11">No</text><path class="e e-main" d="M1134 580 L1088 580" pathLength="1" style="--i: 12"></path><polygon class="e e-main e-head" points="1088,580 1099,574.5 1099,585.5" style="--i: 12"></polygon><text class="e-label" x="1111" y="564" text-anchor="middle" style="--i: 12">Yes</text><path class="e e-main" d="M912 580 L856 580" pathLength="1" style="--i: 13"></path><polygon class="e e-main e-head" points="856,580 867,574.5 867,585.5" style="--i: 13"></polygon><path class="e e-main" d="M664 580 L618 580" pathLength="1" style="--i: 14"></path><polygon class="e e-main e-head" points="618,580 629,574.5 629,585.5" style="--i: 14"></polygon><text class="e-label" x="641" y="564" text-anchor="middle" style="--i: 14">Yes</text><path class="e e-back" d="M760 644 L760 740 L300 740 L300 228" pathLength="1" style="--i: 15"></path><polygon class="e e-back e-head" points="300,228 305.5,239 294.5,239" style="--i: 15"></polygon><text class="e-label" x="530" y="726" text-anchor="middle" style="--i: 15">No: enter everything again from the new starting point</text><text class="e-note" x="776" y="110" text-anchor="start">Misses that the time didn’t change</text><text class="e-note" x="1000" y="652" text-anchor="middle">Misses a short transfer</text><text class="e-note" x="1000" y="674" text-anchor="middle">The train is late</text><text class="e-note" x="1000" y="696" text-anchor="middle">All goes well</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="6.00s" begin="indefinite" fill="freeze" path="M95 190 L520 190 L520 330 L720 330 L720 190 L1230 190 L1230 580 L520 580"></animateMotion></circle></svg>
+              <div class="fvc-node t-start" style="--x: 95; --y: 190; --nw: 150; --i: 0"><span>Opens the app</span></div><div class="fvc-node t-action" style="--x: 300; --y: 190; --i: 1"><span>Enters where from and where to</span></div><div class="fvc-node t-decision" style="--x: 520; --y: 190; --i: 2"><span>Departure date and time?</span></div><div class="fvc-node t-action is-side" style="--x: 520; --y: 60; --i: 3"><span>Changes the date</span></div><div class="fvc-node t-action" style="--x: 520; --y: 330; --i: 4"><span>Leaves the date and time set automatically</span></div><div class="fvc-node t-system" style="--x: 760; --y: 190; --i: 5"><span>Gets the list of routes</span></div><div class="fvc-node t-decision" style="--x: 990; --y: 190; --i: 6"><span>Is the time right?</span></div><div class="fvc-node t-action is-side" style="--x: 990; --y: 330; --i: 7"><span>Changes the time and starts a new search</span></div><div class="fvc-node t-action" style="--x: 1230; --y: 190; --i: 8"><span>Looks through and compares routes</span></div><div class="fvc-node t-decision" style="--x: 1230; --y: 580; --i: 9"><span>Are the transfers and transport type clear?</span></div><div class="fvc-node t-risk is-side" style="--x: 1230; --y: 720; --nw: 250; --i: 10"><span>The trip may go wrong, or the traveller checks details alone</span></div><div class="fvc-node t-action" style="--x: 1000; --y: 580; --i: 11"><span>Starts the trip</span></div><div class="fvc-node t-decision" style="--x: 760; --y: 580; --i: 12"><span>Made the next transfer?</span></div><div class="fvc-node t-end" style="--x: 520; --y: 580; --nw: 196; --i: 13"><span>Reaches the destination</span></div>
+            </div>
+            <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Start</span><b class="fsl-title">Opens the app</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Enters where from and where to</b></span></li><li class="fsl-i t-decision" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Decision</span><b class="fsl-title">Departure date and time?</b><ul class="fl-br" role="list"><li class="is-main"><span>Today</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Leaves them as set</span></li><li><span>Another date</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Changes the date, misses that the time didn’t change</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Leaves the date and time set automatically</b></span></li><li class="fsl-i t-system" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">System</span><b class="fsl-title">Gets the list of routes</b></span></li><li class="fsl-i t-decision" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Decision</span><b class="fsl-title">Is the time right?</b><ul class="fl-br" role="list"><li class="is-main"><span>Yes</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Compares routes</span></li><li><span>No</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Changes the time and starts a new search</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Looks through and compares routes</b></span></li><li class="fsl-i t-decision" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Decision</span><b class="fsl-title">Are the transfers and transport type clear?</b><ul class="fl-br" role="list"><li class="is-main"><span>Yes</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Starts the trip</span></li><li><span>No</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>The trip may go wrong, or the traveller checks details alone</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Action</span><b class="fsl-title">Starts the trip</b><small class="fsl-note">Misses a short transfer · The train is late · All goes well</small></span></li><li class="fsl-i t-decision" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Decision</span><b class="fsl-title">Made the next transfer?</b><ul class="fl-br" role="list"><li class="is-main"><span>Yes</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Reaches the destination</span></li><li><span>No</span><img src="../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Enters everything again from the new starting point</span></li></ul></span></li><li class="fsl-i t-end" style="--i: 10"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">End</span><b class="fsl-title">Reaches the destination</b></span></li></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="redesign" aria-labelledby="redesign-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · Redesign</span></p>
+          <h2 class="h2" id="redesign-title" data-split>The redesign, <em>in progress</em></h2>
+        </div>
+        <p class="section-note" data-rise>The research and testing are done; the redesign is not. Three screens are redesigned so far, each answering a problem from testing. None of them has been tested yet.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>3</strong><span>screens redesigned so far: search, the route list and connection details</span></li>
+          <li class="bt bt-wide bt-note bt-text"><b>In progress</b><span>Not tested yet. Next comes a prototype test with travellers.</span></li>
+          <li class="bt bt-text"><b>Trip filters</b><span>date and time in one scenario, extra settings in their own block</span></li>
+          <li class="bt bt-text"><b>Route badges</b><span>Cheapest, Fewest transfers, Fastest, and they combine</span></li>
+          <li class="bt bt-text"><b>Transfer type</b><span>in the timeline, for example Bus → Train</span></li>
+          <li class="bt bt-text"><b>Tight transfer</b><span>a warning with a link to alternative routes</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib db-ba-sec" aria-labelledby="ba-title">
+      <div class="container">
+        <h3 class="cs-sub" id="ba-title">Before and after</h3>
+
+        <div class="ds-canvas db-ba-a">
+          <p class="dsc-hint">Drag the frames</p>
+          <div class="ba-board">
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: -2deg"><span class="frame-name">Before · Search</span><span class="case-plate"><img src="../assets/figma/db/before-17.png" alt="DB Navigator today: the search with date, passengers and bicycles, options and show fastest connection as separate rows" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: 1.5deg"><span class="frame-name">After · Search</span><span class="case-plate"><img src="../assets/figma/db/after-17.png" alt="Redesign: From, To and one Date field, and a Trip filters row with See more options" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">01</span>
+                <h4>Search and trip filters</h4>
+                <dl>
+                  <div><dt>What changed</dt><dd>I rebuilt the logic of the date and time filters into one scenario. When the date changes, the time no longer stays wrong, and the extra settings moved into a separate Trip filters block.</dd></div>
+                  <div><dt>What it should change</dt><dd>People reach the right route faster, go back to the filters less often and understand the screen better, with fewer errors and less to think about.</dd></div>
+                  <div class="ba-from"><dt>From testing</dt><dd>When the date changed, the time stayed and had to be entered again.</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: 1.5deg"><span class="frame-name">Before · Route list</span><span class="case-plate"><img src="../assets/figma/db/before-19.png" alt="DB Navigator today: connections from Hachenburg to Berlin, each with times, transfers, trains and a price" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: -1.5deg"><span class="frame-name">After · Route list</span><span class="case-plate"><img src="../assets/figma/db/after-19.png" alt="Redesign: badges Cheapest, Fewest transfers and Fastest on the connections, with Trip filters at the top" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">02</span>
+                <h4>Route list</h4>
+                <dl>
+                  <div><dt>What changed</dt><dd>Route categories right in the results: Cheapest, Fewest transfers and Fastest. They show as badges on the routes and can be combined, so the main advantage of each option is clear without opening the filters.</dd></div>
+                  <div><dt>What it should change</dt><dd>Routes are quicker to compare and their differences clear without sorting through every parameter by hand; choosing is easier and needs fewer trips back to the filters.</dd></div>
+                  <div class="ba-from"><dt>From testing</dt><dd>It was unclear how the trains differ and how reliable each option is.</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div class="ba-row">
+              <div class="case-media ba-f" data-case-frame style="--r: -1deg"><span class="frame-name">Before · Connection details</span><span class="case-plate"><img src="../assets/figma/db/before-18.png" alt="DB Navigator today: connection details with a 4-minute transfer marked only as Transfer" width="564" height="1140" loading="lazy"></span></div>
+              <div class="case-media ba-f is-after" data-case-frame style="--r: 2deg"><span class="frame-name">After · Connection details</span><span class="case-plate"><img src="../assets/figma/db/after-18.png" alt="Redesign: a Tight transfer bar with View alternatives, and transfer types such as Bus to Train in the timeline" width="564" height="1140" loading="lazy"></span></div>
+              <div class="ba-note">
+                <span class="ba-num">03</span>
+                <h4>Connection details</h4>
+                <dl>
+                  <div><dt>What changed</dt><dd>A clear hint about the type of each transfer in the timeline, for example Bus → Train, and a warning about a tight transfer with a link to alternative routes.</dd></div>
+                  <div><dt>What it should change</dt><dd>Travellers know in advance what waits at each transfer, feel less stress and judge the risks better. The route becomes more transparent, the app easier to trust, and surprises on the way less likely.</dd></div>
+                  <div class="ba-from"><dt>From testing</dt><dd>Transfers felt too short and scary, especially at unfamiliar stations.</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Outcome</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Where the project <em>stands</em></h2>
+        </div>
+        <p class="section-note" data-rise>The research, the testing and the analysis are complete. The redesign has started, and it hasn’t been tested yet.</p>
+      </div>
+
+      <div class="container">
+        <div class="board is-three" data-stagger>
+          <div class="board-col bc-done">
+            <p class="bc-head">Done <span>5</span></p>
+            <ul role="list"><li>Four hypotheses</li><li>Competitive analysis of three apps</li><li>Usability testing with two participants</li><li>Customer profile and journey map</li><li>User flow of the test trip</li></ul>
+          </div>
+          <div class="board-col bc-next">
+            <p class="bc-head">In progress <span>1</span></p>
+            <ul role="list"><li>Redesign: search, route list and connection details so far</li></ul>
+          </div>
+          <div class="board-col bc-goal">
+            <p class="bc-head">Next</p>
+            <ul role="list"><li>Test the redesign in a prototype</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Four redesign priorities</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">Across the two sessions, confidence depended on more than travel time: participants needed to understand the settings, judge the connections and know what to do when the route changed. The next step is to test these directions in a prototype and check whether travellers can spot a risky connection, correct their search and continue after a delay.</p>
+              <p class="end-statement">Next: a prototype test <em>with travellers</em></p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Clearer transfer information</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Visible search settings</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Understandable transport labels</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>Alternatives within reach</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>More cases</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="mayak.html"><span class="mini-thumb"><img src="../assets/img/cover-mayak.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Mayak</span><span class="mini-sub">Multilingual emotional support for immigrants</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="roomroots.html"><span class="mini-thumb"><img src="../assets/img/cover-roomroots.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">RoomRoots</span><span class="mini-sub">AI-assisted plant selection</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Editorial website for an artisan bakery</span></span><img class="mini-arrow" src="../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Based in Hachenburg, Germany</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Let’s design for <em>real needs</em></h2>
+          <p class="contact-note" data-rise>I’m open to UX/UI designer roles in Germany. Email or call me, or write to me on LinkedIn or Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="Email"><span>Copy</span><img src="../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Phone</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Phone number"><span>Copy</span><img src="../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Connect on</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI design" width="187" height="89">
+          <p>UX/UI designer in Germany: research, user flows, prototypes and design systems.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Menu</span></p>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="../index.html#work">Projects</a>
+            <a href="../index.html#approach">How I work</a>
+            <a href="#contact">Contact</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Language: English">
+                <img src="../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>EN</span><img class="lang-chev" src="../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="db-navigator.html" translate="no" lang="en" hreflang="en" aria-current="true" data-code="EN" aria-label="English"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="../de/cases/db-navigator.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="../ua/cases/db-navigator.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Connect on</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (opens in a new tab)</span></span><img class="arrow" src="../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

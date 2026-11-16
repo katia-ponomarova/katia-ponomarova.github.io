@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/mayak.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/mayak.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/mayak.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/mayak.html">
+  <title>Mayak, App für emotionale Unterstützung von Zugewanderten · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI-Case-Study von Kateryna Ponomarova: Mayak, ein mehrsprachiges App-Konzept für die emotionale Unterstützung von Zugewanderten in Deutschland, von einer Umfrage unter 26 Personen und 3 Interviews bis zu einem Designsystem und einem Prototyp mit 420 Frames.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/de/cases/mayak.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Mayak, App für emotionale Unterstützung von Zugewanderten · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI-Case-Study von Kateryna Ponomarova: Mayak, ein mehrsprachiges App-Konzept für die emotionale Unterstützung von Zugewanderten in Deutschland, von einer Umfrage unter 26 Personen und 3 Interviews bis zu einem Designsystem und einem Prototyp mit 420 Frames.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/de/cases/mayak.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-de.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Direkt zum Inhalt</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Zurück zu allen Projekten">
+        <img src="../../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Hauptmenü" data-nav>
+        <a href="../index.html#work">Projekte</a>
+        <a href="../index.html#approach">Arbeitsweise</a>
+        <a href="#contact">Kontakt</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Sprache: Deutsch">
+            <img src="../../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>DE</span>
+            <img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="../../cases/mayak.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="mayak.html" translate="no" lang="de" hreflang="de" aria-current="true" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="../../ua/cases/mayak.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Kontakt aufnehmen</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Kontakt aufnehmen</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI-Case-Study</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>Mayak</span></h1>
+          <p class="cs-promise" data-hero-in>Mehrsprachige emotionale Unterstützung für Zugewanderte in Deutschland</p>
+          <p class="cs-lead" data-hero-in>Ein App-Konzept, das Zugewanderte bei der emotionalen Seite des Ankommens in einem neuen Land unterstützt: anonymer Austausch mit anderen Betroffenen, ein täglicher Stimmungs-Check-in und schnelle Hilfe in der eigenen Sprache. Ich habe es von der Nutzerforschung bis zu einem Designsystem, einem Prototyp mit 420 Frames und einer Landingpage entwickelt.</p>
+          <ul class="cs-tags" role="list" aria-label="Meine Aufgaben" data-hero-in>
+            <li>UX-Research</li><li>Produktdesign</li><li>Designsystem</li><li>UI-Design</li><li>Prototyping</li><li>Landingpage</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Projektart</span><span class="f-val">Konzeptprojekt</span></span></li>
+            <li><img src="../../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Plattform</span><span class="f-val">App + Landingpage</span></span></li>
+            <li><img src="../../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Rolle</span><span class="f-val">UX/UI-Designerin</span></span></li>
+            <li><img src="../../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Umfang</span><span class="f-val">Von der Recherche zum MVP</span></span></li>
+          </ul>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">Mayak · App-Screens</span>
+          <span class="case-plate"><img src="../../assets/img/mayak/hero-mockup.webp" alt="Mayak auf drei Smartphones: der deutsche Startbildschirm mit „Ich möchte reden“ und „Ich brauche dringend Hilfe“ sowie zwei Onboarding-Screens" width="1821" height="1989"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Das Projekt in Zahlen</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>26</strong><span>Befragte</span></li>
+          <li class="glance"><strong>3</strong><span>Tiefeninterviews</span></li>
+          <li class="glance"><strong>35</strong><span>Komponenten</span></li>
+          <li class="glance"><strong>308</strong><span>Screens</span></li>
+          <li class="glance"><strong>4</strong><span>Sprachen</span></li>
+          <li class="glance"><strong>420</strong><span>Prototyp-Frames</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-showcase" aria-label="Zentrale Screens des Mayak-Prototyps">
+      <div class="container">
+        <div class="mcards" data-loop>
+          <div class="mc-row"><div class="mc-track">
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="Täglicher Check-in auf Deutsch: „Wie fühlst du dich?“ mit fünf Stimmungen" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Landingpage: „You don’t have to go through this“"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 613; --y: 0; --h: 1280"><img src="../../assets/img/mayak/card-home-de.webp" alt="Startbildschirm auf Deutsch mit zwei Wegen: „Ich möchte reden“ und „Ich brauche dringend Hilfe“" width="613" height="1280" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Landingpage: „Relocation changes not just the country around you“"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 1380; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="Schnelle Hilfe auf Ukrainisch: Notrufnummern 112 und 110 mit Anruf-Buttons" width="604" height="1249" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Landingpage: „How Mayak works“ in vier Schritten"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 2880; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="Ein Mitgliederprofil auf Englisch mit Beiträgen und Kommentaren" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Landingpage: „What people usually ask“"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 6520; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 613; --y: 0; --h: 1280"><img src="../../assets/img/mayak/card-home-de.webp" alt="" width="613" height="1280" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 1380; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="" width="604" height="1249" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 2880; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 6520; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · Das Problem</span></p>
+          <h2 class="h2" id="problem-title" data-split>Mehr als Sprache und <em>Bürokratie</em></h2>
+        </div>
+        <p class="section-note" data-rise>Ein Umzug ins Ausland bringt oft Einsamkeit, Angst und das Gefühl, dass nichts stabil ist. Angst, die Sprachbarriere und das Gefühl, die eigenen Probleme seien „nicht ernst genug“, halten Menschen davon ab, um Hilfe zu bitten.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Alle drei Hypothesen durch die Recherche bestätigt</h3>
+        <ol class="hypo-grid" role="list" data-stagger>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H1</span><span class="chip-ok">Bestätigt</span></div>
+            <p class="hc-claim">Zugewanderte fühlen sich einsam und unverstanden, auch wenn ihr Ankommen nach außen gelungen wirkt.</p>
+            <p class="hc-proof"><span class="hc-label">Beleg</span>Starke Einsamkeit und emotionale Isolation in Umfrage und Interviews: „niemand versteht es wirklich“.</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H2</span><span class="chip-ok">Bestätigt</span></div>
+            <p class="hc-claim">Angst, die Sprachbarriere und ein kompliziertes System halten Menschen davon ab, psychologische Hilfe zu suchen.</p>
+            <p class="hc-proof"><span class="hc-label">Beleg</span><strong class="hc-big">11,5&nbsp;%</strong>hatten je professionelle Hilfe gesucht</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H3</span><span class="chip-ok">Bestätigt</span></div>
+            <p class="hc-claim">Es fehlt ein ruhiger Ort, an dem sie über das Erlebte sprechen können, ohne bewertet zu werden.</p>
+            <p class="hc-proof"><span class="hc-label">Beleg</span><strong class="hc-big">50&nbsp;%</strong>fehlte ein geschützter Ort, um über Gefühle zu sprechen</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Recherche</span></p>
+          <h2 class="h2" id="research-title" data-split>Was die Recherche <em>gezeigt hat</em></h2>
+        </div>
+        <p class="section-note" data-rise>Eine Online-Umfrage unter 26 Zugewanderten in Deutschland und drei Tiefeninterviews, verdichtet zu Jobs to be Done und einer Customer Journey Map.</p>
+      </div>
+
+      <div class="container">
+        <div class="research-grid">
+          <figure class="chart-card" data-rise>
+            <figcaption class="chart-head">
+              <span class="cs-sub">Umfrage: zentrale Ergebnisse</span>
+              <span class="cs-caption">Anteil von 26 Befragten</span>
+            </figcaption>
+            <ul class="bars" role="list" data-bars>
+              <li class="bar" style="--v: 53.8"><span class="bar-label">versuchten, mit Gesprächen und neuen Kontakten zurechtzukommen</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">53,8&nbsp;%</strong></li>
+              <li class="bar" style="--v: 50"><span class="bar-label">fehlte ein geschützter Ort ohne Bewertung, um über Gefühle zu sprechen</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">50&nbsp;%</strong></li>
+              <li class="bar" style="--v: 42"><span class="bar-label">bewerteten ihren emotionalen Stress und ihre Erschöpfung mit über 7 von 10</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">42&nbsp;%</strong></li>
+              <li class="bar" style="--v: 11.5"><span class="bar-label">hatten je professionelle psychologische Unterstützung gesucht</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">11,5&nbsp;%</strong></li>
+            </ul>
+          </figure>
+          <img class="research-img cs-rock" src="../../assets/img/mayak/research-laptop.webp" alt="Die Mayak-Landingpage auf einem Laptop: „A simple app for complex feelings“ über drei Onboarding-Screens" width="1536" height="1638" loading="lazy">
+        </div>
+
+        <div class="voices">
+          <div>
+            <h3 class="cs-sub">Interviews: zentrale Erkenntnisse</h3>
+            <ol class="insight-list" role="list" data-stagger>
+              <li><span class="il-num">1</span><div><h4>Schwierigkeiten stauen sich mit der Zeit an</h4><p>Die ersten Monate fühlen sich vorläufig an; Stress und Unsicherheit wachsen erst später.</p></div></li>
+              <li><span class="il-num">2</span><div><h4>Am meisten belastet das Gefühl, verloren zu sein</h4><p>Keine Kontrolle, keine klare Zukunft, alles „allein herausfinden“ müssen.</p></div></li>
+              <li><span class="il-num">3</span><div><h4>Mitgefühl reicht nicht</h4><p>Gewünscht ist ein ruhiges, ehrliches, menschliches Gespräch ohne Floskeln.</p></div></li>
+            </ol>
+          </div>
+          <div>
+            <div class="cs-quotes-head">
+              <h3 class="cs-sub">In ihren Worten</h3>
+              <p class="cs-caption">Aus Umfrage und Interviews, aus dem Russischen übersetzt</p>
+            </div>
+            <ul class="notes" role="list" data-stagger>
+              <li class="note"><blockquote><p>„Es gibt niemanden, mit dem ich reden kann.“</p></blockquote></li>
+              <li class="note"><blockquote><p>„Ich wollte, dass mir einfach jemand zuhört.“</p></blockquote></li>
+              <li class="note"><blockquote><p>„Die Menschen zu Hause verstehen meinen Schmerz nicht.“</p></blockquote></li>
+              <li class="note"><blockquote><p>„Ich wollte mich Fremden nicht öffnen.“</p></blockquote></li>
+              <li class="note"><blockquote><p>„Wenn es einem schlecht geht, hat man keine Kraft, Hilfe zu suchen.“</p></blockquote></li>
+              <li class="note"><blockquote><p>„Es war wichtig, wenigstens zu wissen, dass ich nicht allein bin.“</p></blockquote></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Zielgruppe</span></p>
+          <h2 class="h2" id="users-title" data-split>Für wen ich <em>gestaltet habe</em></h2>
+        </div>
+        <p class="section-note" data-rise>Ein Kundenprofil, sechs Jobs to be Done und eine Customer Journey Map. Aus jedem Job wurde eine Funktion der App.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Kundenprofil</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo cs-rock"><img src="../../assets/img/mayak/persona.webp" alt="Mit KI erstelltes Porträt für das Kundenprofil" width="1447" height="1379" loading="lazy"><span class="ai-note">Porträt mit KI erstellt</span></div>
+          <div class="plist">
+            <h4>Pain Points</h4>
+            <ul role="list">
+              <li>Fühlt sich unverstanden und allein</li>
+              <li>Angst vor der Zukunft und anhaltende Unsicherheit</li>
+              <li>Emotionale Erschöpfung durch das Ankommen in einem neuen Land</li>
+              <li>Tut sich schwer, um Hilfe zu bitten oder sich zu öffnen</li>
+              <li>Angst vor Bewertung und unsicheren Begegnungen</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Bedürfnisse</h4>
+            <ul role="list">
+              <li>Ein ruhiger Ort ohne Druck</li>
+              <li>Unterstützung in einer vertrauten Sprache</li>
+              <li>Menschen mit ähnlichen Erfahrungen</li>
+              <li>Ein sicherer Weg, gehört zu werden, ohne bewertet zu werden</li>
+              <li>Klare und erreichbare nächste Schritte</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Ziele</h4>
+            <ul role="list">
+              <li>Sich emotional stabiler fühlen</li>
+              <li>Nicht mehr alles allein tragen</li>
+              <li>Menschen finden, bei denen sie sie selbst sein kann</li>
+              <li>Mit mehr Zuversicht ankommen</li>
+              <li>Wissen, an wen sie sich in schweren Momenten wenden kann</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>Über mich</figcaption>
+            <blockquote><p>„Ich bin nach Deutschland gezogen, um mir ein sichereres, stabileres Leben aufzubauen. Eine neue Sprache, eine andere Kultur und fremde Systeme lassen mich oft allein und emotional erschöpft zurück. Ich möchte Menschen finden, die das verstehen, ohne Angst vor Bewertung um Hilfe bitten und mich in meinem neuen Zuhause nach und nach sicherer fühlen.“</p></blockquote>
+          </figure>
+        </div>
+
+        <h3 class="cs-sub">Sechs Jobs to be Done, sechs Funktionen</h3>
+        <div class="jobs" data-stagger>
+          <details class="job" open>
+            <summary><span class="job-num">01</span><span class="job-name">Unterstützung</span><span class="job-when">Wenn es schwer ist und niemand da ist, mit dem ich in meiner Muttersprache reden kann</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>anonym teilen, wie es mir geht, und gehört werden, ohne Ratschläge, Bewertung oder Vorwürfe</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>ich mit dem, was ich durchmache, nicht allein bleibe</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">02</span><span class="job-name">Community</span><span class="job-when">Wenn die Menschen zu Hause nicht verstehen, was ich durchmache</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>Geschichten von Menschen lesen, die ebenfalls ausgewandert sind, und ihnen antworten</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>ich sehe, dass ich nicht allein bin und meine Reaktion auf das Ankommen normal ist</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">03</span><span class="job-name">Stimmungs-Check-in</span><span class="job-when">Wenn sich emotionale Probleme langsam und unbemerkt anstauen</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>jeden Tag kurz meine Stimmung festhalten</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>ich sehe, wie es mir über die Zeit geht, und merke, wenn es schlechter wird</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">04</span><span class="job-name">Schnelle Hilfe</span><span class="job-when">Wenn sich mein Zustand plötzlich verschlechtert</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>Notfallkontakte sofort finden, auch offline</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>ich sofort Hilfe bekomme, ohne Suchen und ohne Registrierung</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">05</span><span class="job-name">Antworten · FAQ</span><span class="job-when">Wenn ich nicht verstehe, wie psychologische Hilfe in Deutschland funktioniert</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>einfache Antworten auf häufige Fragen in meiner Muttersprache finden</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>das Unbekannte weniger Angst macht und ich den ersten Schritt kenne</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">06</span><span class="job-name">Sicherheit</span><span class="job-when">Wenn ich in der Community etwas Persönliches teile</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Ich möchte</span>toxische Inhalte melden und sehen, wie die Moderation entschieden hat</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Damit</span>ich spüre, dass der Raum sicher bleibt</p>
+            </div>
+          </details>
+        </div>
+        <div class="cs-block cjm">
+          <div class="cs-quotes-head">
+            <h3 class="cs-sub">Customer Journey Map</h3>
+            <p class="cs-caption">Vom Öffnen der App bis zum ersten Kommentar, aus dem Russischen übersetzt</p>
+          </div>
+          <div class="cjm-card" data-journey style="--n: 11">
+            <div class="cj-curve">
+              <span class="cj-band" data-band aria-hidden="true"></span>
+              <svg class="cj-line" viewBox="0 0 1100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="50,50 150,68 250,50 350,14 450,86 550,50 650,14 750,86 850,32 950,86 1050,14"></polyline></svg>
+              <div class="cj-pts" role="group" aria-label="Zu einer Phase springen">
+                <button type="button" class="cj-pt" data-tone="mid" data-go="0" style="--i: 0; --lv: 0" aria-current="true" aria-label="Phase 01, Öffnet die App: unsicher"><span>01</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="1" style="--i: 1; --lv: -1" aria-label="Phase 02, Meldet sich an oder registriert sich: angespannt"><span>02</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="2" style="--i: 2; --lv: 0" aria-label="Phase 03, Sieht eine kurze Checkliste: zweifelnd"><span>03</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="3" style="--i: 3; --lv: 2" aria-label="Phase 04, Füllt die Checkliste aus oder geht weiter: erleichtert"><span>04</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="4" style="--i: 4; --lv: -2" aria-label="Phase 05, Wählt einen Weg auf dem Startbildschirm: besorgt"><span>05</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="5" style="--i: 5; --lv: 0" aria-label="Phase 06, Öffnet den Community-Feed und wählt ein Thema: neugierig"><span>06</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="6" style="--i: 6; --lv: 2" aria-label="Phase 07, Liest ein Thema und die Kommentare: nachdenklich"><span>07</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="7" style="--i: 7; --lv: -2" aria-label="Phase 08, Entscheidet sich zu kommentieren: ängstlich"><span>08</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="8" style="--i: 8; --lv: 1" aria-label="Phase 09, Schreibt den Kommentar: ruhiger"><span>09</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="9" style="--i: 9; --lv: -2" aria-label="Phase 10, Sendet ihn ab: angespannt"><span>10</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="10" style="--i: 10; --lv: 2" aria-label="Phase 11, Bleibt oder geht: ruhig"><span>11</span></button>
+              </div>
+            </div>
+            <div class="cj-bar">
+              <p class="cj-legend" aria-hidden="true"><span class="lg-up">Besser</span><span class="lg-mid">Neutral</span><span class="lg-down">Schwerer</span></p>
+              <div class="rs-controls">
+                <span class="rs-count" aria-hidden="true"><b data-count>01–04</b> / 11</span>
+                <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Vorherige Phase"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+                <button type="button" class="rs-arrow" data-next aria-label="Nächste Phase"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              </div>
+            </div>
+            <div class="cj-scroll" data-track tabindex="0" role="region" aria-label="Customer Journey Map, 11 Phasen, seitlich scrollen">
+              <ol class="cj-board" role="list">
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">01</span><h4>Öffnet die App</h4><span class="cj-word">Unsicher</span></div>
+                  <p class="cj-story">Startet Mayak, weil es gerade schwer ist und sie Unterstützung sucht.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Öffnet die App.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Splash und erster Screen</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Noch ist unklar, was die App ist und ob man hier sicher ist.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Sofort zeigen, dass hier ein sicherer Ort mit Unterstützung ist und alles einfach ist.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">02</span><h4>Meldet sich an oder registriert sich</h4><span class="cj-word">Angespannt</span></div>
+                  <p class="cj-story">Entscheidet, ob sie sich mit einem bestehenden Konto anmeldet oder ein neues anlegt.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Sieht die Frage nach dem Konto; ohne Konto gibt sie eine E-Mail ein, legt ein Passwort fest, bestätigt und meldet sich an.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Screens für Anmeldung, Registrierung und Bestätigung</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Eine lange Anmeldung ermüdet, besonders wenn man ohnehin unter Stress steht.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Die Anmeldung so kurz und klar wie möglich halten; kurz erklären, wofür die Daten nötig sind.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">03</span><h4>Sieht eine kurze Checkliste</h4><span class="cj-word">Zweifelnd</span></div>
+                  <p class="cj-story">Landet nach der Anmeldung bei einer kurzen Checkliste.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Sieht sich die Fragen an; entscheidet, ob sie die Checkliste überspringt oder ausfüllt.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Checklisten-Screen</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Wenn es einem schlecht geht, wirken selbst kurze Fragen schwer.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>In einem Satz sagen, wozu die Checkliste da ist; sie sehr kurz und ruhig halten.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">04</span><h4>Füllt die Checkliste aus oder geht weiter</h4><span class="cj-word">Erleichtert</span></div>
+                  <p class="cj-story">Überspringt nichts, beantwortet die Fragen und geht weiter.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Füllt die Checkliste aus.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Checklisten-Formular</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Trockene oder zu persönliche Fragen können abschrecken.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Behutsame, einfache Fragen und eine Fortschrittsanzeige, damit der Schritt kurz wirkt.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">05</span><h4>Wählt einen Weg auf dem Startbildschirm</h4><span class="cj-word">Besorgt</span></div>
+                  <p class="cj-story">Entscheidet, was sie gerade braucht: mit Menschen reden oder schnelle Hilfe finden.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Sieht sich den Startbildschirm an; wählt „Ich möchte reden“ oder „Ich brauche dringend Hilfe“.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Startbildschirm</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Angst erschwert schnelle Entscheidungen.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Die beiden Wege auf dem Startbildschirm sehr klar trennen: Reden und schnelle Hilfe.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">06</span><h4>Öffnet den Community-Feed und wählt ein Thema</h4><span class="cj-word">Neugierig</span></div>
+                  <p class="cj-story">Geht dorthin, wo sie über die Erfahrungen anderer lesen kann.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Öffnet den Community-Feed; wählt ein Thema.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Community-Feed</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Vielleicht ist unklar, welches Thema passt.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Kurze Beschreibungen der Themen: worum es geht und für wen es gedacht ist.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">07</span><h4>Liest ein Thema und die Kommentare</h4><span class="cj-word">Nachdenklich</span></div>
+                  <p class="cj-story">Will sehen, ob man hier sicher ist und ob andere dasselbe erlebt haben.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Öffnet ein Thema, kommt zur Themenkarte, liest die Kommentare.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Thema, Themenkarte und Kommentare</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Chaotische oder belastende Kommentare können die Angst verstärken.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Klare Community-Regeln, eine ruhige Darstellung und die hilfreichsten Kommentare hervorgehoben.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">08</span><h4>Entscheidet sich zu kommentieren</h4><span class="cj-word">Ängstlich</span></div>
+                  <p class="cj-story">Merkt, dass sie sich auch äußern möchte.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Tippt auf „Kommentar hinzufügen“.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Button „Kommentar hinzufügen“</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Angst vor Bewertung, Angst, etwas „falsch“ zu sagen.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Vor dem Schreiben mit einem kurzen Hinweis unterstützen.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">09</span><h4>Schreibt den Kommentar</h4><span class="cj-word">Ruhiger</span></div>
+                  <p class="cj-story">Bringt ihre Gedanken in Worte.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Schreibt im Kommentar-Screen.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Kommentar-Editor</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Ein leerer Screen kann einschüchtern; bei null anzufangen ist schwer.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Ein Beispielanfang oder eine behutsame Vorlage für die erste Nachricht.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">10</span><h4>Sendet ihn ab</h4><span class="cj-word">Angespannt</span></div>
+                  <p class="cj-story">Entscheidet, den Kommentar abzusenden.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Bestätigt das Senden.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Senden-Button und Bestätigung</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Unklar ist, was nach dem Senden passiert.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Nach dem Senden ein klares Ergebnis: „Kommentar veröffentlicht“.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">11</span><h4>Bleibt oder geht</h4><span class="cj-word">Ruhig</span></div>
+                  <p class="cj-story">Bleibt nach dem Senden oder schließt die App.</p>
+                  <dl class="cj-box"><dt>Handlung</dt><dd>Entscheidet, weiterzulesen oder zu gehen.</dd></dl>
+                  <dl class="cj-box"><dt>Touchpoint</dt><dd>Screen nach dem Senden, zurück zum Community-Feed, Beenden</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Hindernis</dt><dd>Ohne das Gefühl eines Abschlusses geht sie vielleicht beunruhigt.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Verbesserung</dt><dd>Ein behutsamer nächster Schritt: weiterlesen, ein anderes Thema probieren oder später wiederkommen.</dd></dl>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="market" aria-labelledby="market-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · Wettbewerbsanalyse</span></p>
+          <h2 class="h2" id="market-title" data-split>Was bestehende Apps <em>auslassen</em></h2>
+        </div>
+        <p class="section-note" data-rise>Ich habe drei Produkte verglichen, die Neuankommende bereits nutzen. Jedes deckt einen Teil des Bedarfs ab; keines verbindet Unterstützung, Hilfe vor Ort und vertraute Sprachen.</p>
+      </div>
+
+      <div class="container">
+        <div class="rival-slider" data-slider data-rise>
+          <div class="rs-bar">
+            <div class="rs-names" role="group" aria-label="Produkt wählen">
+              <button type="button" class="rs-name" data-go="0" aria-current="true">TalkLife</button>
+              <button type="button" class="rs-name" data-go="1">Integreat</button>
+              <button type="button" class="rs-name" data-go="2">Réfugiés.info</button>
+            </div>
+            <div class="rs-controls">
+              <span class="rs-count" aria-hidden="true"><b data-count>01</b> / 03</span>
+              <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Vorheriges Produkt"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              <button type="button" class="rs-arrow" data-next aria-label="Nächstes Produkt"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+            </div>
+          </div>
+          <div class="rs-track" data-track tabindex="0" aria-label="Wettbewerber, wischen oder Pfeile nutzen" aria-roledescription="Karussell">
+            <article class="rs-slide" aria-roledescription="Folie" aria-label="1 von 3: TalkLife">
+              <div class="rs-text">
+                <h3>TalkLife</h3>
+                <p class="rs-where"><span>Website</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Was es ist</dt><dd>Eine Community zur gegenseitigen Unterstützung: Beiträge, private Nachrichten, Gruppenchats und Antworten rund um die Uhr.</dd></div>
+                  <div><dt>Stärken</dt><dd>Ein Ort „ohne Bewertung“; fast immer ist jemand online; starke Werkzeuge für Sicherheit und Moderation.</dd></div>
+                  <div><dt>Grenzen</dt><dd>Sagt selbst, dass sie keine professionelle Hilfe ersetzt; keine lokalen Angebote rund um Migration in der Beschreibung; der iOS-Eintrag zeigt nur eine englische Oberfläche.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-01.webp" alt="TalkLife-Feed" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-02.webp" alt="TalkLife-Kommentare" width="842" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-03.webp" alt="TalkLife-Räume" width="842" height="1710" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="Folie" aria-label="2 von 3: Integreat">
+              <div class="rs-text">
+                <h3>Integreat</h3>
+                <p class="rs-where"><span>Website</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Was es ist</dt><dd>Ein mehrsprachiger lokaler Wegweiser für Neuankommende: offizielle Informationen, Beratungsangebote, Stellenanzeigen und Veranstaltungen.</dd></div>
+                  <div><dt>Stärken</dt><dd>Inhalte von Behörden und Organisationen; viele Sprachen und Offline-Zugriff; keine Werbung und keine Erhebung von Nutzerdaten.</dd></div>
+                  <div><dt>Grenzen</dt><dd>Keine emotionale Unterstützung und keine Community; die Qualität hängt davon ab, wie aktiv jede Stadt sie pflegt; im Mittelpunkt steht die alltägliche Integration, nicht Gefühle.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-04.webp" alt="Integreat-Neuigkeiten" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-05.webp" alt="Integreat-Veranstaltungen" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-06.webp" alt="Integreat-Startseite für den Rhein-Pfalz-Kreis" width="838" height="1710" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="Folie" aria-label="3 von 3: Réfugiés.info">
+              <div class="rs-text">
+                <h3>Réfugiés.info</h3>
+                <p class="rs-where"><span>Website</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Was es ist</dt><dd>Ein staatliches Angebot in Frankreich mit einfachen übersetzten Anleitungen, lokalen Angeboten und Personalisierung für Geflüchtete.</dd></div>
+                  <div><dt>Stärken</dt><dd>7 Sprachen, darunter Ukrainisch und Russisch; Angebote in der Nähe; Schritt-für-Schritt-Anleitungen, Personalisierung und Sprachausgabe.</dd></div>
+                  <div><dt>Grenzen</dt><dd>Nur für Frankreich; eine engere Zielgruppe als Mayak, vor allem Geflüchtete statt aller Zugewanderten; keine Community und kein Chat.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-07.webp" alt="Réfugiés.info, Startseite" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-08.webp" alt="Réfugiés.info, Profileinstellungen" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-09.webp" alt="Réfugiés.info, gespeicherte Einträge" width="838" height="1710" loading="lazy">
+              </div>
+            </article>
+          </div>
+          <div class="rs-dots" aria-hidden="true"><i data-dot></i><i data-dot></i><i data-dot></i></div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Übernommene Muster</h3>
+
+          <ul class="ref-bento" role="list">
+            <li class="rb-wide"><span class="rn-k">Struktur</span><b>Reddit</b><p>Threads, Kommentarzweige und anonyme Nicknames: Menschen machen mit, ohne preiszugeben, wer sie sind.</p></li>
+            <li><span class="rn-k">Lokaler Kontext</span><b>Nextdoor</b><p>Ein Feed „in deiner Nähe“ und gegenseitige Hilfe, wie der Bereich „Hilfe nach Stadt“ in Mayak.</p></li>
+            <li><span class="rn-k">Tonalität</span><b>Headspace</b><p>Behutsame Fürsorge, ruhige Illustrationen und umsichtige Formulierungen ohne Druck.</p></li>
+            <li><span class="rn-k">Darstellung</span><b>Medium</b><p>Geschichten in der Ich-Form und Themenwahl im Onboarding, wie die Interessen-Tags in Mayak.</p></li>
+            <li class="rb-wide"><span class="rn-k">Matching</span><b>Bumble</b><p>Empfehlungen nach Interessen und Erfahrungen, mit umsichtigen Regeln für den ersten Kontakt.</p></li>
+            <li><span class="rn-k">Einfachheit</span><b>Threads</b><p>Einfache Anmeldung mit einem bestehenden Konto und ein reduzierter Diskussions-Feed.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · Szenario und User Flows</span></p>
+          <h2 class="h2" id="flow-title" data-split>Von einem schweren Abend zu <em>„Ich bin nicht allein“</em></h2>
+        </div>
+        <p class="section-note" data-rise>Marias erste Suche nach Unterstützung, abgebildet in vier User Flows: Anmeldung, Community, Kommentieren und schnelle Hilfe.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="flow-tabs" data-tabs>
+          <div class="ft-list" role="tablist" aria-label="User Flows">
+            <button type="button" class="ft-tab" id="ft-1-tab" role="tab" aria-controls="ft-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Anmeldung und Check-in</span></button>
+            <button type="button" class="ft-tab" id="ft-2-tab" role="tab" aria-controls="ft-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">Community</span></button>
+            <button type="button" class="ft-tab" id="ft-3-tab" role="tab" aria-controls="ft-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Erster Kommentar</span></button>
+            <button type="button" class="ft-tab" id="ft-4-tab" role="tab" aria-controls="ft-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Schnelle Hilfe</span></button>
+          </div>
+
+          <div class="ft-panel" id="ft-1-panel" role="tabpanel" aria-labelledby="ft-1-tab" tabindex="0">
+            <div class="fp-head">
+              <p class="fp-steps"><span>Schritte 01–03 des Szenarios</span></p>
+              <p class="fp-lead">Ein Abend nach einer schweren Woche. Maria ist unruhig und einsam: Niemand in ihrer Nähe würde sie verstehen. Sie öffnet Mayak, meldet sich mit ihrer E-Mail über wenige Felder an, und ein behutsamer Check-in hilft ihr, ihr Gefühl zu benennen.</p>
+              <p class="fp-screens">Screens: Splash · Onboarding · Anmeldung · Check-in</p>
+            </div>
+            <div class="fv" data-flow="registration">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Start</li><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Aktion</li><li class="lg t-form"><span></span>Registrierungsschritt</li><li class="lg t-decision"><span></span>Entscheidung</li><li class="lg lg-main"><span></span>Hauptpfad</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M228 164 L284 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="284,164 273,169.5 273,158.5" style="--i: 0"></polygon><path class="e e-main" d="M380 228 L380 374" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="380,374 374.5,363 385.5,363" style="--i: 1"></polygon><text class="e-label" x="396" y="306" text-anchor="middle" style="--i: 1">Nein</text><path class="e e-main" d="M468 411 L532 411" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="532,411 521,416.5 521,405.5" style="--i: 2"></polygon><path class="e e-main" d="M708 411 L772 411" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="772,411 761,416.5 761,405.5" style="--i: 3"></polygon><path class="e e-main" d="M948 411 L1012 411" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1012,411 1001,416.5 1001,405.5" style="--i: 4"></polygon><path class="e e-main" d="M1100 374 L1100 296 L620 296 L620 202" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="620,202 625.5,213 614.5,213" style="--i: 5"></polygon><text class="e-label" x="860" y="284" text-anchor="middle" style="--i: 5">Zurück zur Checkliste</text><path class="e" d="M476 164 L532 164" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="532,164 521,169.5 521,158.5" style="--i: 6"></polygon><text class="e-label" x="504" y="148" text-anchor="middle" style="--i: 6">Ja</text><path class="e e-main" d="M708 164 L764 164" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="764,164 753,169.5 753,158.5" style="--i: 7"></polygon><path class="e e-main" d="M956 164 L1012 164" pathLength="1" style="--i: 8"></path><polygon class="e e-main e-head" points="1012,164 1001,169.5 1001,158.5" style="--i: 8"></polygon><text class="e-label" x="984" y="148" text-anchor="middle" style="--i: 8">Nein</text><path class="e" d="M860 100 L860 64 L1340 64 L1340 126" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="1340,126 1334.5,115 1345.5,115" style="--i: 9"></polygon><text class="e-label" x="1100" y="52" text-anchor="middle" style="--i: 9">Ja</text><path class="e e-main" d="M1188 164 L1252 164" pathLength="1" style="--i: 10"></path><polygon class="e e-main e-head" points="1252,164 1241,169.5 1241,158.5" style="--i: 10"></polygon><text class="e-note" x="1340" y="234" text-anchor="middle">Weiter in 02 / 04</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="5.10s" begin="indefinite" fill="freeze" path="M140 164 L380 164 L380 411 L1100 411 L1100 296 L620 296 L620 164 L1340 164"></animateMotion></circle></svg>
+            <div class="fvc-node t-start" style="--x: 140; --y: 164; --i: 0"><span>App-Start</span></div><div class="fvc-node t-decision" style="--x: 380; --y: 164; --i: 1"><span>Ist die Person registriert?</span></div><div class="fvc-node t-screen" style="--x: 620; --y: 164; --i: 6"><span>Kurze Checkliste</span></div><div class="fvc-node t-decision" style="--x: 860; --y: 164; --i: 7"><span>Checkliste überspringen?</span></div><div class="fvc-node t-action" style="--x: 1100; --y: 164; --i: 8"><span>Checkliste ausfüllen</span></div><div class="fvc-node t-screen" style="--x: 1340; --y: 164; --i: 9"><span>Startbildschirm</span></div><div class="fvc-node t-form" style="--x: 380; --y: 411; --i: 2"><span>E-Mail eingeben</span></div><div class="fvc-node t-form" style="--x: 620; --y: 411; --i: 3"><span>Passwort erstellen</span></div><div class="fvc-node t-form" style="--x: 860; --y: 411; --i: 4"><span>Bestätigung</span></div><div class="fvc-node t-form" style="--x: 1100; --y: 411; --i: 5"><span>In der App anmelden</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Start</span><b class="fsl-title">App-Start</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Entscheidung</span><b class="fsl-title">Ist die Person registriert?</b><ul class="fl-br" role="list"><li class="is-main"><span>Nein</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>E-Mail eingeben</span></li><li class=""><span>Ja</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Kurze Checkliste</span></li></ul></span></li><li class="fsl-i t-form" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Registrierungsschritt</span><b class="fsl-title">E-Mail eingeben</b></span></li><li class="fsl-i t-form" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Registrierungsschritt</span><b class="fsl-title">Passwort erstellen</b></span></li><li class="fsl-i t-form" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Registrierungsschritt</span><b class="fsl-title">Bestätigung</b></span></li><li class="fsl-i t-form" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Registrierungsschritt</span><b class="fsl-title">In der App anmelden</b><small class="fsl-note">Dann zurück zur Checkliste</small></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Kurze Checkliste</b></span></li><li class="fsl-i t-decision" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Entscheidung</span><b class="fsl-title">Checkliste überspringen?</b><ul class="fl-br" role="list"><li class="is-main"><span>Nein</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Checkliste ausfüllen</span></li><li class=""><span>Ja</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Startbildschirm</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Checkliste ausfüllen</b></span></li><li class="fsl-i t-screen" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Startbildschirm</b><small class="fsl-note">Weiter in 02 / 04</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-2-panel" role="tabpanel" aria-labelledby="ft-2-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Schritte 04–05 des Szenarios</span></p>
+              <p class="fp-lead">Der Startbildschirm trennt zwei Wege: „Ich möchte reden“ und „Ich brauche dringend Hilfe“. Maria entscheidet sich fürs Reden, öffnet das Thema „Adaptation“ und liest Geschichten von Menschen, die einen ähnlichen Weg gegangen sind. Zum ersten Mal an diesem Tag denkt sie: „Ich bin nicht allein.“</p>
+              <p class="fp-screens">Screens: Start · Community-Feed · Thema</p>
+            </div>
+            <div class="fv" data-flow="community">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Aktion</li><li class="lg t-decision"><span></span>Entscheidung</li><li class="lg lg-main"><span></span>Hauptpfad</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L252 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="252,164 241,169.5 241,158.5" style="--i: 0"></polygon><path class="e e-main" d="M444 164 L456 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="456,164 445,169.5 445,158.5" style="--i: 1"></polygon><text class="e-label" x="450" y="88" text-anchor="middle" style="--i: 1">Ich möchte reden</text><path class="e e-main" d="M632 164 L652 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="652,164 641,169.5 641,158.5" style="--i: 2"></polygon><path class="e e-main" d="M828 164 L848 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="848,164 837,169.5 837,158.5" style="--i: 3"></polygon><path class="e e-main" d="M1024 164 L1044 164" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1044,164 1033,169.5 1033,158.5" style="--i: 4"></polygon><path class="e e-main" d="M1220 164 L1240 164" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1240,164 1229,169.5 1229,158.5" style="--i: 5"></polygon><path class="e" d="M348 228 L348 303 L500 303" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="500,303 489,308.5 489,297.5" style="--i: 6"></polygon><text class="e-label" x="512" y="308" text-anchor="start" style="--i: 6">04 · Schnelle Hilfe</text><text class="e-note" x="1328" y="238" text-anchor="middle">03 · Kommentieren</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="2.26s" begin="indefinite" fill="freeze" path="M152 164 L1328 164"></animateMotion></circle></svg>
+            <div class="fvc-node t-screen" style="--x: 152; --y: 164; --i: 0"><span>Startbildschirm</span></div><div class="fvc-node t-decision" style="--x: 348; --y: 164; --i: 1"><span>Dringend Hilfe oder reden?</span></div><div class="fvc-node t-screen" style="--x: 544; --y: 164; --i: 2"><span>Community-Feed</span></div><div class="fvc-node t-action" style="--x: 740; --y: 164; --i: 3"><span>Thema wählen</span></div><div class="fvc-node t-action" style="--x: 936; --y: 164; --i: 4"><span>Thema öffnen</span></div><div class="fvc-node t-screen" style="--x: 1132; --y: 164; --i: 5"><span>Themenkarte</span></div><div class="fvc-node t-action" style="--x: 1328; --y: 164; --i: 6"><span>Kommentare lesen</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Startbildschirm</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Entscheidung</span><b class="fsl-title">Dringend Hilfe oder reden?</b><ul class="fl-br" role="list"><li class="is-main"><span>Ich möchte reden</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Community-Feed</span></li><li class=""><span>Schnelle Hilfe</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>04 · Schnelle Hilfe</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Community-Feed</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Thema wählen</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Thema öffnen</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Themenkarte</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Kommentare lesen</b><small class="fsl-note">Weiter in 03 · Kommentieren</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-3-panel" role="tabpanel" aria-labelledby="ft-3-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Schritt 06 des Szenarios</span></p>
+              <p class="fp-lead">Maria schreibt einen Kommentar, veröffentlicht ihn und bekommt eine herzliche Antwort aus der Community. Aus Angst wird das Gefühl, gehört zu werden: Sie kommt von sich aus zu Mayak zurück, ohne äußeren Anlass.</p>
+              <p class="fp-screens">Screens: Kommentare · Kommentar-Editor</p>
+            </div>
+            <div class="fv" data-flow="commenting">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Aktion</li><li class="lg t-decision"><span></span>Entscheidung</li><li class="lg t-end"><span></span>Ende</li><li class="lg lg-main"><span></span>Hauptpfad</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L292 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="292,164 281,169.5 281,158.5" style="--i: 0"></polygon><path class="e e-main" d="M468 164 L520 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="520,164 509,169.5 509,158.5" style="--i: 1"></polygon><path class="e e-main" d="M696 164 L748 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="748,164 737,169.5 737,158.5" style="--i: 2"></polygon><path class="e e-main" d="M924 164 L968 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="968,164 957,169.5 957,158.5" style="--i: 3"></polygon><path class="e e-main" d="M1064 228 L1064 299 L608 299 L608 374" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="608,374 602.5,363 613.5,363" style="--i: 4"></polygon><text class="e-label" x="836" y="287" text-anchor="middle" style="--i: 4">Weiterlesen</text><path class="e" d="M1160 164 L1200 164 L1200 411 L1152 411" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="1152,411 1163,405.5 1163,416.5" style="--i: 5"></polygon><text class="e-label" x="1182" y="148" text-anchor="middle" style="--i: 5">Beenden</text><text class="e-note" x="608" y="482" text-anchor="middle">02 · Community entdecken</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="3.11s" begin="indefinite" fill="freeze" path="M152 164 L1064 164 L1064 299 L608 299 L608 411"></animateMotion></circle></svg>
+            <div class="fvc-node t-action" style="--x: 152; --y: 164; --i: 0"><span>Kommentare lesen</span></div><div class="fvc-node t-action" style="--x: 380; --y: 164; --i: 1"><span>Kommentar hinzufügen</span></div><div class="fvc-node t-screen" style="--x: 608; --y: 164; --i: 2"><span>Kommentar-Editor</span></div><div class="fvc-node t-action" style="--x: 836; --y: 164; --i: 3"><span>Veröffentlichen bestätigen</span></div><div class="fvc-node t-decision" style="--x: 1064; --y: 164; --i: 4"><span>Weiterlesen oder beenden?</span></div><div class="fvc-node t-screen" style="--x: 608; --y: 411; --i: 5"><span>Community-Feed</span></div><div class="fvc-node t-end is-side" style="--x: 1064; --y: 411; --i: 6"><span>App verlassen</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-action" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Kommentare lesen</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Kommentar hinzufügen</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Kommentar-Editor</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Veröffentlichen bestätigen</b></span></li><li class="fsl-i t-decision" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Entscheidung</span><b class="fsl-title">Weiterlesen oder beenden?</b><ul class="fl-br" role="list"><li class="is-main"><span>Weiterlesen</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Community-Feed</span></li><li class=""><span>Beenden</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>App verlassen</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Community-Feed</b><small class="fsl-note">Zurück in 02 · Community entdecken</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-4-panel" role="tabpanel" aria-labelledby="ft-4-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Der andere Weg bei Schritt 04</span></p>
+              <p class="fp-lead">„Ich brauche dringend Hilfe“ führt direkt zum Hilfebereich: Kontakt oder Adresse finden, Telefonnummer kopieren und anrufen, ohne zu suchen.</p>
+              <p class="fp-screens">Screens: Start · Hilfebereich</p>
+            </div>
+            <div class="fv" data-flow="urgent">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Screen</li><li class="lg t-action"><span></span>Aktion</li><li class="lg t-decision"><span></span>Entscheidung</li><li class="lg t-end"><span></span>Ende</li><li class="lg lg-main"><span></span>Hauptpfad</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L252 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="252,164 241,169.5 241,158.5" style="--i: 0"></polygon><path class="e e-main" d="M444 164 L456 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="456,164 445,169.5 445,158.5" style="--i: 1"></polygon><text class="e-label" x="450" y="88" text-anchor="middle" style="--i: 1">Schnelle Hilfe</text><path class="e e-main" d="M632 164 L672 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="672,164 661,169.5 661,158.5" style="--i: 2"></polygon><path class="e e-main" d="M848 164 L888 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="888,164 877,169.5 877,158.5" style="--i: 3"></polygon><path class="e e-main" d="M976 202 L976 374" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="976,374 970.5,363 981.5,363" style="--i: 4"></polygon><path class="e" d="M348 228 L348 374" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="348,374 342.5,363 353.5,363" style="--i: 5"></polygon><text class="e-label" x="364" y="306" text-anchor="start" style="--i: 5">Ich möchte reden</text><text class="e-note" x="348" y="482" text-anchor="middle">02 · Community entdecken</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="2.06s" begin="indefinite" fill="freeze" path="M152 164 L976 164 L976 411"></animateMotion></circle></svg>
+            <div class="fvc-node t-screen" style="--x: 152; --y: 164; --i: 0"><span>Startbildschirm</span></div><div class="fvc-node t-decision" style="--x: 348; --y: 164; --i: 1"><span>Dringend Hilfe oder reden?</span></div><div class="fvc-node t-screen" style="--x: 544; --y: 164; --i: 2"><span>Hilfebereich</span></div><div class="fvc-node t-action" style="--x: 760; --y: 164; --i: 3"><span>Kontakte oder Adresse finden</span></div><div class="fvc-node t-action" style="--x: 976; --y: 164; --i: 4"><span>Telefonnummer kopieren</span></div><div class="fvc-node t-end" style="--x: 976; --y: 411; --i: 5"><span>App verlassen</span></div><div class="fvc-node t-screen is-side" style="--x: 348; --y: 411; --i: 6"><span>Community-Feed</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Startbildschirm</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Entscheidung</span><b class="fsl-title">Dringend Hilfe oder reden?</b><ul class="fl-br" role="list"><li class="is-main"><span>Schnelle Hilfe</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Hilfebereich</span></li><li class=""><span>Ich möchte reden</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>02 · Community entdecken</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Screen</span><b class="fsl-title">Hilfebereich</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Kontakte oder Adresse finden</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Aktion</span><b class="fsl-title">Telefonnummer kopieren</b></span></li><li class="fsl-i t-end" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Ende</span><b class="fsl-title">App verlassen</b></span></li></ol>
+        </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block wf-block">
+          <h3 class="cs-sub">Wireframes</h3>
+          <div class="wf-board" data-stagger>
+            <div class="case-media wf-f" style="--r: -1.5deg"><span class="frame-name">Start</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-home.png" alt="Wireframe des Startbildschirms: die zwei Wege, Themen und die Tab-Leiste" width="485" height="1082" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Community</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-community.png" alt="Wireframe eines Community-Beitrags mit Antworten und Kommentarfeld" width="589" height="1314" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Neuer Beitrag</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-new-post.png" alt="Wireframe zum Erstellen eines Beitrags: Text, Bild und Themen-Chips" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1.5deg"><span class="frame-name">Profil</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-profile.png" alt="Wireframe eines öffentlichen Profils" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Nachrichten</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-messages.png" alt="Wireframe der Nachrichtenliste" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Chat</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-chat.png" alt="Wireframe eines Chats mit Eingabefeld" width="599" height="1330" loading="lazy"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="system" aria-labelledby="system-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · Designsystem</span></p>
+          <h2 class="h2" id="system-title" data-split>Ein System, <em>vier Sprachen</em></h2>
+        </div>
+        <p class="section-note" data-rise>Eine Figma-Bibliothek hält jeden Screen in vier Sprachen konsistent, bis hin zu den Skeleton-Zuständen beim Laden von Inhalten.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>35</strong><span>Komponenten, 361 Varianten</span></li>
+          <li class="bt"><strong>31</strong><span>Farbstile, davon 4 Verläufe</span></li>
+          <li class="bt"><strong>16</strong><span>Textstile, eine Schrift: Montserrat</span></li>
+          <li class="bt bt-wide">
+            <strong>308</strong><span>Screens in vier Sprachen, 9 Bereiche</span>
+            <span class="bt-langs" aria-label="Russisch, Englisch, Deutsch, Ukrainisch"><b>RU</b><b>EN</b><b>DE</b><b>UK</b></span>
+          </li>
+          <li class="bt bt-wide bt-note"><strong>420</strong><span>Frames im klickbaren Prototyp, dazu eine Landingpage auf derselben Bibliothek</span></li>
+          <li class="bt"><strong>3</strong><span>Button-Typen: Primary, Secondary, Ghost; 12 Zustände</span></li>
+          <li class="bt"><strong>5</strong><span>Zustände für Eingabefelder: Default, Focused, Filled, Error, Loading</span></li>
+          <li class="bt bt-wide"><strong>5</strong><span>Emotionen im Stimmungstagebuch</span></li>
+          <li class="bt bt-wide bt-text"><b>Community</b><span>Beiträge, Themen und Chatnachrichten</span></li>
+          <li class="bt bt-wide bt-text"><b>Navigation</b><span>App-Bar und Tab-Leiste mit Benachrichtigungen</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib" aria-labelledby="lib-title">
+      <div class="container">
+        <div class="mood-block">
+          <div class="mood-copy" data-rise>
+            <h3 class="cs-sub">Moodboard</h3>
+            <p class="mood-lead">Das Board gibt den visuellen Ton vor: ein Leuchtturm im Sonnenuntergang, eine Gruppenumarmung am Strand, Hände in warmem Licht, Berge in der Dämmerung und dazu weiches violettes und pfirsichfarbenes Licht.</p>
+            <dl class="mood-list">
+              <div><dt>Palette</dt><dd>Purple · Pastel · Ash-lilac · Blush · Ivory</dd></div>
+              <div><dt>Sätze auf dem Board</dt><dd><ul role="list"><li>„Wir sind da, um dich zu unterstützen.“</li><li>„Weniger Lärm. Mehr Verständnis.“</li><li>„Teile, was in dir ist.“</li><li>„Ich wollte, dass mir einfach jemand zuhört. Ohne Ratschläge und fertige Antworten.“</li><li>„Die Menschen hier haben selbst zu kämpfen. Die zu Hause verstehen es nicht.“</li></ul></dd></div>
+              <div><dt>Schlusssatz</dt><dd class="mood-close">Eine einfache App für komplexe Gefühle</dd></div>
+            </dl>
+            <p class="cs-caption">Sätze aus dem Russischen übersetzt</p>
+          </div>
+          <div class="case-media mood-f" data-rise style="--r: 1.5deg"><span class="frame-name">Moodboard</span><span class="case-plate"><img src="../../assets/figma/mayak/moodboard.jpg" alt="Mayak-Moodboard: das Mayak-Logo, Fotos eines Leuchtturms im Sonnenuntergang, einer Gruppenumarmung am Strand, von Händen in warmem Licht, unscharfen Blumen und Bergen in der Dämmerung, russische Sätze in violetter Schrift und die Palette Purple, Pastel, Ash-lilac, Blush, Ivory" width="1252" height="2206" loading="lazy"></span></div>
+        </div>
+
+        <h3 class="cs-sub" id="lib-title">Ein Blick in die Bibliothek</h3>
+        <div class="ds-canvas">
+          <p class="dsc-hint">Frames verschieben</p>
+          <div class="dsc-board">
+            <div class="case-media dsc-f dsc-type" data-case-frame style="--r: -1.5deg"><span class="frame-name">Farbe und Schrift</span><span class="case-plate"><img src="../../assets/img/mayak/ds-frame-512935.svg" alt="Farbpalette aus fünf Farben und einem Verlauf; Typografie in Montserrat: Überschrift SemiBold 16 px, Button SemiBold 14 px, Fließtext Regular 12 px" width="791" height="335" loading="lazy"></span></div>
+            <div class="case-media dsc-f dsc-parts" data-case-frame style="--r: 1.5deg"><span class="frame-name">Komponenten</span><span class="case-plate"><img src="../../assets/img/mayak/ds-frame-512930.svg" alt="Icons, Primary-, Secondary- und Ghost-Buttons, Themen-Chips und die Karte der Stimmungswoche" width="392" height="803" loading="lazy"></span></div>
+            <div class="dsc-phones">
+              <div class="case-media dsc-f dsc-p1" data-case-frame style="--r: -3deg"><span class="frame-name">EN · Profil</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="Englisch: ein Mitgliederprofil mit Beiträgen und Kommentaren" width="576" height="1191" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p2" data-case-frame style="--r: 2deg"><span class="frame-name">UA · Schnelle Hilfe</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="Ukrainisch: schnelle Hilfe mit Notrufnummern" width="604" height="1249" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p3" data-case-frame style="--r: -1deg"><span class="frame-name">DE · Check-in</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="Deutsch: der tägliche Check-in" width="576" height="1191" loading="lazy"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="landing" aria-labelledby="landing-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Landingpage</span></p>
+          <h2 class="h2" id="landing-title" data-split>Eine Seite, <em>zehn Abschnitte</em></h2>
+        </div>
+        <p class="section-note" data-rise>Die Landingpage ist eine live geschaltete Webflow-Website auf Russisch, Englisch, Deutsch und Ukrainisch. Sie führt vom Versprechen und den Zahlen dahinter über die Funktionsweise von Mayak und das, was Menschen nach dem Umzug gefühlt haben, bis zu den Fragen vor dem ersten Schritt.</p>
+      </div>
+
+      <div class="container">
+        <div class="mk-tour" data-tour data-tour-w="1440" data-tour-h="8220">
+          <div class="case-media mk-win" style="--r: 0deg" aria-hidden="true">
+            <span class="frame-name">Mayak · Landingpage · 1440 px</span>
+            <span class="case-plate"><span class="mk-view" data-tour-win><span class="mk-page" data-tour-page><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"><span class="mk-mark" data-tour-mark></span></span></span></span>
+          </div>
+          <ol class="mk-notes" role="list">
+            <li data-y="0" data-h="866">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 866"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">01</span><h3>Hero</h3>
+              <p>Das Menü mit Sprachwahl und Download the app, dann „You don’t have to go through this“, Try for free und „You’re not alone. Many of us are here.“ Drei Smartphones stehen vor einem Leuchtturm.</p>
+            </li>
+            <li data-y="866" data-h="489">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 866; --h: 489"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">02</span><h3>Zahlen</h3>
+              <p>Vier Werte in einer Glaskarte: 50 % haben das Gefühl, mit niemandem reden zu können, 42 % bewerten ihr Burnout mit 7 von 10, 73 % kämpfen auch nach 3+ Jahren noch, 11,5 % suchen Hilfe.</p>
+            </li>
+            <li data-y="1355" data-h="950">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 1355; --h: 950"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">03</span><h3>Das Problem</h3>
+              <p>„Relocation changes not just the country around you“: was sich nach einem Umzug verändert und warum es Mayak gibt, neben dem Startbildschirm, darunter drei nummerierte Karten.</p>
+            </li>
+            <li data-y="2305" data-h="623">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 2305; --h: 623"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">04</span><h3>Gehört werden</h3>
+              <p>„Sometimes support begins with the simple feeling of being heard“, ein übersetzter Chat auf einem Smartphone und zwei Buttons: Try Mayak und How Mayak works.</p>
+            </li>
+            <li data-y="2928" data-h="808">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 2928; --h: 808"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">05</span><h3>So funktioniert Mayak</h3>
+              <p>Vier Schritte: teilen, was einen bewegt, Menschen mit ähnlicher Erfahrung finden, sich mehr unterstützt fühlen, wieder zur Ruhe kommen. Jeder endet mit einem kurzen Versprechen wie „Without toxicity or judgment“.</p>
+            </li>
+            <li data-y="3736" data-h="1231">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 3736; --h: 1231"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">06</span><h3>Eine einfache App</h3>
+              <p>„A simple app for complex feelings“: die drei Onboarding-Screens auf Smartphones, unter der Zeile „An interface that doesn’t overwhelm. Questions that help you understand.“</p>
+            </li>
+            <li data-y="4967" data-h="892">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 4967; --h: 892"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">07</span><h3>Nach dem Umzug</h3>
+              <p>Sechs kurze Zitate, jedes mit der Angabe, wie lange der Umzug her ist, und die Zeile „We can’t eliminate the challenges of moving, but no one should have to face them alone.“</p>
+            </li>
+            <li data-y="5859" data-h="675">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 5859; --h: 675"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">08</span><h3>Jetzt starten</h3>
+              <p>Ein letzter Aufruf, Mayak auszuprobieren, „Available on iOS and Android“, neben dem Startbildschirm.</p>
+            </li>
+            <li data-y="6534" data-h="877">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 6534; --h: 877"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">09</span><h3>Fragen</h3>
+              <p>Fünf Fragen als Akkordeon: ob Mayak eine Psychologin oder einen Psychologen ersetzt, für wen es gedacht ist, Sprachwechsel, Privatsphäre und wie viel man am Anfang teilen sollte.</p>
+            </li>
+            <li data-y="7411" data-h="809">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 7411; --h: 809"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">10</span><h3>Fußzeile</h3>
+              <p>Eine Zeile über einfühlsame Unterstützung, die E-Mail-Adresse, das Menü mit Sprachwahl und die App auf drei Smartphones.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>08 · Ergebnis</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Erkenntnisse <em>aus dem Projekt</em></h2>
+        </div>
+        <p class="section-note" data-rise>Die Recherche hat das Problem bestätigt, und der Prototyp ist bereit für Usability-Tests.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Das Projekt in Kürze</h3>
+        <ol class="summary" role="list" data-stagger>
+          <li><span class="sm-k">01 · Problem bestätigt</span><strong>11,5&nbsp;%</strong><p>hatten je psychologische Hilfe gesucht. Den Menschen fehlen eher emotionale Unterstützung und ein geschützter Ort als Informationen.</p></li>
+          <li><span class="sm-k">02 · Lösung</span><strong>Mayak</strong><p>Ein ruhiger Ort in RU · EN · DE · UK: anonyme Unterstützung, eine Community, ein täglicher Stimmungs-Check-in, schnelle Hilfe offline und Antworten in der eigenen Sprache.</p></li>
+          <li><span class="sm-k">03 · System und Reichweite</span><strong>308</strong><p>Screens in vier Sprachen auf einer Bibliothek, mit Skeleton-Zuständen, einem Prototyp mit 420 Frames und einer Landingpage.</p></li>
+        </ol>
+
+        <h3 class="cs-sub">Nächste Schritte</h3>
+        <div class="board" data-stagger>
+          <div class="board-col bc-done">
+            <p class="bc-head">Erledigt <span>4</span></p>
+            <ul role="list"><li>Recherche: Umfrage mit 26 Personen und 3 Interviews</li><li>Designsystem</li><li>Klickbarer Prototyp mit 420 Frames</li><li>Landingpage</li></ul>
+          </div>
+          <div class="board-col bc-next">
+            <p class="bc-head">Als Nächstes <span>1</span></p>
+            <ul role="list"><li>Usability-Test des Prototyps mit der Zielgruppe</li></ul>
+          </div>
+          <div class="board-col bc-later">
+            <p class="bc-head">Später <span>2</span></p>
+            <ul role="list"><li>Moderation der Community anhand der Ergebnisse verfeinern</li><li>Spezifikation für die Umsetzung des MVP vorbereiten</li></ul>
+          </div>
+          <div class="board-col bc-goal">
+            <p class="bc-head">Ziel</p>
+            <ul role="list"><li>Pilot in Deutschland starten</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Vier Schlussfolgerungen</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">Recherche und Prototyping haben aus einem breiten Problem ein fokussiertes Produktkonzept gemacht. Mayak soll professionelle Unterstützung nicht ersetzen, sondern den ersten Schritt zur Hilfe klarer, sicherer und zugänglicher machen.</p>
+              <p class="end-statement">Mayak macht aus Unsicherheit einen <em>klaren, unterstützenden nächsten Schritt</em>.</p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Ein sicherer erster Schritt ist entscheidend</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Unterstützung sollte sich dem aktuellen Zustand anpassen</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Vertrauen ist Teil der User Experience</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>Das Konzept muss sich im echten Einsatz bewähren</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Weitere Projekte</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="roomroots.html"><span class="mini-thumb"><img src="../../assets/img/cover-roomroots.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">RoomRoots</span><span class="mini-sub">KI-gestützte Pflanzen­auswahl</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="db-navigator.html"><span class="mini-thumb"><img src="../../assets/img/cover-db.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">DB Navigator</span><span class="mini-sub">Redesign der Reiseauskunft in Eigeninitiative</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Website im Editorial-Stil für eine Handwerks­bäckerei</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Wohnort: Hachenburg, Deutschland</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Gestalten wir für <em>echte Bedürfnisse</em></h2>
+          <p class="contact-note" data-rise>Ich suche eine Stelle als UX/UI-Designerin in Deutschland. Schreiben Sie mir eine E-Mail, rufen Sie an oder melden Sie sich über LinkedIn oder Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">E-Mail</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="E-Mail"><span>Kopieren</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Telefon</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Telefonnummer"><span>Kopieren</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Vernetzen</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI-Design" width="187" height="89">
+          <p>UX/UI-Designerin in Deutschland: Recherche, User Flows, Prototypen und Designsysteme.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Menü</span></p>
+          <nav class="footer-nav" aria-label="Fußzeile">
+            <a href="../index.html#work">Projekte</a>
+            <a href="../index.html#approach">Arbeitsweise</a>
+            <a href="#contact">Kontakt</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Sprache: Deutsch">
+                <img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>DE</span><img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="../../cases/mayak.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="mayak.html" translate="no" lang="de" hreflang="de" aria-current="true" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="../../ua/cases/mayak.html" translate="no" lang="uk" hreflang="uk" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Vernetzen</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (öffnet in neuem Tab)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../../assets/vendor/gsap.min.js" defer></script>
+  <script src="../../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../../assets/vendor/lenis.min.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

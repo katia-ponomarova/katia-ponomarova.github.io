@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/roomroots.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/roomroots.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/roomroots.html">
+  <title>RoomRoots, застосунок для підбору рослин за допомогою ШІ · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI-кейс Kateryna Ponomarova: RoomRoots, e-commerce застосунок рівня MVP, який підбирає рослини за освітленням, кімнатою, досвідом догляду й домашніми тваринами, від дослідження й персони до чотирьох user flow, UI-кіту та hi-fi прототипу.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/ua/cases/roomroots.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="RoomRoots, застосунок для підбору рослин за допомогою ШІ · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI-кейс Kateryna Ponomarova: RoomRoots, e-commerce застосунок рівня MVP, який підбирає рослини за освітленням, кімнатою, досвідом догляду й домашніми тваринами, від дослідження й персони до чотирьох user flow, UI-кіту та hi-fi прототипу.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/ua/cases/roomroots.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-uk.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page case-rr">
+  <a class="skip" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Назад до всіх проєктів">
+        <img src="../../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Головне меню" data-nav>
+        <a href="../index.html#work">Проєкти</a>
+        <a href="../index.html#approach">Як я працюю</a>
+        <a href="#contact">Контакти</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Мова: українська">
+            <img src="../../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>UA</span>
+            <img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="../../cases/roomroots.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="../../de/cases/roomroots.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="roomroots.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI-кейс</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>RoomRoots</span></h1>
+          <p class="cs-promise" data-hero-in>ШІ-підбір рослин за освітленням, типом кімнати, складністю догляду й тваринами</p>
+          <p class="cs-lead" data-hero-in>Мобільний e-commerce застосунок рівня MVP, який допомагає обирати й купувати рослини з урахуванням простору, освітлення, досвіду догляду та вподобань. Персональні рекомендації та AI-Vision зменшують невизначеність і ведуть від пошуку до оформлення замовлення.</p>
+          <ul class="cs-tags" role="list" aria-label="Що я робила" data-hero-in>
+            <li>UX-дослідження</li><li>Персона й сценарій</li><li>User flow</li><li>Вайрфрейми</li><li>UI-кіт</li><li>Hi-fi прототип</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Тип проєкту</span><span class="f-val">Концепт MVP</span></span></li>
+            <li><img src="../../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Платформа</span><span class="f-val">Мобільний застосунок</span></span></li>
+            <li><img src="../../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Роль</span><span class="f-val">UX/UI-дизайнерка</span></span></li>
+            <li><img src="../../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Обсяг</span><span class="f-val">Від дослідження до MVP</span></span></li>
+          </ul>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">RoomRoots · Екрани застосунку</span>
+          <span class="case-plate"><img src="../../assets/img/roomroots/hero-mockup.webp" alt="RoomRoots на двох телефонах: головний екран з категоріями рослин і Top 5 з Peace Lily та сторінка товару Monstera Deliciosa" width="1821" height="1551"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Проєкт у цифрах</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>25–40</strong><span>вік основної аудиторії</span></li>
+          <li class="glance"><strong>4</strong><span>ключові бар’єри</span></li>
+          <li class="glance"><strong>4</strong><span>критерії підбору</span></li>
+          <li class="glance"><strong>6</strong><span>основні функції MVP</span></li>
+          <li class="glance"><strong>4</strong><span>user flow</span></li>
+          <li class="glance"><strong>27</strong><span>компонентів</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-showcase" aria-label="Ключові екрани прототипу RoomRoots">
+      <div class="container">
+        <div class="mcards" data-loop>
+          <div class="mc-row"><div class="mc-track">
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="Головний екран: пошук, категорії Low Light, Easy Care і Pet Friendly та Top 5 з Peace Lily" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="Каталог з чипами фільтрів і картками рослин: Monstera Deliciosa та Yucca" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-1.webp" alt="Сторінка товару Monstera Deliciosa: теги розміру, світла й поливу, фото та ціна" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="AI-Vision: «See your space come alive», ідеальний збіг і рослини під ваш простір" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="AI-Vision: рекомендації ШІ для вітальні, рослини під простір і освітлення" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="Сторінка товару Fiddle Leaf Fig: великий розмір, любить сонце, помірний полив" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 584; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="Порожній список бажань: «Start saving your favorite plants» з кнопкою Find my plants" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-1.webp" alt="Порожній кошик: «No plants here yet» з кнопкою Start exploring" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-1.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="" width="575" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 584; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 581; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-1.webp" alt="" width="581" height="4960" loading="lazy"></span></span>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · Проблема</span></p>
+          <h2 class="h2" id="problem-title" data-split>Багато рослин, жодних <em>підказок</em></h2>
+        </div>
+        <p class="section-note" data-rise>Ринок рослин росте і вибір великий, але більшість магазинів показує всім однаковий каталог і не зважає на умови покупця. Найбільше від цього страждають новачки: вони помиляються й втрачають інтерес до покупок.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Три питання, на які покупець не має відповіді</h3>
+        <ul class="notes is-three" role="list" data-stagger>
+          <li class="note"><p>Чи впораюся я з доглядом?</p></li>
+          <li class="note"><p>Чи пасуватиме вона моєму простору?</p></li>
+          <li class="note"><p>Чи вистачить у кімнаті світла?</p></li>
+        </ul>
+
+        <h3 class="cs-sub">Чотири бар’єри до покупки</h3>
+        <ol class="hypo-grid is-four" role="list" data-stagger>
+          <li class="hypo-card">
+            <span class="hc-num">01</span>
+            <h4 class="hc-title">Брак персоналізації</h4>
+            <p class="hc-text">Освітлення, тип кімнати й рівень досвіду не враховуються. Усі бачать однаковий каталог.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">02</span>
+            <h4 class="hc-title">Забагато варіантів</h4>
+            <p class="hc-text">Широкий вибір ускладнює рішення: люди губляться серед варіантів.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">03</span>
+            <h4 class="hc-title">Немає підказок у контексті</h4>
+            <p class="hc-text">Ніщо не пояснює, яка рослина підійде саме цьому простору. Рішення лишається за покупцем.</p>
+          </li>
+          <li class="hypo-card">
+            <span class="hc-num">04</span>
+            <h4 class="hc-title">Страх помилитися</h4>
+            <p class="hc-text">Рослини, що вже загинули, лякають людей купувати знову, тож вони взагалі уникають вибору.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Дослідження</span></p>
+          <h2 class="h2" id="research-title" data-split>Що показало <em>дослідження</em></h2>
+        </div>
+        <p class="section-note" data-rise>Головна проблема не в браку вибору, а в браку впевненості. Користувачам потрібно менше, але релевантніших варіантів і зрозумілі підказки, прив’язані до їхнього простору, досвіду догляду й щоденних умов.</p>
+      </div>
+
+      <div class="container">
+        <div class="research-grid">
+          <div class="chart-card aud-card" data-rise>
+            <h3 class="cs-sub">Цільова аудиторія</h3>
+            <dl class="aud-list">
+              <div><dt>Вік і житло</dt><dd><strong class="aud-big">25–40</strong>живуть у квартирах або будинках</dd></div>
+              <div><dt>Три типи покупців</dt><dd><ul class="aud-types" role="list"><li>Новачки без досвіду</li><li>Люди з базовими знаннями</li><li>Люди, які створюють інтер’єри</li></ul></dd></div>
+              <div><dt>Спільна мотивація</dt><dd>Незалежно від досвіду, вони хочуть рослину, яка пасує до інтер’єру, підходить умовам кімнати й не потребує складного догляду.</dd></div>
+            </dl>
+            <p class="aud-key">Вони хочуть бути певними, що рослина <em>виживе й гарно виглядатиме</em>.</p>
+          </div>
+          <div class="research-img rr-trio cs-rock" role="img" aria-label="Три екрани RoomRoots: каталог з чипами фільтрів, AI-Vision «See your space come alive» і рекомендації ШІ для вітальні">
+            <span class="crop rr-ph" style="--w: 581; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span>
+            <span class="crop rr-ph" style="--w: 581; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-4.webp" alt="" width="581" height="4960" loading="lazy"></span>
+            <span class="crop rr-ph" style="--w: 584; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="" width="584" height="4960" loading="lazy"></span>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Основа дослідження</h3>
+          <ol class="insight-list is-grid" role="list" data-stagger>
+            <li><span class="il-num">1</span><div><h4>Аналіз контексту</h4><p>Ринок рослин, що росте, і каталоги, які не зважають на умови покупця.</p></div></li>
+            <li><span class="il-num">2</span><div><h4>Цільова аудиторія</h4><p>Люди віком 25–40 років у квартирах або будинках, від новачків до дизайнерів інтер’єру.</p></div></li>
+            <li><span class="il-num">3</span><div><h4>Персона</h4><p>Анна, 29, офіс-менеджерка в Кельні, у якої вже гинули рослини.</p></div></li>
+            <li><span class="il-num">4</span><div><h4>Сценарій користувача</h4><p>Від кімнати, що після роботи здається порожньою, до оформленого замовлення.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Користувачі</span></p>
+          <h2 class="h2" id="users-title" data-split>Для кого я <em>проєктувала</em></h2>
+        </div>
+        <p class="section-note" data-rise>Персона й сценарій користувача: Анна хоче рослину, яка зробить квартиру затишнішою і виживе в її умовах.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Персона</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo is-square cs-rock"><img src="../../assets/img/roomroots/persona.webp" alt="Портрет персони, створений за допомогою ШІ" width="1254" height="1254" loading="lazy"><span class="ai-note">Портрет створено за допомогою ШІ</span></div>
+          <div class="plist">
+            <h4>Больові точки</h4>
+            <ul role="list">
+              <li>Не розумію, які рослини підходять під освітлення</li>
+              <li>У мене вже швидко гинули рослини</li>
+              <li>Важко заздалегідь оцінити складність догляду</li>
+              <li>Боюся знову помилитися з вибором</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Потреби</h4>
+            <ul role="list">
+              <li>Прості рекомендації під мої умови</li>
+              <li>Зрозумілі інструкції з догляду</li>
+              <li>Певність, що рослина не загине</li>
+              <li>Уявлення, як вона виглядатиме вдома</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Цілі</h4>
+            <ul role="list">
+              <li>Зробити інтер’єр затишнішим</li>
+              <li>Додати простору «життя»</li>
+              <li>Обрати рослину без помилок</li>
+              <li>Знайти рішення без складного догляду</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>Про мене<span class="persona-tag">Анна, 29 · Офіс-менеджерка · Кельн</span></figcaption>
+            <blockquote><p>«Я живу в квартирі й працюю в офісі. Мені важливо, щоб удома було затишно й красиво, особливо після робочого дня. Я часто зберігаю ідеї інтер’єру в Pinterest і хочу, щоб мій простір виглядав так само охайно й стильно. Я вже купувала рослини, але не завжди знаю, які підійдуть до моїх умов.»</p></blockquote>
+          </figure>
+        </div>
+
+        <div class="cs-quotes-head rr-scn-head">
+          <h3 class="cs-sub">Сценарій користувача</h3>
+          <p class="cs-caption">Словами Анни, переклад з російської</p>
+        </div>
+        <div class="scenario">
+          <div class="sc-cards" data-stagger>
+            <div class="sc-card"><span class="sm-k">Ситуація</span><p>Після роботи я помічаю, що моя кімната виглядає порожньою й не дуже затишною. Хочу додати рослину, але не знаю, яка підійде до моїх умов.</p></div>
+            <div class="sc-card"><span class="sm-k">Мотивація</span><p>Рослини, які я купувала раніше, швидко гинули. Цього разу хочу не помилитися й обрати надійний варіант.</p></div>
+          </div>
+          <ol class="insight-list" role="list" aria-label="Що робить Анна" data-stagger>
+            <li><span class="il-num">1</span><div><h4>Відкриває застосунок</h4><p>щоб отримати рекомендацію, а не обирати навмання</p></div></li>
+            <li><span class="il-num">2</span><div><h4>Проходить короткий квіз</h4><p>освітлення, тип кімнати, складність догляду й тварини</p></div></li>
+            <li><span class="il-num">3</span><div><h4>Отримує відповідні рослини</h4><p>застосунок пропонує ті, що підходять</p></div></li>
+            <li><span class="il-num">4</span><div><h4>Переглядає картку товару</h4><p>умови й опис з першого погляду</p></div></li>
+            <li><span class="il-num">5</span><div><h4>Додає в кошик</h4><p>і оформлює замовлення</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="scope" aria-labelledby="scope-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · Обсяг MVP</span></p>
+          <h2 class="h2" id="scope-title" data-split>MVP у шести <em>функціях</em></h2>
+        </div>
+        <p class="section-note" data-rise>Для MVP я залишила лише ключові функції, потрібні, щоб перевірити гіпотезу покупки.</p>
+      </div>
+
+      <div class="container">
+        <ol class="mvp-grid" role="list" data-stagger>
+          <li><span class="mvp-num">01</span><h3>Каталог</h3><p>Перегляд доступних рослин з базовою інформацією та швидким вибором.</p></li>
+          <li><span class="mvp-num">02</span><h3>Картка товару</h3><p>Усе про рослину: умови, догляд і рекомендації.</p></li>
+          <li><span class="mvp-num">03</span><h3>Кошик</h3><p>Перевірити обрані рослини перед замовленням.</p></li>
+          <li class="is-key"><span class="mvp-num">04</span><h3>AI-Vision</h3><p>Рослини, підібрані під умови користувача або під фото його простору.</p></li>
+          <li><span class="mvp-num">05</span><h3>Оформлення</h3><p>Ввести дані й завершити покупку.</p></li>
+          <li><span class="mvp-num">06</span><h3>Підтвердження</h3><p>Повідомлення, що замовлення пройшло, з його деталями.</p></li>
+        </ol>
+      </div>
+    </section>
+
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · User flow</span></p>
+          <h2 class="h2" id="flow-title" data-split>Від першого дотику до <em>оформлення</em></h2>
+        </div>
+        <p class="section-note" data-rise>Чотири flow описують увесь шлях покупки, від пошуку в каталозі та ШІ-підбору до персональних рекомендацій і оформлення, з ключовими взаємодіями й рішеннями на кожному етапі.</p>
+      </div>
+
+      <div class="container">
+        <div class="flow-tabs" data-tabs>
+          <div class="ft-list" role="tablist" aria-label="User flow">
+            <button type="button" class="ft-tab" id="ft-1-tab" role="tab" aria-controls="ft-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Пошук у каталозі</span></button>
+            <button type="button" class="ft-tab" id="ft-2-tab" role="tab" aria-controls="ft-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">ШІ-підбір</span></button>
+            <button type="button" class="ft-tab" id="ft-3-tab" role="tab" aria-controls="ft-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Рекомендації</span></button>
+            <button type="button" class="ft-tab" id="ft-4-tab" role="tab" aria-controls="ft-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Кошик і оформлення</span></button>
+          </div>
+
+          <div class="ft-panel" id="ft-1-panel" role="tabpanel" aria-labelledby="ft-1-tab" tabindex="0">
+            <div class="fp-head">
+              <p class="fp-steps"><span>Функції MVP 01 · 02 · 03</span></p>
+              <p class="fp-lead">Після запуску застосунку користувач вмикає фільтр Medium Light, обирає Monstera Deliciosa у відфільтрованому каталозі, додає її в кошик і повертається на головний екран.</p>
+              <p class="fp-screens">Екрани: вхід у застосунок · головна · фільтри · каталог · сторінка товару</p>
+            </div>
+            <div class="fv" data-flow="catalog">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Старт</li><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 30; --vbw: 1380; --vbh: 330">
+                  <svg class="fvc-svg" viewBox="10 30 1380 330" focusable="false"><path class="e e-main" d="M190 220 L266 220" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="266,220 255,225.5 255,214.5" style="--i: 0"></polygon><text class="e-label" x="228" y="208" text-anchor="middle" style="--i: 0">Запуск</text><path class="e e-main" d="M426 220 L502 220" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="502,220 491,225.5 491,214.5" style="--i: 1"></polygon><text class="e-label" x="464" y="208" text-anchor="middle" style="--i: 1">Фільтр</text><path class="e e-main" d="M662 220 L738 220" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="738,220 727,225.5 727,214.5" style="--i: 2"></polygon><path class="e e-main" d="M898 220 L974 220" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="974,220 963,225.5 963,214.5" style="--i: 3"></polygon><text class="e-label" x="936" y="208" text-anchor="middle" style="--i: 3">Вибір</text><path class="e e-main" d="M1134 220 L1210 220" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1210,220 1199,225.5 1199,214.5" style="--i: 4"></polygon><path class="e e-main" d="M1290 182 L1290 118" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1290,118 1295.5,129 1284.5,129" style="--i: 5"></polygon><text class="e-label" x="1302" y="156" text-anchor="start" style="--i: 5">Додати</text><path class="e e-main" d="M1210 80 L346 80 L346 182" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="346,182 340.5,171 351.5,171" style="--i: 6"></polygon><text class="e-label" x="778" y="68" text-anchor="middle" style="--i: 6">Повернення</text><path class="e" d="M346 258 L346 316" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="346,316 340.5,305 351.5,305" style="--i: 7"></polygon><text class="e-label" x="358" y="294" text-anchor="start" style="--i: 7">Прокрутка</text><text class="e-note" x="346" y="344" text-anchor="middle">Далі: 02 · ШІ-підбір</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="5.00s" begin="indefinite" fill="freeze" path="M110 220 L1290 220 L1290 80 L346 80 L346 220"></animateMotion></circle></svg>
+                  <div class="fvc-node t-start" style="--x: 110; --y: 220; --nw: 160; --i: 0"><span>Запуск застосунку</span></div><div class="fvc-node t-screen" style="--x: 346; --y: 220; --nw: 160; --i: 1"><span>Головний екран</span></div><div class="fvc-node t-action" style="--x: 582; --y: 220; --nw: 160; --i: 2"><span>Увімкнути фільтр «Medium Light»</span></div><div class="fvc-node t-screen" style="--x: 818; --y: 220; --nw: 160; --i: 3"><span>Відфільтрований каталог</span></div><div class="fvc-node t-action" style="--x: 1054; --y: 220; --nw: 160; --i: 4"><span>Обрати «Monstera Deliciosa»</span></div><div class="fvc-node t-screen" style="--x: 1290; --y: 220; --nw: 160; --i: 5"><span>Сторінка товару</span></div><div class="fvc-node t-action" style="--x: 1290; --y: 80; --nw: 160; --i: 6"><span>Додати в кошик</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Старт</span><b class="fsl-title">Запуск застосунку</b></span></li><li class="fsl-i t-screen" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Головний екран</b></span></li><li class="fsl-i t-action" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Увімкнути фільтр «Medium Light»</b></span></li><li class="fsl-i t-screen" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Відфільтрований каталог</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Обрати «Monstera Deliciosa»</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Сторінка товару</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Додати в кошик</b><ul class="fl-br" role="list"><li class="is-main"><span>Повернення</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Головний екран</span></li></ul><small class="fsl-note">Далі: 02 · ШІ-підбір</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-2-panel" role="tabpanel" aria-labelledby="ft-2-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Функція MVP 04 · AI-Vision</span></p>
+              <p class="fp-lead">Від банера AI-Vision на головному екрані через онбординг і квіз до фото кімнати. Якщо фото не підходить, користувач повертається на екран завантаження; якщо підходить, ШІ його обробляє.</p>
+              <p class="fp-screens">Екрани: головна · AI-Vision · онбординг · квіз · завантаження фото · завантаження</p>
+            </div>
+            <div class="fv" data-flow="ai">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-system"><span></span>Система</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 50; --vbw: 1380; --vbh: 400">
+                  <svg class="fvc-svg" viewBox="10 50 1380 400" focusable="false"><path class="e e-main" d="M190 110 L265 110" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="265,110 254,115.5 254,104.5" style="--i: 0"></polygon><text class="e-label" x="227" y="98" text-anchor="middle" style="--i: 0">Прокрутка</text><path class="e e-main" d="M425 110 L480 110" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="480,110 469,115.5 469,104.5" style="--i: 1"></polygon><path class="e e-main" d="M640 110 L710 110" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="710,110 699,115.5 699,104.5" style="--i: 2"></polygon><text class="e-label" x="675" y="98" text-anchor="middle" style="--i: 2">Натиснути</text><path class="e e-main" d="M870 110 L925 110" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="925,110 914,115.5 914,104.5" style="--i: 3"></polygon><path class="e e-main" d="M1085 110 L1220 110" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1220,110 1209,115.5 1209,104.5" style="--i: 4"></polygon><text class="e-label" x="1152" y="98" text-anchor="middle" style="--i: 4">Завершити</text><path class="e e-main" d="M1300 148 L1300 262" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1300,262 1294.5,251 1305.5,251" style="--i: 5"></polygon><path class="e e-main" d="M1220 300 L1144 300" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="1144,300 1155,294.5 1155,305.5" style="--i: 6"></polygon><text class="e-label" x="1182" y="288" text-anchor="middle" style="--i: 6">Завантажити</text><path class="e e-main" d="M984 300 L924 300" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="924,300 935,294.5 935,305.5" style="--i: 7"></polygon><path class="e e-main" d="M732 300 L672 300" pathLength="1" style="--i: 8"></path><polygon class="e e-main e-head" points="672,300 683,294.5 683,305.5" style="--i: 8"></polygon><text class="e-label" x="702" y="288" text-anchor="middle" style="--i: 8">ТАК</text><path class="e" d="M828 364 L828 420 L1300 420 L1300 338" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="1300,338 1305.5,349 1294.5,349" style="--i: 9"></polygon><text class="e-label" x="1064" y="408" text-anchor="middle" style="--i: 9">НІ</text><text class="e-note" x="592" y="370" text-anchor="middle">Далі: 03 · Рекомендації</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="4.60s" begin="indefinite" fill="freeze" path="M110 110 L1300 110 L1300 300 L592 300"></animateMotion></circle></svg>
+                  <div class="fvc-node t-screen" style="--x: 110; --y: 110; --nw: 160; --i: 0"><span>Головний екран</span></div><div class="fvc-node t-action" style="--x: 345; --y: 110; --nw: 160; --i: 1"><span>Прокрутити до банера ШІ</span></div><div class="fvc-node t-screen" style="--x: 560; --y: 110; --nw: 160; --i: 2"><span>Банер AI-Vision</span></div><div class="fvc-node t-action" style="--x: 790; --y: 110; --nw: 160; --i: 3"><span>Натиснути «Get My Match»</span></div><div class="fvc-node t-screen" style="--x: 1005; --y: 110; --nw: 160; --i: 4"><span>Екрани онбордингу</span></div><div class="fvc-node t-action" style="--x: 1300; --y: 110; --nw: 160; --i: 5"><span>Пройти квіз</span></div><div class="fvc-node t-screen" style="--x: 1300; --y: 300; --nw: 160; --i: 6"><span>Екран завантаження фото</span></div><div class="fvc-node t-action" style="--x: 1064; --y: 300; --nw: 160; --i: 7"><span>Завантажити фото кімнати</span></div><div class="fvc-node t-decision" style="--x: 828; --y: 300; --nw: 160; --i: 8"><span>Фото підходить?</span></div><div class="fvc-node t-system" style="--x: 592; --y: 300; --nw: 160; --i: 9"><span>Система: обробка ШІ</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Головний екран</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Прокрутити до банера ШІ</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Банер AI-Vision</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Натиснути «Get My Match»</b></span></li><li class="fsl-i t-screen" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Екрани онбордингу</b></span></li><li class="fsl-i t-action" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Пройти квіз</b></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Екран завантаження фото</b></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Завантажити фото кімнати</b></span></li><li class="fsl-i t-decision" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Фото підходить?</b><ul class="fl-br" role="list"><li class="is-main"><span>ТАК</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Система: обробка ШІ</span></li><li><span>НІ</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Назад до екрана завантаження фото</span></li></ul></span></li><li class="fsl-i t-system" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Система</span><b class="fsl-title">Система: обробка ШІ</b><small class="fsl-note">Далі: 03 · Рекомендації</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-3-panel" role="tabpanel" aria-labelledby="ft-3-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Функції MVP 04 · 02 · 03</span></p>
+              <p class="fp-lead">Два паралельні шляхи від результатів ШІ: обрати Fiddle Leaf Fig або Bird of Paradise, відкрити сторінку товару й додати в кошик. Звідти користувач повертається до результатів або переходить у кошик через панель навігації.</p>
+              <p class="fp-screens">Екрани: рекомендації ШІ · сторінки товарів</p>
+            </div>
+            <div class="fv" data-flow="recommendations">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: -60; --vby: 0; --vbw: 1380; --vbh: 460">
+                  <svg class="fvc-svg" viewBox="-60 0 1380 460" focusable="false"><path class="e e-main" d="M190 215 L228 215 L228 90 L266 90" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="266,90 255,95.5 255,84.5" style="--i: 0"></polygon><text class="e-label" x="236" y="150" text-anchor="start" style="--i: 0">Вибір</text><path class="e e-main" d="M426 90 L502 90" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="502,90 491,95.5 491,84.5" style="--i: 1"></polygon><path class="e e-main" d="M662 90 L738 90" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="738,90 727,95.5 727,84.5" style="--i: 2"></polygon><text class="e-label" x="700" y="78" text-anchor="middle" style="--i: 2">Додати</text><path class="e e-main" d="M898 90 L980 90 L980 230 L1070 230" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="1070,230 1059,235.5 1059,224.5" style="--i: 3"></polygon><text class="e-label" x="990" y="166" text-anchor="start" style="--i: 3">Наступний крок</text><path class="e" d="M818 52 L818 20 L110 20 L110 192" pathLength="1" style="--i: 4"></path><polygon class="e e-head" points="110,192 104.5,181 115.5,181" style="--i: 4"></polygon><text class="e-label" x="464" y="40" text-anchor="middle" style="--i: 4">Повернення</text><path class="e" d="M190 245 L228 245 L228 370 L266 370" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="266,370 255,375.5 255,364.5" style="--i: 5"></polygon><text class="e-label" x="236" y="318" text-anchor="start" style="--i: 5">Вибір</text><path class="e" d="M426 370 L502 370" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="502,370 491,375.5 491,364.5" style="--i: 6"></polygon><path class="e" d="M662 370 L738 370" pathLength="1" style="--i: 7"></path><polygon class="e e-head" points="738,370 727,375.5 727,364.5" style="--i: 7"></polygon><text class="e-label" x="700" y="358" text-anchor="middle" style="--i: 7">Додати</text><path class="e" d="M898 370 L980 370 L980 230" pathLength="1" style="--i: 8"></path><text class="e-label" x="990" y="306" text-anchor="start" style="--i: 8">Наступний крок</text><path class="e" d="M818 408 L818 440 L110 440 L110 268" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="110,268 115.5,279 104.5,279" style="--i: 9"></polygon><text class="e-label" x="464" y="432" text-anchor="middle" style="--i: 9">Повернення</text><text class="e-note" x="1150" y="300" text-anchor="middle">Далі: 04 · Оформлення</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="4.20s" begin="indefinite" fill="freeze" path="M110 215 L228 215 L228 90 L980 90 L980 230 L1150 230"></animateMotion></circle></svg>
+                  <div class="fvc-node t-screen" style="--x: 110; --y: 230; --nw: 160; --i: 0"><span>Візуалізація результатів ШІ</span></div><div class="fvc-node t-action" style="--x: 346; --y: 90; --nw: 160; --i: 1"><span>Обрати «Fiddle Leaf Fig»</span></div><div class="fvc-node t-screen" style="--x: 582; --y: 90; --nw: 160; --i: 2"><span>Сторінка товару</span></div><div class="fvc-node t-action" style="--x: 818; --y: 90; --nw: 160; --i: 3"><span>Додати в кошик</span></div><div class="fvc-node t-action" style="--x: 346; --y: 370; --nw: 160; --i: 4"><span>Обрати «Bird of Paradise»</span></div><div class="fvc-node t-screen" style="--x: 582; --y: 370; --nw: 160; --i: 5"><span>Сторінка товару</span></div><div class="fvc-node t-action" style="--x: 818; --y: 370; --nw: 160; --i: 6"><span>Додати в кошик</span></div><div class="fvc-node t-action" style="--x: 1150; --y: 230; --nw: 160; --i: 7"><span>Натиснути на панель навігації</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Візуалізація результатів ШІ</b><ul class="fl-br" role="list"><li class="is-main"><span>Вибір</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>«Fiddle Leaf Fig»</span></li><li><span>Вибір</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>«Bird of Paradise»</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Обрати «Fiddle Leaf Fig»</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Сторінка товару</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Додати в кошик</b><ul class="fl-br" role="list"><li class="is-main"><span>Наступний крок</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Натиснути на панель навігації</span></li><li><span>Повернення</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Візуалізація результатів ШІ</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Обрати «Bird of Paradise»</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Сторінка товару</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Додати в кошик</b><ul class="fl-br" role="list"><li class="is-main"><span>Наступний крок</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Натиснути на панель навігації</span></li><li><span>Повернення</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Візуалізація результатів ШІ</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Натиснути на панель навігації</b><small class="fsl-note">Далі: 04 · Оформлення</small></span></li></ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="ft-panel" id="ft-4-panel" role="tabpanel" aria-labelledby="ft-4-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Функції MVP 03 · 05 · 06</span></p>
+              <p class="fp-lead">Від панелі навігації до кошика, де свайп видаляє Monstera Deliciosa, через форму доставки з «Use App Data» і екран оплати до успішної оплати.</p>
+              <p class="fp-screens">Екрани: кошик · доставка · оплата · оплата успішна</p>
+            </div>
+            <div class="fv" data-flow="checkout">
+              <div class="fvc">
+                <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-end"><span></span>Кінець</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+                <div class="fvc-board" aria-hidden="true" style="--vbx: 10; --vby: 50; --vbw: 1380; --vbh: 310">
+                  <svg class="fvc-svg" viewBox="10 50 1380 310" focusable="false"><path class="e e-main" d="M190 110 L240 110" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="240,110 229,115.5 229,104.5" style="--i: 0"></polygon><path class="e e-main" d="M400 110 L470 110" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="470,110 459,115.5 459,104.5" style="--i: 1"></polygon><text class="e-label" x="435" y="98" text-anchor="middle" style="--i: 1">Свайп</text><path class="e e-main" d="M670 110 L720 110" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="720,110 709,115.5 709,104.5" style="--i: 2"></polygon><path class="e e-main" d="M880 110 L975 110" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="975,110 964,115.5 964,104.5" style="--i: 3"></polygon><text class="e-label" x="927" y="98" text-anchor="middle" style="--i: 3">Оформлення</text><path class="e e-main" d="M1135 110 L1220 110" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1220,110 1209,115.5 1209,104.5" style="--i: 4"></polygon><text class="e-label" x="1177" y="98" text-anchor="middle" style="--i: 4">Перемикач</text><path class="e e-main" d="M1300 148 L1300 262" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1300,262 1294.5,251 1305.5,251" style="--i: 5"></polygon><path class="e e-main" d="M1220 300 L1144 300" pathLength="1" style="--i: 6"></path><polygon class="e e-main e-head" points="1144,300 1155,294.5 1155,305.5" style="--i: 6"></polygon><text class="e-label" x="1182" y="288" text-anchor="middle" style="--i: 6">Оплатити</text><path class="e e-main" d="M984 300 L926 300" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="926,300 937,294.5 937,305.5" style="--i: 7"></polygon><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="3.60s" begin="indefinite" fill="freeze" path="M110 110 L1300 110 L1300 300 L828 300"></animateMotion></circle></svg>
+                  <div class="fvc-node t-action" style="--x: 110; --y: 110; --nw: 160; --i: 0"><span>Натиснути на панель навігації</span></div><div class="fvc-node t-screen" style="--x: 320; --y: 110; --nw: 160; --i: 1"><span>Кошик</span></div><div class="fvc-node t-action" style="--x: 570; --y: 110; --nw: 200; --i: 2"><span>Свайпом видалити «Monstera Deliciosa»</span></div><div class="fvc-node t-screen" style="--x: 800; --y: 110; --nw: 160; --i: 3"><span>Оновлений кошик</span></div><div class="fvc-node t-screen" style="--x: 1055; --y: 110; --nw: 160; --i: 4"><span>Форма доставки</span></div><div class="fvc-node t-action" style="--x: 1300; --y: 110; --nw: 160; --i: 5"><span>Увімкнути «Use App Data»</span></div><div class="fvc-node t-screen" style="--x: 1300; --y: 300; --nw: 160; --i: 6"><span>Екран оплати</span></div><div class="fvc-node t-action" style="--x: 1064; --y: 300; --nw: 160; --i: 7"><span>Натиснути «Pay»</span></div><div class="fvc-node t-end" style="--x: 828; --y: 300; --nw: 196; --i: 8"><span>Оплата успішна</span></div>
+                </div>
+                <ol class="fsl fvc-list" role="list"><li class="fsl-i t-action" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Натиснути на панель навігації</b></span></li><li class="fsl-i t-screen" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Кошик</b></span></li><li class="fsl-i t-action" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Свайпом видалити «Monstera Deliciosa»</b></span></li><li class="fsl-i t-screen" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Оновлений кошик</b></span></li><li class="fsl-i t-screen" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Форма доставки</b></span></li><li class="fsl-i t-action" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Увімкнути «Use App Data»</b></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Екран оплати</b></span></li><li class="fsl-i t-action" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Натиснути «Pay»</b></span></li><li class="fsl-i t-end" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Кінець</span><b class="fsl-title">Оплата успішна</b></span></li></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block wf-block">
+          <h3 class="cs-sub">Вайрфрейми</h3>
+          <div class="wf-board" data-stagger>
+            <div class="case-media wf-f" style="--r: -1.5deg"><span class="frame-name">Головна</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-home.png" alt="Вайрфрейм головного екрана: привітання, пошук, розділи, топ-добірка й категорії рослин" width="642" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Картка товару</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-product.png" alt="Вайрфрейм сторінки товару Monstera Deliciosa: фото, теги догляду, галерея й кнопка «у кошик»" width="642" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">AI-Vision</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-ai.png" alt="Вайрфрейм AI-Vision: «Turn your space into a green oasis» з кнопкою Try AI" width="656" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1.5deg"><span class="frame-name">Список бажань</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-wishlist.png" alt="Вайрфрейм порожнього списку бажань з кнопкою Find my plants" width="656" height="1432" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Кошик · порожній</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-cart-empty.png" alt="Вайрфрейм порожнього кошика з кнопкою Start exploring" width="656" height="1415" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Кошик</span><span class="case-plate"><img src="../../assets/figma/roomroots/wireframe-cart.png" alt="Вайрфрейм кошика з чотирма рослинами й переходом до оформлення" width="643" height="1432" loading="lazy"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="system" aria-labelledby="system-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · UI-кіт</span></p>
+          <h2 class="h2" id="system-title" data-split>UI-кіт і <em>hi-fi прототип</em></h2>
+        </div>
+        <p class="section-note" data-rise>Ключові компоненти з більшого UI-кіту: колір, типографіка, іконки, кнопки й картки товарів.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>27</strong><span>компонентів із варіантами</span></li>
+          <li class="bt bt-wide"><strong>21</strong><span>кольорів у палітрі, 17 з назвами: основні зелені, нейтральні, помилка, успіх, білий</span></li>
+          <li class="bt"><strong>8</strong><span>текстових стилів, один шрифт: Lexend</span></li>
+          <li class="bt"><strong>2</strong><span>стилі кнопок: primary і secondary</span></li>
+          <li class="bt bt-wide">
+            <strong>5</strong><span>розділів у таббарі</span>
+            <span class="bt-langs" aria-label="Home, Catalog, AI-Vision, Wishlist, Cart"><b>Головна</b><b>Каталог</b><b>AI-Vision</b><b>Список бажань</b><b>Кошик</b></span>
+          </li>
+          <li class="bt bt-wide bt-note bt-text"><b>Hi-fi прототип</b><span>у Figma, з анімованою каруселлю онбордингу та кошиком</span></li>
+          <li class="bt bt-wide bt-text"><b>Картка товару</b><span>фото, назва, короткий рядок, ціна, «у кошик» і сердечко для списку бажань</span></li>
+          <li class="bt bt-text"><b>Іконки</b><span>один лінійний стиль у кількох розмірах</span></li>
+          <li class="bt bt-text"><b>Чипи фільтрів</b><span>Low Light, Easy Care, Pet Friendly</span></li>
+          <li class="bt bt-wide bt-text"><b>Відгуки</b><span>картки відгуків з оцінкою від однієї до п’яти зірок</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib" aria-labelledby="lib-title">
+      <div class="container">
+        <h3 class="cs-sub" id="lib-title">Усередині UI-кіту</h3>
+        <div class="ds-canvas">
+          <p class="dsc-hint">Перетягуйте фрейми</p>
+          <div class="dsc-board">
+            <div class="case-media dsc-f dsc-type" data-case-frame style="--r: -1.5deg"><span class="frame-name">Колір і шрифт</span><span class="case-plate"><img src="../../assets/img/roomroots/ds-frame-512936.svg" alt="Палітра з п’яти кольорів від кремового до коричневого й лаймового; типографіка в Lexend: заголовок 24 px, кнопка 16 px, основний текст 16 px" width="791" height="321" loading="lazy"></span></div>
+            <div class="case-media dsc-f dsc-parts" data-case-frame style="--r: 1.5deg"><span class="frame-name">Іконки, кнопки, картки товарів</span><span class="case-plate"><img src="../../assets/img/roomroots/ds-frame-512938.webp" alt="Вісімнадцять лінійних іконок, кнопки primary і secondary та дві картки товарів: Boston Fern і Cactus Mix по 24,99 €" width="796" height="1606" loading="lazy"></span></div>
+            <div class="dsc-phones">
+              <div class="case-media dsc-f dsc-p1" data-case-frame style="--r: -3deg"><span class="frame-name">Головна · Top 5</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 575; --y: 0; --h: 1198"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="Головний екран з категоріями й Top 5" width="575" height="4960" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p2" data-case-frame style="--r: 2deg"><span class="frame-name">AI-Vision · Результати</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 584; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-2.webp" alt="Рекомендації AI-Vision для вітальні" width="584" height="4960" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p3" data-case-frame style="--r: -1deg"><span class="frame-name">Товар · Fiddle Leaf Fig</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 575; --y: 1253; --h: 1199"><img src="../../assets/img/roomroots/screens-col-3.webp" alt="Сторінка товару Fiddle Leaf Fig" width="575" height="4960" loading="lazy"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Результат</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Висновки <em>проєкту</em></h2>
+        </div>
+        <p class="section-note" data-rise>MVP зосереджений на тому, щоб зробити вибір простішим і менш тривожним.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Проєкт коротко</h3>
+        <ol class="summary" role="list" data-stagger>
+          <li><span class="sm-k">01 · Проблема</span><strong>Впевненість</strong><p>Покупцям потрібно менше, але краще підібраних рослин і зрозумілі поради з догляду.</p></li>
+          <li><span class="sm-k">02 · Рішення</span><strong>RoomRoots</strong><p>Короткий квіз і AI-Vision звужують каталог за освітленням, умовами в кімнаті, досвідом догляду й тваринами.</p></li>
+          <li><span class="sm-k">03 · MVP</span><strong>6</strong><p>основних функцій на одному UI-кіті, від каталогу до підтвердження замовлення, у hi-fi прототипі.</p></li>
+        </ol>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Чотири висновки</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">Увесь шлях від першого дотику до оплаченого замовлення описано й прототиповано, а один UI-кіт тримає інтерфейс узгодженим, щоб він міг рости разом із продуктом.</p>
+              <p class="end-statement">RoomRoots перетворює купівлю рослин на <em>простий, персональний і впевнений</em> досвід.</p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Простота дає впевненість</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Персоналізація робить вибір релевантним</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Контекст допомагає ухвалювати кращі рішення</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>Зрозумілий флоу зміцнює довіру</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Інші кейси</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="mayak.html"><span class="mini-thumb"><img src="../../assets/img/cover-mayak.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Mayak</span><span class="mini-sub">Багатомовна емоційна підтримка для іммігрантів</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="db-navigator.html"><span class="mini-thumb"><img src="../../assets/img/cover-db.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">DB Navigator</span><span class="mini-sub">Редизайн планувальника подорожей з власної ініціативи</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Сайт у редакційному стилі для ремісничої пекарні</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Живу в Гахенбурзі, Німеччина</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Проєктуймо для <em>реальних потреб</em></h2>
+          <p class="contact-note" data-rise>Шукаю роботу UX/UI-дизайнерки в Німеччині. Напишіть мені на email, зателефонуйте або напишіть у LinkedIn чи Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="Email"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Телефон</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Номер телефону"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Соцмережі</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI-дизайн" width="187" height="89">
+          <p>UX/UI-дизайнерка в Німеччині: дослідження, user flow, прототипи та дизайн-системи.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Меню</span></p>
+          <nav class="footer-nav" aria-label="Нижнє меню">
+            <a href="../index.html#work">Проєкти</a>
+            <a href="../index.html#approach">Як я працюю</a>
+            <a href="#contact">Контакти</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Мова: українська">
+                <img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>UA</span><img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="../../cases/roomroots.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="../../de/cases/roomroots.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="roomroots.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Соцмережі</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../../assets/vendor/gsap.min.js" defer></script>
+  <script src="../../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../../assets/vendor/lenis.min.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

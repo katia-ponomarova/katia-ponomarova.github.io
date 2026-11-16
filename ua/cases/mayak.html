@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" hreflang="en" href="https://katia-ponomarova.github.io/cases/mayak.html">
+  <link rel="alternate" hreflang="de" href="https://katia-ponomarova.github.io/de/cases/mayak.html">
+  <link rel="alternate" hreflang="uk" href="https://katia-ponomarova.github.io/ua/cases/mayak.html">
+  <link rel="alternate" hreflang="x-default" href="https://katia-ponomarova.github.io/cases/mayak.html">
+  <title>Mayak, застосунок емоційної підтримки для іммігрантів · Kateryna Ponomarova</title>
+  <meta name="description" content="UX/UI-кейс Kateryna Ponomarova: Mayak, концепт багатомовного застосунку емоційної підтримки для іммігрантів у Німеччині, від опитування 26 людей і 3 інтерв’ю до дизайн-системи та прототипу на 420 фреймів.">
+  <meta name="theme-color" content="#FBF1EF">
+  <link rel="icon" href="../../assets/icons/eyebrow-star.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://katia-ponomarova.github.io/ua/cases/mayak.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kateryna Ponomarova">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="Mayak, застосунок емоційної підтримки для іммігрантів · Kateryna Ponomarova">
+  <meta property="og:description" content="UX/UI-кейс Kateryna Ponomarova: Mayak, концепт багатомовного застосунку емоційної підтримки для іммігрантів у Німеччині, від опитування 26 людей і 3 інтерв’ю до дизайн-системи та прототипу на 420 фреймів.">
+  <meta property="og:url" content="https://katia-ponomarova.github.io/ua/cases/mayak.html">
+  <meta property="og:image" content="https://katia-ponomarova.github.io/assets/img/og-uk.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="../../assets/fonts/oswald-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand brand-back" href="../index.html#work" aria-label="Назад до всіх проєктів">
+        <img src="../../assets/img/logo.svg" alt="" width="94" height="47">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Головне меню" data-nav>
+        <a href="../index.html#work">Проєкти</a>
+        <a href="../index.html#approach">Як я працюю</a>
+        <a href="#contact">Контакти</a>
+        <div class="lang" data-lang>
+          <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Мова: українська">
+            <img src="../../assets/icons/language.svg" alt="" width="20" height="20">
+            <span translate="no" data-lang-code>UA</span>
+            <img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="20" height="20">
+          </button>
+          <ul class="lang-menu" id="lang-menu" role="list">
+            <li><a href="../../cases/mayak.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+            <li><a href="../../de/cases/mayak.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+            <li><a href="mayak.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+      </nav>
+
+      <div class="header-tools">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">
+          <span>Зв’язатися</span>
+          <img src="../../assets/icons/cta-arrow.png" alt="" width="24" height="24">
+        </a>
+
+        <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню" data-burger>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero" aria-labelledby="case-title">
+      <div class="container cs-hero-inner">
+        <div class="cs-hero-copy">
+          <p class="eyebrow" data-hero-in><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>UX/UI-кейс</span></p>
+          <h1 class="cs-title" id="case-title"><span class="ht-line" data-hero-line>Mayak</span></h1>
+          <p class="cs-promise" data-hero-in>Багатомовна емоційна підтримка для іммігрантів у Німеччині</p>
+          <p class="cs-lead" data-hero-in>Концепт мобільного застосунку, що допомагає іммігрантам пройти емоційну сторону адаптації в новій країні: анонімна підтримка від людей з подібним досвідом, щоденний чек-ін настрою та термінова допомога рідною мовою. Я провела його від дослідження користувачів до дизайн-системи, прототипу на 420 фреймів і лендингу.</p>
+          <ul class="cs-tags" role="list" aria-label="Що я робила" data-hero-in>
+            <li>UX-дослідження</li><li>Продуктовий дизайн</li><li>Дизайн-система</li><li>UI-дизайн</li><li>Прототипування</li><li>Лендинг</li>
+          </ul>
+          <ul class="facts" role="list" data-hero-in>
+            <li><img src="../../assets/icons/meta-type.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Тип проєкту</span><span class="f-val">Концептуальний проєкт</span></span></li>
+            <li><img src="../../assets/icons/meta-platform.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Платформа</span><span class="f-val">Застосунок + лендинг</span></span></li>
+            <li><img src="../../assets/icons/meta-role.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Роль</span><span class="f-val">UX/UI-дизайнерка</span></span></li>
+            <li><img src="../../assets/icons/meta-scope.svg" alt="" width="44" height="44"><span class="f-text"><span class="f-label">Обсяг</span><span class="f-val">Від дослідження до MVP</span></span></li>
+          </ul>
+        </div>
+
+        <div class="case-media cs-cover" data-case-frame data-hero-in>
+          <span class="frame-name">Mayak · Екрани застосунку</span>
+          <span class="case-plate"><img src="../../assets/img/mayak/hero-mockup.webp" alt="Mayak на трьох телефонах: німецький головний екран з «Ich möchte reden» та «Ich brauche dringend Hilfe» і два екрани онбордингу" width="1821" height="1989"></span>
+        </div>
+      </div>
+
+      <div class="container cs-glance" data-hero-in>
+        <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Проєкт у цифрах</span></p>
+        <ul class="glance-grid" role="list">
+          <li class="glance"><strong>26</strong><span>опитаних</span></li>
+          <li class="glance"><strong>3</strong><span>глибинні інтерв’ю</span></li>
+          <li class="glance"><strong>35</strong><span>компонентів</span></li>
+          <li class="glance"><strong>308</strong><span>екранів</span></li>
+          <li class="glance"><strong>4</strong><span>мови</span></li>
+          <li class="glance"><strong>420</strong><span>фреймів прототипу</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-showcase" aria-label="Ключові екрани прототипу Mayak">
+      <div class="container">
+        <div class="mcards" data-loop>
+          <div class="mc-row"><div class="mc-track">
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="Щоденний чек-ін німецькою: «Wie fühlst du dich?» з п’ятьма настроями" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Лендинг: «You don’t have to go through this»"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 613; --y: 0; --h: 1280"><img src="../../assets/img/mayak/card-home-de.webp" alt="Головний екран німецькою з двома шляхами: «Ich möchte reden» та «Ich brauche dringend Hilfe»" width="613" height="1280" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Лендинг: «Relocation changes not just the country around you»"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 1380; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="Термінова допомога українською: номери екстрених служб 112 і 110 з кнопками виклику" width="604" height="1249" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Лендинг: «How Mayak works» у чотири кроки"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 2880; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="Профіль учасниці англійською з дописами й коментарями" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item"><span class="mk-dev is-laptop mc-dev" role="img" aria-label="Лендинг: «What people usually ask»"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 6520; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 613; --y: 0; --h: 1280"><img src="../../assets/img/mayak/card-home-de.webp" alt="" width="613" height="1280" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 1380; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="" width="604" height="1249" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 2880; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="crop mc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="" width="576" height="1191" loading="lazy"></span></span>
+            <span class="mc-item" aria-hidden="true"><span class="mk-dev is-laptop mc-dev"><span class="mk-scr"><span class="crop" style="--sw: 1440; --w: 1440; --y: 6520; --h: 900"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span></span><img class="mk-frame" src="../../assets/figma/muka/device-laptop.svg" alt="" width="1640" height="1006" loading="lazy"></span></span>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="problem" aria-labelledby="problem-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>01 · Проблема</span></p>
+          <h2 class="h2" id="problem-title" data-split>Більше, ніж мова і <em>документи</em></h2>
+        </div>
+        <p class="section-note" data-rise>Переїзд за кордон часто приносить самотність, тривогу й відчуття, що нічого не стабільно. Страх, мовний бар’єр і відчуття, що власні проблеми «недостатньо серйозні», заважають людям звертатися по допомогу.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Три гіпотези, всі підтверджені дослідженням</h3>
+        <ol class="hypo-grid" role="list" data-stagger>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H1</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Іммігранти почуваються самотніми й незрозумілими, навіть коли їхня адаптація здається успішною.</p>
+            <p class="hc-proof"><span class="hc-label">Підтвердження</span>Висока самотність і емоційна ізоляція в опитуванні та інтерв’ю: «ніхто насправді не розуміє».</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H2</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Страх, мовний бар’єр і складна система не дають людям звертатися по психологічну допомогу.</p>
+            <p class="hc-proof"><span class="hc-label">Підтвердження</span><strong class="hc-big">11,5&nbsp;%</strong>колись зверталися по професійну допомогу</p>
+          </li>
+          <li class="hypo-card">
+            <div class="hc-top"><span class="hc-num">H3</span><span class="chip-ok">Підтверджено</span></div>
+            <p class="hc-claim">Немає спокійного місця, де можна поговорити про те, що вони переживають, без осуду.</p>
+            <p class="hc-proof"><span class="hc-label">Підтвердження</span><strong class="hc-big">50&nbsp;%</strong>бракувало безпечного місця, щоб говорити про свої почуття</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cs-section cs-ruled" id="research" aria-labelledby="research-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>02 · Дослідження</span></p>
+          <h2 class="h2" id="research-title" data-split>Що показало <em>дослідження</em></h2>
+        </div>
+        <p class="section-note" data-rise>Онлайн-опитування 26 іммігрантів у Німеччині та три глибинні інтерв’ю, зведені в Jobs to be Done і карту шляху клієнта.</p>
+      </div>
+
+      <div class="container">
+        <div class="research-grid">
+          <figure class="chart-card" data-rise>
+            <figcaption class="chart-head">
+              <span class="cs-sub">Опитування: ключові результати</span>
+              <span class="cs-caption">Частка з 26 респондентів</span>
+            </figcaption>
+            <ul class="bars" role="list" data-bars>
+              <li class="bar" style="--v: 53.8"><span class="bar-label">намагалися впоратися через спілкування й нові знайомства</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">53,8&nbsp;%</strong></li>
+              <li class="bar" style="--v: 50"><span class="bar-label">бракувало безпечного місця без осуду, щоб говорити про свої почуття</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">50&nbsp;%</strong></li>
+              <li class="bar" style="--v: 42"><span class="bar-label">оцінили свій емоційний стрес і вигорання вище ніж 7 з 10</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">42&nbsp;%</strong></li>
+              <li class="bar" style="--v: 11.5"><span class="bar-label">колись зверталися по професійну психологічну підтримку</span><span class="bar-track" aria-hidden="true"><span class="bar-fill"></span></span><strong class="bar-num">11,5&nbsp;%</strong></li>
+            </ul>
+          </figure>
+          <img class="research-img cs-rock" src="../../assets/img/mayak/research-laptop.webp" alt="Лендинг Mayak на ноутбуці: «A simple app for complex feelings» над трьома екранами онбордингу" width="1536" height="1638" loading="lazy">
+        </div>
+
+        <div class="voices">
+          <div>
+            <h3 class="cs-sub">Інтерв’ю: ключові інсайти</h3>
+            <ol class="insight-list" role="list" data-stagger>
+              <li><span class="il-num">1</span><div><h4>Труднощі накопичуються з часом</h4><p>Перші місяці здаються тимчасовими; стрес і невизначеність накопичуються пізніше.</p></div></li>
+              <li><span class="il-num">2</span><div><h4>Найбільший стрес – відчуття розгубленості</h4><p>Немає контролю, немає ясного майбутнього, доводиться «розбиратися з усім самій».</p></div></li>
+              <li><span class="il-num">3</span><div><h4>Співчуття замало</h4><p>Люди хочуть спокійної, чесної, людської розмови без шаблонних фраз.</p></div></li>
+            </ol>
+          </div>
+          <div>
+            <div class="cs-quotes-head">
+              <h3 class="cs-sub">Їхніми словами</h3>
+              <p class="cs-caption">З опитування та інтерв’ю, переклад з російської</p>
+            </div>
+            <ul class="notes" role="list" data-stagger>
+              <li class="note"><blockquote><p>«Немає з ким поговорити.»</p></blockquote></li>
+              <li class="note"><blockquote><p>«Хотілося, щоб хтось просто вислухав.»</p></blockquote></li>
+              <li class="note"><blockquote><p>«Люди вдома не розуміють мого болю.»</p></blockquote></li>
+              <li class="note"><blockquote><p>«Я не хотіла відкриватися незнайомцям.»</p></blockquote></li>
+              <li class="note"><blockquote><p>«Коли тобі погано, немає сил шукати допомогу.»</p></blockquote></li>
+              <li class="note"><blockquote><p>«Було важливо хоча б знати, що я не одна.»</p></blockquote></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="users" aria-labelledby="users-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>03 · Користувачі</span></p>
+          <h2 class="h2" id="users-title" data-split>Для кого я <em>проєктувала</em></h2>
+        </div>
+        <p class="section-note" data-rise>Профіль клієнта, шість Jobs to be Done і карта шляху клієнта. Кожна «робота» стала функцією застосунку.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Профіль клієнта</h3>
+        <div class="profile" data-stagger>
+          <div class="profile-photo cs-rock"><img src="../../assets/img/mayak/persona.webp" alt="Портрет для профілю клієнта, створений за допомогою ШІ" width="1447" height="1379" loading="lazy"><span class="ai-note">Портрет створено за допомогою ШІ</span></div>
+          <div class="plist">
+            <h4>Больові точки</h4>
+            <ul role="list">
+              <li>Почувається незрозумілою й самотньою</li>
+              <li>Тривога за майбутнє та постійна невизначеність</li>
+              <li>Емоційне виснаження від адаптації в новій країні</li>
+              <li>Їй важко просити про допомогу чи відкриватися</li>
+              <li>Страх осуду та небезпечних взаємодій</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Потреби</h4>
+            <ul role="list">
+              <li>Спокійний простір без тиску</li>
+              <li>Підтримка знайомою мовою</li>
+              <li>Люди з подібним досвідом</li>
+              <li>Безпечний спосіб бути почутою без осуду</li>
+              <li>Зрозумілі й доступні наступні кроки</li>
+            </ul>
+          </div>
+          <div class="plist">
+            <h4>Цілі</h4>
+            <ul role="list">
+              <li>Почуватися емоційно стабільнішою</li>
+              <li>Перестати нести все сама</li>
+              <li>Знайти людей, з якими можна бути собою</li>
+              <li>Адаптуватися впевненіше</li>
+              <li>Знати, куди звернутися у важкі моменти</li>
+            </ul>
+          </div>
+          <figure class="about-me">
+            <figcaption>Про мене</figcaption>
+            <blockquote><p>«Я переїхала до Німеччини, щоб збудувати безпечніше й стабільніше життя. Нова мова, культура й незнайомі системи часто залишають мене самотньою та емоційно виснаженою. Я хочу знайти людей, які розуміють цей досвід, просити про допомогу без страху осуду й поступово почуватися впевненіше в новому домі.»</p></blockquote>
+          </figure>
+        </div>
+
+        <h3 class="cs-sub">Шість Jobs to be Done, шість функцій</h3>
+        <div class="jobs" data-stagger>
+          <details class="job" open>
+            <summary><span class="job-num">01</span><span class="job-name">Підтримка</span><span class="job-when">Коли важко, а поговорити рідною мовою немає з ким</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>анонімно поділитися тим, як почуваюся, і бути почутою, без порад, осуду чи звинувачень</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>не залишатися наодинці з тим, що переживаю</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">02</span><span class="job-name">Спільнота</span><span class="job-when">Коли люди вдома не розуміють, що я переживаю</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>читати історії людей, які теж переїхали, і відповідати їм</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>бачити, що я не одна і моя реакція на адаптацію нормальна</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">03</span><span class="job-name">Чек-ін настрою</span><span class="job-when">Коли емоційні труднощі накопичуються повільно й непомітно</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>щодня коротко відмічати свій настрій</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>бачити, як я почуваюся з часом, і помічати, коли стає гірше</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">04</span><span class="job-name">Термінова допомога</span><span class="job-when">Коли мій стан раптово погіршується</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>миттєво знайти екстрені контакти, навіть офлайн</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>отримати допомогу одразу, без пошуку й реєстрації</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">05</span><span class="job-name">Відповіді · FAQ</span><span class="job-when">Коли я не розумію, як працює психологічна допомога в Німеччині</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>знайти прості відповіді на поширені питання рідною мовою</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>невідоме лякало менше і я знала перший крок</p>
+            </div>
+          </details>
+          <details class="job">
+            <summary><span class="job-num">06</span><span class="job-name">Безпека</span><span class="job-when">Коли я ділюся чимось особистим у спільноті</span><img class="job-chev" src="../../assets/icons/chevron.svg" alt="" width="22" height="22"></summary>
+            <div class="job-flow">
+              <p class="job-step"><span>Я хочу</span>скаржитися на токсичний контент і бачити рішення модерації</p>
+              <img class="job-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16">
+              <p class="job-step job-goal"><span>Щоб</span>відчувати, що простір лишається безпечним</p>
+            </div>
+          </details>
+        </div>
+        <div class="cs-block cjm">
+          <div class="cs-quotes-head">
+            <h3 class="cs-sub">Карта шляху клієнта</h3>
+            <p class="cs-caption">Від відкриття застосунку до першого коментаря, переклад з російської</p>
+          </div>
+          <div class="cjm-card" data-journey style="--n: 11">
+            <div class="cj-curve">
+              <span class="cj-band" data-band aria-hidden="true"></span>
+              <svg class="cj-line" viewBox="0 0 1100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="50,50 150,68 250,50 350,14 450,86 550,50 650,14 750,86 850,32 950,86 1050,14"></polyline></svg>
+              <div class="cj-pts" role="group" aria-label="Перейти до етапу">
+                <button type="button" class="cj-pt" data-tone="mid" data-go="0" style="--i: 0; --lv: 0" aria-current="true" aria-label="Етап 01, Відкриває застосунок: невпевненість"><span>01</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="1" style="--i: 1; --lv: -1" aria-label="Етап 02, Входить або реєструється: напруга"><span>02</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="2" style="--i: 2; --lv: 0" aria-label="Етап 03, Бачить короткий чекліст: сумнів"><span>03</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="3" style="--i: 3; --lv: 2" aria-label="Етап 04, Заповнює чекліст або йде далі: полегшення"><span>04</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="4" style="--i: 4; --lv: -2" aria-label="Етап 05, Обирає шлях на головному екрані: хвилювання"><span>05</span></button>
+                <button type="button" class="cj-pt" data-tone="mid" data-go="5" style="--i: 5; --lv: 0" aria-label="Етап 06, Відкриває стрічку спільноти й обирає тему: цікавість"><span>06</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="6" style="--i: 6; --lv: 2" aria-label="Етап 07, Читає тему та коментарі: задума"><span>07</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="7" style="--i: 7; --lv: -2" aria-label="Етап 08, Вирішує прокоментувати: страх"><span>08</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="8" style="--i: 8; --lv: 1" aria-label="Етап 09, Пише коментар: спокійніше"><span>09</span></button>
+                <button type="button" class="cj-pt" data-tone="down" data-go="9" style="--i: 9; --lv: -2" aria-label="Етап 10, Надсилає його: напруга"><span>10</span></button>
+                <button type="button" class="cj-pt" data-tone="up" data-go="10" style="--i: 10; --lv: 2" aria-label="Етап 11, Залишається або виходить: спокій"><span>11</span></button>
+              </div>
+            </div>
+            <div class="cj-bar">
+              <p class="cj-legend" aria-hidden="true"><span class="lg-up">Краще</span><span class="lg-mid">Нейтрально</span><span class="lg-down">Важче</span></p>
+              <div class="rs-controls">
+                <span class="rs-count" aria-hidden="true"><b data-count>01–04</b> / 11</span>
+                <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Попередній етап"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+                <button type="button" class="rs-arrow" data-next aria-label="Наступний етап"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              </div>
+            </div>
+            <div class="cj-scroll" data-track tabindex="0" role="region" aria-label="Карта шляху клієнта, 11 етапів, прокручується вбік">
+              <ol class="cj-board" role="list">
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">01</span><h4>Відкриває застосунок</h4><span class="cj-word">Невпевненість</span></div>
+                  <p class="cj-story">Запускає Mayak, бо зараз важко і хочеться підтримки.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває застосунок.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Сплеш і перший екран</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Ще незрозуміло, що це за застосунок і чи тут безпечно.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Одразу показати, що це безпечний простір з підтримкою і все просто.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">02</span><h4>Входить або реєструється</h4><span class="cj-word">Напруга</span></div>
+                  <p class="cj-story">Вирішує, увійти в наявний акаунт чи створити новий.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Бачить питання про акаунт; без акаунта вводить email, задає пароль, підтверджує й входить.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Екрани входу, реєстрації та підтвердження</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Довгий вхід виснажує, особливо людину, яка й так у стресі.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Зробити вхід максимально коротким і зрозумілим; коротко пояснити, навіщо потрібні дані.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">03</span><h4>Бачить короткий чекліст</h4><span class="cj-word">Сумнів</span></div>
+                  <p class="cj-story">Після входу потрапляє на короткий чекліст.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Переглядає питання; вирішує пропустити чекліст чи заповнити.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Екран чекліста</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Коли погано, навіть короткі питання здаються важкими.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Одним реченням пояснити, навіщо чекліст; зробити його дуже коротким і спокійним.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">04</span><h4>Заповнює чекліст або йде далі</h4><span class="cj-word">Полегшення</span></div>
+                  <p class="cj-story">Нічого не пропускаючи, відповідає на питання й іде далі.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Заповнює чекліст.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Форма чекліста</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Сухі або надто особисті питання можуть відштовхнути.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Делікатні, прості питання й показаний прогрес, щоб крок здавався коротким.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">05</span><h4>Обирає шлях на головному екрані</h4><span class="cj-word">Хвилювання</span></div>
+                  <p class="cj-story">Вирішує, що потрібно зараз: поговорити з людьми чи знайти термінову допомогу.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Дивиться на головний екран; обирає «Хочу поговорити» або «Мені потрібна термінова допомога».</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Головний екран</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Тривога заважає швидко ухвалювати рішення.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Дуже чітко розділити два шляхи на головному екрані: розмова й термінова допомога.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="mid">
+                  <div class="cj-head"><span class="cj-num">06</span><h4>Відкриває стрічку спільноти й обирає тему</h4><span class="cj-word">Цікавість</span></div>
+                  <p class="cj-story">Іде туди, де можна прочитати про досвід інших людей.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває стрічку спільноти; обирає тему.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Стрічка спільноти</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Може бути незрозуміло, яка тема підходить.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Короткі підписи до тем: про що кожна і для кого.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">07</span><h4>Читає тему та коментарі</h4><span class="cj-word">Задума</span></div>
+                  <p class="cj-story">Хоче побачити, чи тут безпечно і чи інші пережили те саме.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Відкриває тему, доходить до картки теми, читає коментарі.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Тема, картка теми й коментарі</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Хаотичні або важкі коментарі можуть посилити тривогу.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Чіткі правила спільноти, спокійна подача й виділені найкорисніші коментарі.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">08</span><h4>Вирішує прокоментувати</h4><span class="cj-word">Страх</span></div>
+                  <p class="cj-story">Розуміє, що теж хоче висловитися.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Натискає «Додати коментар».</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Кнопка «Додати коментар»</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Страх осуду, страх сказати «не так».</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Підтримати ще до того, як людина почне писати, короткою підказкою.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">09</span><h4>Пише коментар</h4><span class="cj-word">Спокійніше</span></div>
+                  <p class="cj-story">Перетворює свої думки на слова.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Пише на екрані коментаря.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Редактор коментаря</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Порожній екран може лякати; почати з нуля важко.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Приклад початку або м’який шаблон для першого повідомлення.</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="down">
+                  <div class="cj-head"><span class="cj-num">10</span><h4>Надсилає його</h4><span class="cj-word">Напруга</span></div>
+                  <p class="cj-story">Вирішує надіслати коментар.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Підтверджує надсилання.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Кнопка надсилання й підтвердження</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Незрозуміло, що відбувається після надсилання.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>Після надсилання – зрозумілий результат: «Коментар опубліковано».</dd></dl>
+                </li>
+                <li class="cj-col" data-col data-tone="up">
+                  <div class="cj-head"><span class="cj-num">11</span><h4>Залишається або виходить</h4><span class="cj-word">Спокій</span></div>
+                  <p class="cj-story">Після надсилання залишається або закриває застосунок.</p>
+                  <dl class="cj-box"><dt>Дії</dt><dd>Обирає: читати далі чи вийти.</dd></dl>
+                  <dl class="cj-box"><dt>Точка контакту</dt><dd>Екран після надсилання, повернення до стрічки спільноти, вихід</dd></dl>
+                  <dl class="cj-box is-pain"><dt>Що заважає</dt><dd>Без відчуття завершеності людина може піти стривоженою.</dd></dl>
+                  <dl class="cj-box is-fix"><dt>Що покращити</dt><dd>М’який наступний крок: читати далі, спробувати іншу тему або повернутися пізніше.</dd></dl>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="market" aria-labelledby="market-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>04 · Конкурентний аналіз</span></p>
+          <h2 class="h2" id="market-title" data-split>Чого бракує <em>наявним застосункам</em></h2>
+        </div>
+        <p class="section-note" data-rise>Я порівняла три продукти, якими новоприбулі вже користуються. Кожен закриває частину потреби; жоден не поєднує підтримку, місцеву допомогу й знайомі мови.</p>
+      </div>
+
+      <div class="container">
+        <div class="rival-slider" data-slider data-rise>
+          <div class="rs-bar">
+            <div class="rs-names" role="group" aria-label="Оберіть продукт">
+              <button type="button" class="rs-name" data-go="0" aria-current="true">TalkLife</button>
+              <button type="button" class="rs-name" data-go="1">Integreat</button>
+              <button type="button" class="rs-name" data-go="2">Réfugiés.info</button>
+            </div>
+            <div class="rs-controls">
+              <span class="rs-count" aria-hidden="true"><b data-count>01</b> / 03</span>
+              <button type="button" class="rs-arrow rs-prev" data-prev aria-label="Попередній продукт"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+              <button type="button" class="rs-arrow" data-next aria-label="Наступний продукт"><img src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></button>
+            </div>
+          </div>
+          <div class="rs-track" data-track tabindex="0" aria-label="Конкуренти, гортайте або користуйтеся стрілками" aria-roledescription="карусель">
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="1 з 3: TalkLife">
+              <div class="rs-text">
+                <h3>TalkLife</h3>
+                <p class="rs-where"><span>Сайт</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Що це</dt><dd>Спільнота взаємопідтримки: дописи, особисті повідомлення, групові чати й відповіді цілодобово.</dd></div>
+                  <div><dt>Сильні сторони</dt><dd>Простір «без осуду»; майже завжди хтось онлайн; сильні інструменти безпеки й модерації.</dd></div>
+                  <div><dt>Обмеження</dt><dd>Сама зазначає, що не замінює професійної допомоги; в описі немає місцевих сервісів для мігрантів; у App Store інтерфейс лише англійською.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-01.webp" alt="Стрічка TalkLife" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-02.webp" alt="Коментарі TalkLife" width="842" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-03.webp" alt="Кімнати TalkLife" width="842" height="1710" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="2 з 3: Integreat">
+              <div class="rs-text">
+                <h3>Integreat</h3>
+                <p class="rs-where"><span>Сайт</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Що це</dt><dd>Багатомовний місцевий путівник для новоприбулих: офіційна інформація, консультації, вакансії та події.</dd></div>
+                  <div><dt>Сильні сторони</dt><dd>Контент від органів влади й організацій; багато мов і офлайн-доступ; без реклами й без збору даних користувачів.</dd></div>
+                  <div><dt>Обмеження</dt><dd>Немає емоційної підтримки чи спільноти; якість залежить від того, наскільки активно її оновлює кожне місто; у фокусі – щоденна інтеграція, а не почуття.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-04.webp" alt="Новини Integreat" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-05.webp" alt="Події Integreat" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-06.webp" alt="Головна Integreat для району Райн-Пфальц" width="838" height="1710" loading="lazy">
+              </div>
+            </article>
+            <article class="rs-slide" aria-roledescription="слайд" aria-label="3 з 3: Réfugiés.info">
+              <div class="rs-text">
+                <h3>Réfugiés.info</h3>
+                <p class="rs-where"><span>Сайт</span><span>Android</span><span>iOS</span></p>
+                <dl>
+                  <div><dt>Що це</dt><dd>Французький державний сервіс із простими перекладеними інструкціями, місцевими ініціативами й персоналізацією для біженців.</dd></div>
+                  <div><dt>Сильні сторони</dt><dd>7 мов, зокрема українська й російська; ініціативи поруч; покрокові підказки, персоналізація й озвучення.</dd></div>
+                  <div><dt>Обмеження</dt><dd>Працює лише для Франції; вужча аудиторія, ніж у Mayak, переважно біженці, а не всі іммігранти; немає спільноти чи чату.</dd></div>
+                </dl>
+              </div>
+              <div class="rs-shots">
+                <img src="../../assets/img/mayak/screen-07.webp" alt="Головна Réfugiés.info" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-08.webp" alt="Налаштування профілю Réfugiés.info" width="838" height="1710" loading="lazy">
+                <img src="../../assets/img/mayak/screen-09.webp" alt="Збережені записи Réfugiés.info" width="838" height="1710" loading="lazy">
+              </div>
+            </article>
+          </div>
+          <div class="rs-dots" aria-hidden="true"><i data-dot></i><i data-dot></i><i data-dot></i></div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Патерни, які я запозичила</h3>
+
+          <ul class="ref-bento" role="list">
+            <li class="rb-wide"><span class="rn-k">Структура</span><b>Reddit</b><p>Треди, гілки коментарів і анонімні нікнейми: люди беруть участь, не розкриваючи, хто вони.</p></li>
+            <li><span class="rn-k">Місцевий контекст</span><b>Nextdoor</b><p>Стрічка «поруч з вами» і взаємодопомога, як розділ допомоги за містами в Mayak.</p></li>
+            <li><span class="rn-k">Тон</span><b>Headspace</b><p>Дбайливий тон, спокійні ілюстрації та обережні формулювання без тиску.</p></li>
+            <li><span class="rn-k">Подача</span><b>Medium</b><p>Історії від першої особи й вибір тем під час онбордингу, як теги інтересів у Mayak.</p></li>
+            <li class="rb-wide"><span class="rn-k">Метчинг</span><b>Bumble</b><p>Рекомендації за інтересами й досвідом, з обережними правилами першого контакту.</p></li>
+            <li><span class="rn-k">Простота</span><b>Threads</b><p>Простий вхід через наявний акаунт і мінімалістична стрічка обговорень.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="flow" aria-labelledby="flow-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>05 · Сценарій і user flow</span></p>
+          <h2 class="h2" id="flow-title" data-split>Від важкого вечора до <em>«Я не одна»</em></h2>
+        </div>
+        <p class="section-note" data-rise>Перше звернення Марії по підтримку, розкладене на чотири user flow: вхід, спільнота, коментування й термінова допомога.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="flow-tabs" data-tabs>
+          <div class="ft-list" role="tablist" aria-label="User flow">
+            <button type="button" class="ft-tab" id="ft-1-tab" role="tab" aria-controls="ft-1-panel" aria-selected="true"><span class="ft-num">01</span><span class="ft-title">Вхід і чек-ін</span></button>
+            <button type="button" class="ft-tab" id="ft-2-tab" role="tab" aria-controls="ft-2-panel" aria-selected="false" tabindex="-1"><span class="ft-num">02</span><span class="ft-title">Спільнота</span></button>
+            <button type="button" class="ft-tab" id="ft-3-tab" role="tab" aria-controls="ft-3-panel" aria-selected="false" tabindex="-1"><span class="ft-num">03</span><span class="ft-title">Перший коментар</span></button>
+            <button type="button" class="ft-tab" id="ft-4-tab" role="tab" aria-controls="ft-4-panel" aria-selected="false" tabindex="-1"><span class="ft-num">04</span><span class="ft-title">Термінова допомога</span></button>
+          </div>
+
+          <div class="ft-panel" id="ft-1-panel" role="tabpanel" aria-labelledby="ft-1-tab" tabindex="0">
+            <div class="fp-head">
+              <p class="fp-steps"><span>Кроки 01–03 сценарію</span></p>
+              <p class="fp-lead">Вечір після важкого тижня. Марії тривожно й самотньо: поруч немає нікого, хто б зрозумів. Вона відкриває Mayak, входить через email за кілька полів, і м’який чек-ін допомагає їй назвати свої почуття.</p>
+              <p class="fp-screens">Екрани: сплеш · онбординг · вхід · чек-ін</p>
+            </div>
+            <div class="fv" data-flow="registration">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-start"><span></span>Старт</li><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-form"><span></span>Крок реєстрації</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M228 164 L284 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="284,164 273,169.5 273,158.5" style="--i: 0"></polygon><path class="e e-main" d="M380 228 L380 374" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="380,374 374.5,363 385.5,363" style="--i: 1"></polygon><text class="e-label" x="396" y="306" text-anchor="middle" style="--i: 1">Ні</text><path class="e e-main" d="M468 411 L532 411" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="532,411 521,416.5 521,405.5" style="--i: 2"></polygon><path class="e e-main" d="M708 411 L772 411" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="772,411 761,416.5 761,405.5" style="--i: 3"></polygon><path class="e e-main" d="M948 411 L1012 411" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1012,411 1001,416.5 1001,405.5" style="--i: 4"></polygon><path class="e e-main" d="M1100 374 L1100 296 L620 296 L620 202" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="620,202 625.5,213 614.5,213" style="--i: 5"></polygon><text class="e-label" x="860" y="284" text-anchor="middle" style="--i: 5">Назад до чекліста</text><path class="e" d="M476 164 L532 164" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="532,164 521,169.5 521,158.5" style="--i: 6"></polygon><text class="e-label" x="504" y="148" text-anchor="middle" style="--i: 6">Так</text><path class="e e-main" d="M708 164 L764 164" pathLength="1" style="--i: 7"></path><polygon class="e e-main e-head" points="764,164 753,169.5 753,158.5" style="--i: 7"></polygon><path class="e e-main" d="M956 164 L1012 164" pathLength="1" style="--i: 8"></path><polygon class="e e-main e-head" points="1012,164 1001,169.5 1001,158.5" style="--i: 8"></polygon><text class="e-label" x="984" y="148" text-anchor="middle" style="--i: 8">Ні</text><path class="e" d="M860 100 L860 64 L1340 64 L1340 126" pathLength="1" style="--i: 9"></path><polygon class="e e-head" points="1340,126 1334.5,115 1345.5,115" style="--i: 9"></polygon><text class="e-label" x="1100" y="52" text-anchor="middle" style="--i: 9">Так</text><path class="e e-main" d="M1188 164 L1252 164" pathLength="1" style="--i: 10"></path><polygon class="e e-main e-head" points="1252,164 1241,169.5 1241,158.5" style="--i: 10"></polygon><text class="e-note" x="1340" y="234" text-anchor="middle">Далі в 02 / 04</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="5.10s" begin="indefinite" fill="freeze" path="M140 164 L380 164 L380 411 L1100 411 L1100 296 L620 296 L620 164 L1340 164"></animateMotion></circle></svg>
+            <div class="fvc-node t-start" style="--x: 140; --y: 164; --i: 0"><span>Запуск застосунку</span></div><div class="fvc-node t-decision" style="--x: 380; --y: 164; --i: 1"><span>Користувач зареєстрований?</span></div><div class="fvc-node t-screen" style="--x: 620; --y: 164; --i: 6"><span>Короткий чекліст</span></div><div class="fvc-node t-decision" style="--x: 860; --y: 164; --i: 7"><span>Пропустити чекліст?</span></div><div class="fvc-node t-action" style="--x: 1100; --y: 164; --i: 8"><span>Заповнити чекліст</span></div><div class="fvc-node t-screen" style="--x: 1340; --y: 164; --i: 9"><span>Головний екран</span></div><div class="fvc-node t-form" style="--x: 380; --y: 411; --i: 2"><span>Ввести email</span></div><div class="fvc-node t-form" style="--x: 620; --y: 411; --i: 3"><span>Створити пароль</span></div><div class="fvc-node t-form" style="--x: 860; --y: 411; --i: 4"><span>Підтвердження</span></div><div class="fvc-node t-form" style="--x: 1100; --y: 411; --i: 5"><span>Увійти в застосунок</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-start" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Старт</span><b class="fsl-title">Запуск застосунку</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Користувач зареєстрований?</b><ul class="fl-br" role="list"><li class="is-main"><span>Ні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Ввести email</span></li><li class=""><span>Так</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Короткий чекліст</span></li></ul></span></li><li class="fsl-i t-form" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Крок реєстрації</span><b class="fsl-title">Ввести email</b></span></li><li class="fsl-i t-form" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Крок реєстрації</span><b class="fsl-title">Створити пароль</b></span></li><li class="fsl-i t-form" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Крок реєстрації</span><b class="fsl-title">Підтвердження</b></span></li><li class="fsl-i t-form" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Крок реєстрації</span><b class="fsl-title">Увійти в застосунок</b><small class="fsl-note">Потім назад до чекліста</small></span></li><li class="fsl-i t-screen" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Короткий чекліст</b></span></li><li class="fsl-i t-decision" style="--i: 7"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Пропустити чекліст?</b><ul class="fl-br" role="list"><li class="is-main"><span>Ні</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Заповнити чекліст</span></li><li class=""><span>Так</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Головний екран</span></li></ul></span></li><li class="fsl-i t-action" style="--i: 8"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Заповнити чекліст</b></span></li><li class="fsl-i t-screen" style="--i: 9"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Головний екран</b><small class="fsl-note">Далі в 02 / 04</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-2-panel" role="tabpanel" aria-labelledby="ft-2-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Кроки 04–05 сценарію</span></p>
+              <p class="fp-lead">Головний екран розділяє два шляхи: «Хочу поговорити» і «Мені потрібна термінова допомога». Марія обирає розмову, відкриває тему «Адаптація» й читає історії людей, які пройшли схожий шлях. Уперше за день вона думає: «Я не одна».</p>
+              <p class="fp-screens">Екрани: головна · стрічка спільноти · тема</p>
+            </div>
+            <div class="fv" data-flow="community">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L252 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="252,164 241,169.5 241,158.5" style="--i: 0"></polygon><path class="e e-main" d="M444 164 L456 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="456,164 445,169.5 445,158.5" style="--i: 1"></polygon><text class="e-label" x="450" y="88" text-anchor="middle" style="--i: 1">Хочу поговорити</text><path class="e e-main" d="M632 164 L652 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="652,164 641,169.5 641,158.5" style="--i: 2"></polygon><path class="e e-main" d="M828 164 L848 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="848,164 837,169.5 837,158.5" style="--i: 3"></polygon><path class="e e-main" d="M1024 164 L1044 164" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="1044,164 1033,169.5 1033,158.5" style="--i: 4"></polygon><path class="e e-main" d="M1220 164 L1240 164" pathLength="1" style="--i: 5"></path><polygon class="e e-main e-head" points="1240,164 1229,169.5 1229,158.5" style="--i: 5"></polygon><path class="e" d="M348 228 L348 303 L500 303" pathLength="1" style="--i: 6"></path><polygon class="e e-head" points="500,303 489,308.5 489,297.5" style="--i: 6"></polygon><text class="e-label" x="512" y="308" text-anchor="start" style="--i: 6">04 · Термінова допомога</text><text class="e-note" x="1328" y="238" text-anchor="middle">03 · Коментування</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="2.26s" begin="indefinite" fill="freeze" path="M152 164 L1328 164"></animateMotion></circle></svg>
+            <div class="fvc-node t-screen" style="--x: 152; --y: 164; --i: 0"><span>Головний екран</span></div><div class="fvc-node t-decision" style="--x: 348; --y: 164; --i: 1"><span>Термінова допомога чи розмова?</span></div><div class="fvc-node t-screen" style="--x: 544; --y: 164; --i: 2"><span>Стрічка спільноти</span></div><div class="fvc-node t-action" style="--x: 740; --y: 164; --i: 3"><span>Обрати тему</span></div><div class="fvc-node t-action" style="--x: 936; --y: 164; --i: 4"><span>Відкрити тему</span></div><div class="fvc-node t-screen" style="--x: 1132; --y: 164; --i: 5"><span>Картка теми</span></div><div class="fvc-node t-action" style="--x: 1328; --y: 164; --i: 6"><span>Читати коментарі</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Головний екран</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Термінова допомога чи розмова?</b><ul class="fl-br" role="list"><li class="is-main"><span>Хочу поговорити</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Стрічка спільноти</span></li><li class=""><span>Термінова допомога</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>04 · Термінова допомога</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Стрічка спільноти</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Обрати тему</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Відкрити тему</b></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Картка теми</b></span></li><li class="fsl-i t-action" style="--i: 6"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Читати коментарі</b><small class="fsl-note">Далі в 03 · Коментування</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-3-panel" role="tabpanel" aria-labelledby="ft-3-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Крок 06 сценарію</span></p>
+              <p class="fp-lead">Марія пише коментар, публікує його й отримує теплу відповідь від спільноти. Від тривоги до відчуття, що її почули: вона повертається в Mayak сама, без нагадувань.</p>
+              <p class="fp-screens">Екрани: коментарі · редактор коментаря</p>
+            </div>
+            <div class="fv" data-flow="commenting">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg t-end"><span></span>Кінець</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L292 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="292,164 281,169.5 281,158.5" style="--i: 0"></polygon><path class="e e-main" d="M468 164 L520 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="520,164 509,169.5 509,158.5" style="--i: 1"></polygon><path class="e e-main" d="M696 164 L748 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="748,164 737,169.5 737,158.5" style="--i: 2"></polygon><path class="e e-main" d="M924 164 L968 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="968,164 957,169.5 957,158.5" style="--i: 3"></polygon><path class="e e-main" d="M1064 228 L1064 299 L608 299 L608 374" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="608,374 602.5,363 613.5,363" style="--i: 4"></polygon><text class="e-label" x="836" y="287" text-anchor="middle" style="--i: 4">Читати далі</text><path class="e" d="M1160 164 L1200 164 L1200 411 L1152 411" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="1152,411 1163,405.5 1163,416.5" style="--i: 5"></polygon><text class="e-label" x="1182" y="148" text-anchor="middle" style="--i: 5">Вийти</text><text class="e-note" x="608" y="482" text-anchor="middle">02 · Знайомство зі спільнотою</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="3.11s" begin="indefinite" fill="freeze" path="M152 164 L1064 164 L1064 299 L608 299 L608 411"></animateMotion></circle></svg>
+            <div class="fvc-node t-action" style="--x: 152; --y: 164; --i: 0"><span>Читати коментарі</span></div><div class="fvc-node t-action" style="--x: 380; --y: 164; --i: 1"><span>Додати коментар</span></div><div class="fvc-node t-screen" style="--x: 608; --y: 164; --i: 2"><span>Редактор коментаря</span></div><div class="fvc-node t-action" style="--x: 836; --y: 164; --i: 3"><span>Підтвердити публікацію</span></div><div class="fvc-node t-decision" style="--x: 1064; --y: 164; --i: 4"><span>Читати далі чи вийти?</span></div><div class="fvc-node t-screen" style="--x: 608; --y: 411; --i: 5"><span>Стрічка спільноти</span></div><div class="fvc-node t-end is-side" style="--x: 1064; --y: 411; --i: 6"><span>Вийти із застосунку</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-action" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Читати коментарі</b></span></li><li class="fsl-i t-action" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Додати коментар</b></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Редактор коментаря</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Підтвердити публікацію</b></span></li><li class="fsl-i t-decision" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Читати далі чи вийти?</b><ul class="fl-br" role="list"><li class="is-main"><span>Читати далі</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Стрічка спільноти</span></li><li class=""><span>Вийти</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Вийти із застосунку</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Стрічка спільноти</b><small class="fsl-note">Назад до 02 · Знайомство зі спільнотою</small></span></li></ol>
+        </div>
+            </div>
+          </div>
+          <div class="ft-panel" id="ft-4-panel" role="tabpanel" aria-labelledby="ft-4-tab" tabindex="0" hidden>
+            <div class="fp-head">
+              <p class="fp-steps"><span>Інший шлях на кроці 04</span></p>
+              <p class="fp-lead">«Мені потрібна термінова допомога» веде одразу в розділ підтримки: знайти контакт або адресу, скопіювати номер телефону й зателефонувати без пошуку.</p>
+              <p class="fp-screens">Екрани: головна · розділ підтримки</p>
+            </div>
+            <div class="fv" data-flow="urgent">
+              <div class="fvc">
+          <ul class="fvc-legend" role="list" aria-hidden="true"><li class="lg t-screen"><span></span>Екран</li><li class="lg t-action"><span></span>Дія</li><li class="lg t-decision"><span></span>Рішення</li><li class="lg t-end"><span></span>Кінець</li><li class="lg lg-main"><span></span>Основний шлях</li></ul>
+          <div class="fvc-board" aria-hidden="true">
+            <svg class="fvc-svg" viewBox="40 20 1400 490" focusable="false"><path class="e e-main" d="M240 164 L252 164" pathLength="1" style="--i: 0"></path><polygon class="e e-main e-head" points="252,164 241,169.5 241,158.5" style="--i: 0"></polygon><path class="e e-main" d="M444 164 L456 164" pathLength="1" style="--i: 1"></path><polygon class="e e-main e-head" points="456,164 445,169.5 445,158.5" style="--i: 1"></polygon><text class="e-label" x="450" y="88" text-anchor="middle" style="--i: 1">Термінова допомога</text><path class="e e-main" d="M632 164 L672 164" pathLength="1" style="--i: 2"></path><polygon class="e e-main e-head" points="672,164 661,169.5 661,158.5" style="--i: 2"></polygon><path class="e e-main" d="M848 164 L888 164" pathLength="1" style="--i: 3"></path><polygon class="e e-main e-head" points="888,164 877,169.5 877,158.5" style="--i: 3"></polygon><path class="e e-main" d="M976 202 L976 374" pathLength="1" style="--i: 4"></path><polygon class="e e-main e-head" points="976,374 970.5,363 981.5,363" style="--i: 4"></polygon><path class="e" d="M348 228 L348 374" pathLength="1" style="--i: 5"></path><polygon class="e e-head" points="348,374 342.5,363 353.5,363" style="--i: 5"></polygon><text class="e-label" x="364" y="306" text-anchor="start" style="--i: 5">Хочу поговорити</text><text class="e-note" x="348" y="482" text-anchor="middle">02 · Знайомство зі спільнотою</text><circle class="e-dot" r="9" cx="0" cy="0"><animateMotion dur="2.06s" begin="indefinite" fill="freeze" path="M152 164 L976 164 L976 411"></animateMotion></circle></svg>
+            <div class="fvc-node t-screen" style="--x: 152; --y: 164; --i: 0"><span>Головний екран</span></div><div class="fvc-node t-decision" style="--x: 348; --y: 164; --i: 1"><span>Термінова допомога чи розмова?</span></div><div class="fvc-node t-screen" style="--x: 544; --y: 164; --i: 2"><span>Розділ підтримки</span></div><div class="fvc-node t-action" style="--x: 760; --y: 164; --i: 3"><span>Знайти контакти або адресу</span></div><div class="fvc-node t-action" style="--x: 976; --y: 164; --i: 4"><span>Скопіювати номер телефону</span></div><div class="fvc-node t-end" style="--x: 976; --y: 411; --i: 5"><span>Вийти із застосунку</span></div><div class="fvc-node t-screen is-side" style="--x: 348; --y: 411; --i: 6"><span>Стрічка спільноти</span></div>
+          </div>
+          <ol class="fsl fvc-list" role="list"><li class="fsl-i t-screen" style="--i: 0"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Головний екран</b></span></li><li class="fsl-i t-decision" style="--i: 1"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Рішення</span><b class="fsl-title">Термінова допомога чи розмова?</b><ul class="fl-br" role="list"><li class="is-main"><span>Термінова допомога</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>Розділ підтримки</span></li><li class=""><span>Хочу поговорити</span><img src="../../assets/icons/case-link-arrow.svg" alt="" width="12" height="12"><span>02 · Знайомство зі спільнотою</span></li></ul></span></li><li class="fsl-i t-screen" style="--i: 2"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Екран</span><b class="fsl-title">Розділ підтримки</b></span></li><li class="fsl-i t-action" style="--i: 3"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Знайти контакти або адресу</b></span></li><li class="fsl-i t-action" style="--i: 4"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Дія</span><b class="fsl-title">Скопіювати номер телефону</b></span></li><li class="fsl-i t-end" style="--i: 5"><span class="fsl-mark" aria-hidden="true"></span><span class="fsl-body"><span class="fsl-type">Кінець</span><b class="fsl-title">Вийти із застосунку</b></span></li></ol>
+        </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-block wf-block">
+          <h3 class="cs-sub">Вайрфрейми</h3>
+          <div class="wf-board" data-stagger>
+            <div class="case-media wf-f" style="--r: -1.5deg"><span class="frame-name">Головна</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-home.png" alt="Вайрфрейм головного екрана: два шляхи, теми й таббар" width="485" height="1082" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Спільнота</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-community.png" alt="Вайрфрейм допису спільноти з відповідями й полем коментаря" width="589" height="1314" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Новий допис</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-new-post.png" alt="Вайрфрейм створення допису: текст, зображення й чипи тем" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1.5deg"><span class="frame-name">Профіль</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-profile.png" alt="Вайрфрейм публічного профілю" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: -1deg"><span class="frame-name">Повідомлення</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-messages.png" alt="Вайрфрейм списку повідомлень" width="599" height="1337" loading="lazy"></span></div>
+            <div class="case-media wf-f" style="--r: 1deg"><span class="frame-name">Чат</span><span class="case-plate"><img src="../../assets/figma/mayak/wireframe-chat.png" alt="Вайрфрейм чату з полем повідомлення" width="599" height="1330" loading="lazy"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section band-dark" id="system" aria-labelledby="system-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>06 · Дизайн-система</span></p>
+          <h2 class="h2" id="system-title" data-split>Одна система, <em>чотири мови</em></h2>
+        </div>
+        <p class="section-note" data-rise>Одна бібліотека у Figma тримає всі екрани узгодженими чотирма мовами, аж до скелетонів, що показуються під час завантаження контенту.</p>
+      </div>
+
+      <div class="container">
+        <ul class="bento" role="list" data-stagger>
+          <li class="bt bt-wide"><strong>35</strong><span>компонентів, 361 варіант</span></li>
+          <li class="bt"><strong>31</strong><span>колірних стилів, 4 з них градієнти</span></li>
+          <li class="bt"><strong>16</strong><span>текстових стилів, один шрифт: Montserrat</span></li>
+          <li class="bt bt-wide">
+            <strong>308</strong><span>екранів чотирма мовами, 9 розділів</span>
+            <span class="bt-langs" aria-label="Російська, англійська, німецька, українська"><b>RU</b><b>EN</b><b>DE</b><b>UK</b></span>
+          </li>
+          <li class="bt bt-wide bt-note"><strong>420</strong><span>фреймів у клікабельному прототипі, плюс лендинг на тій самій бібліотеці</span></li>
+          <li class="bt"><strong>3</strong><span>типи кнопок: primary, secondary, ghost; 12 станів</span></li>
+          <li class="bt"><strong>5</strong><span>стани полів: default, focused, filled, error, loading</span></li>
+          <li class="bt bt-wide"><strong>5</strong><span>емоцій у щоденнику настрою</span></li>
+          <li class="bt bt-wide bt-text"><b>Спільнота</b><span>дописи, теми й повідомлення в чаті</span></li>
+          <li class="bt bt-wide bt-text"><b>Навігація</b><span>апбар і таббар зі сповіщеннями</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section ds-lib" aria-labelledby="lib-title">
+      <div class="container">
+        <div class="mood-block">
+          <div class="mood-copy" data-rise>
+            <h3 class="cs-sub">Мудборд</h3>
+            <p class="mood-lead">Борд задає візуальний тон: маяк на заході сонця, групові обійми на пляжі, руки в теплому світлі, гори в сутінках і м’яке фіолетове та персикове світло навколо.</p>
+            <dl class="mood-list">
+              <div><dt>Палітра</dt><dd>Purple · Pastel · Ash-lilac · Blush · Ivory</dd></div>
+              <div><dt>Фрази на борді</dt><dd><ul role="list"><li>«Ми тут, щоб підтримати тебе.»</li><li>«Менше шуму. Більше розуміння.»</li><li>«Поділися тим, що всередині.»</li><li>«Хотілося, щоб хтось просто вислухав. Без порад і готових відповідей.»</li><li>«Тут люди самі ледве тримаються. Вдома не розуміють.»</li></ul></dd></div>
+              <div><dt>Фінальна фраза</dt><dd class="mood-close">Простий застосунок для складних почуттів</dd></div>
+            </dl>
+            <p class="cs-caption">Фрази перекладено з російської</p>
+          </div>
+          <div class="case-media mood-f" data-rise style="--r: 1.5deg"><span class="frame-name">Мудборд</span><span class="case-plate"><img src="../../assets/figma/mayak/moodboard.jpg" alt="Мудборд Mayak: логотип Mayak, фото маяка на заході сонця, групових обіймів на пляжі, рук у теплому світлі, розмитих квітів і гір у сутінках, російські фрази фіолетовим шрифтом і палітра Purple, Pastel, Ash-lilac, Blush, Ivory" width="1252" height="2206" loading="lazy"></span></div>
+        </div>
+
+        <h3 class="cs-sub" id="lib-title">Усередині бібліотеки</h3>
+        <div class="ds-canvas">
+          <p class="dsc-hint">Перетягуйте фрейми</p>
+          <div class="dsc-board">
+            <div class="case-media dsc-f dsc-type" data-case-frame style="--r: -1.5deg"><span class="frame-name">Колір і шрифт</span><span class="case-plate"><img src="../../assets/img/mayak/ds-frame-512935.svg" alt="Палітра з п’яти кольорів і градієнта; типографіка в Montserrat: заголовок SemiBold 16 px, кнопка SemiBold 14 px, основний текст Regular 12 px" width="791" height="335" loading="lazy"></span></div>
+            <div class="case-media dsc-f dsc-parts" data-case-frame style="--r: 1.5deg"><span class="frame-name">Компоненти</span><span class="case-plate"><img src="../../assets/img/mayak/ds-frame-512930.svg" alt="Іконки, кнопки primary, secondary і ghost, чипи тем і картка тижня настрою" width="392" height="803" loading="lazy"></span></div>
+            <div class="dsc-phones">
+              <div class="case-media dsc-f dsc-p1" data-case-frame style="--r: -3deg"><span class="frame-name">EN · Профіль</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-profile-en.webp" alt="Англійська: профіль учасниці з дописами й коментарями" width="576" height="1191" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p2" data-case-frame style="--r: 2deg"><span class="frame-name">UA · Термінова допомога</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 604; --y: 0; --h: 1249"><img src="../../assets/img/mayak/card-urgent-ua.webp" alt="Українська: термінова допомога з номерами екстрених служб" width="604" height="1249" loading="lazy"></span></span></div>
+              <div class="case-media dsc-f dsc-p3" data-case-frame style="--r: -1deg"><span class="frame-name">DE · Чек-ін</span><span class="case-plate"><span class="crop dsc-phone is-framed" style="--w: 576; --y: 0; --h: 1191"><img src="../../assets/img/mayak/card-checkin-de.webp" alt="Німецька: щоденний чек-ін" width="576" height="1191" loading="lazy"></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section cs-canvas" id="landing" aria-labelledby="landing-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>07 · Лендинг</span></p>
+          <h2 class="h2" id="landing-title" data-split>Одна сторінка, <em>десять секцій</em></h2>
+        </div>
+        <p class="section-note" data-rise>Лендинг – це живий сайт на Webflow російською, англійською, німецькою та українською. Він веде від обіцянки й цифр, що за нею стоять, через те, як працює Mayak, і те, що люди відчували після переїзду, до запитань, які виникають перед першим кроком.</p>
+      </div>
+
+      <div class="container">
+        <div class="mk-tour" data-tour data-tour-w="1440" data-tour-h="8220">
+          <div class="case-media mk-win" style="--r: 0deg" aria-hidden="true">
+            <span class="frame-name">Mayak · Лендинг · 1440 px</span>
+            <span class="case-plate"><span class="mk-view" data-tour-win><span class="mk-page" data-tour-page><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"><span class="mk-mark" data-tour-mark></span></span></span></span>
+          </div>
+          <ol class="mk-notes" role="list">
+            <li data-y="0" data-h="866">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 0; --h: 866"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">01</span><h3>Хіро</h3>
+              <p>Меню з перемиканням мов і Download the app, далі «You don’t have to go through this», Try for free і «You’re not alone. Many of us are here.» Три телефони стоять біля маяка.</p>
+            </li>
+            <li data-y="866" data-h="489">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 866; --h: 489"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">02</span><h3>Цифри</h3>
+              <p>Чотири показники в одній скляній картці: 50% відчувають, що їм нема з ким поговорити, 42% оцінюють вигорання на 7 з 10, 73% досі важко після 3+ років, 11,5% звертаються по допомогу.</p>
+            </li>
+            <li data-y="1355" data-h="950">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 1355; --h: 950"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">03</span><h3>Проблема</h3>
+              <p>«Relocation changes not just the country around you»: що змінюється після переїзду і навіщо існує Mayak, поруч головний екран, нижче три пронумеровані картки.</p>
+            </li>
+            <li data-y="2305" data-h="623">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 2305; --h: 623"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">04</span><h3>Бути почутим</h3>
+              <p>«Sometimes support begins with the simple feeling of being heard», перекладений чат на телефоні й дві кнопки: Try Mayak і How Mayak works.</p>
+            </li>
+            <li data-y="2928" data-h="808">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 2928; --h: 808"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">05</span><h3>Як працює Mayak</h3>
+              <p>Чотири кроки: поділитися тим, що на душі, знайти людей зі схожим досвідом, відчути більше підтримки, повернути спокій. Кожен закінчується короткою обіцянкою, як-от «Without toxicity or judgment».</p>
+            </li>
+            <li data-y="3736" data-h="1231">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 3736; --h: 1231"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">06</span><h3>Простий застосунок</h3>
+              <p>«A simple app for complex feelings»: три екрани онбордингу на телефонах під рядком «An interface that doesn’t overwhelm. Questions that help you understand.»</p>
+            </li>
+            <li data-y="4967" data-h="892">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 4967; --h: 892"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">07</span><h3>Після переїзду</h3>
+              <p>Шість коротких цитат, кожна з підписом, скільки часу минуло після переїзду, і рядок «We can’t eliminate the challenges of moving, but no one should have to face them alone.»</p>
+            </li>
+            <li data-y="5859" data-h="675">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 5859; --h: 675"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">08</span><h3>Почати зараз</h3>
+              <p>Останній заклик спробувати Mayak, «Available on iOS and Android», поруч головний екран.</p>
+            </li>
+            <li data-y="6534" data-h="877">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 6534; --h: 877"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">09</span><h3>Запитання</h3>
+              <p>П’ять запитань в акордеоні: чи замінює Mayak психолога, для кого він, перемикання мов, приватність і скільки ділитися на початку.</p>
+            </li>
+            <li data-y="7411" data-h="809">
+              <span class="crop mk-crop" style="--sw: 1440; --w: 1440; --y: 7411; --h: 809"><img src="../../assets/figma/mayak/landing.jpg" alt="" width="1440" height="8220" loading="lazy"></span>
+              <span class="mk-n">10</span><h3>Нижнє меню</h3>
+              <p>Рядок про турботливу підтримку, адреса електронної пошти, меню з перемиканням мов і застосунок на трьох телефонах.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section" id="outcome" aria-labelledby="outcome-title">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>08 · Результат</span></p>
+          <h2 class="h2" id="outcome-title" data-split>Висновки <em>проєкту</em></h2>
+        </div>
+        <p class="section-note" data-rise>Дослідження підтвердило проблему, а прототип готовий до юзабіліті-тестування.</p>
+      </div>
+
+      <div class="container">
+        <h3 class="cs-sub">Проєкт коротко</h3>
+        <ol class="summary" role="list" data-stagger>
+          <li><span class="sm-k">01 · Проблему підтверджено</span><strong>11,5&nbsp;%</strong><p>колись зверталися по психологічну допомогу. Людям бракує передусім емоційної підтримки й безпечного простору, а не інформації.</p></li>
+          <li><span class="sm-k">02 · Рішення</span><strong>Mayak</strong><p>Спокійний простір мовами RU · EN · DE · UK: анонімна підтримка, спільнота, щоденний чек-ін настрою, термінова допомога офлайн і відповіді рідною мовою.</p></li>
+          <li><span class="sm-k">03 · Система й охоплення</span><strong>308</strong><p>екранів чотирма мовами на одній бібліотеці, зі скелетонами, прототипом на 420 фреймів і лендингом.</p></li>
+        </ol>
+
+        <h3 class="cs-sub">Що далі</h3>
+        <div class="board" data-stagger>
+          <div class="board-col bc-done">
+            <p class="bc-head">Зроблено <span>4</span></p>
+            <ul role="list"><li>Дослідження: опитування 26 людей і 3 інтерв’ю</li><li>Дизайн-система</li><li>Клікабельний прототип на 420 фреймів</li><li>Лендинг</li></ul>
+          </div>
+          <div class="board-col bc-next">
+            <p class="bc-head">Далі <span>1</span></p>
+            <ul role="list"><li>Юзабіліті-тест прототипу з цільовою аудиторією</li></ul>
+          </div>
+          <div class="board-col bc-later">
+            <p class="bc-head">Пізніше <span>2</span></p>
+            <ul role="list"><li>Доопрацювати модерацію спільноти за результатами</li><li>Підготувати специфікацію для розробки MVP</li></ul>
+          </div>
+          <div class="board-col bc-goal">
+            <p class="bc-head">Мета</p>
+            <ul role="list"><li>Запустити пілот у Німеччині</li></ul>
+          </div>
+        </div>
+
+        <div class="cs-block">
+          <h3 class="cs-sub">Чотири висновки</h3>
+          <div class="end-stack">
+            <div class="es-side">
+              <p class="end-lead">Дослідження й прототипування перетворили широку проблему на сфокусований продуктовий концепт. Mayak не має замінити професійну підтримку, а має зробити перший крок до допомоги зрозумілішим, безпечнішим і доступнішим.</p>
+              <p class="end-statement">Mayak перетворює невизначеність на <em>зрозумілий і підтримувальний наступний крок</em>.</p>
+            </div>
+            <ol class="es-cards" role="list">
+              <li style="--i: 0"><span class="es-num">01</span><p>Безпечний перший крок – найважливіший</p></li>
+              <li style="--i: 1"><span class="es-num">02</span><p>Підтримка має підлаштовуватися під поточний стан людини</p></li>
+              <li style="--i: 2"><span class="es-num">03</span><p>Довіра – частина користувацького досвіду</p></li>
+              <li style="--i: 3"><span class="es-num">04</span><p>Концепт потребує перевірки в реальному використанні</p></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-next" aria-labelledby="next-title">
+      <div class="container">
+        <p class="eyebrow" id="next-title"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Інші кейси</span></p>
+        <ul class="mini-cases" role="list">
+          <li><a class="mini-case" href="roomroots.html"><span class="mini-thumb"><img src="../../assets/img/cover-roomroots.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">RoomRoots</span><span class="mini-sub">Підбір рослин за допомогою ШІ</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="db-navigator.html"><span class="mini-thumb"><img src="../../assets/img/cover-db.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">DB Navigator</span><span class="mini-sub">Редизайн планувальника подорожей з власної ініціативи</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+          <li><a class="mini-case" href="muka.html"><span class="mini-thumb"><img src="../../assets/img/cover-muka.webp" alt="" width="1106" height="1222" loading="lazy"></span><span class="mini-text"><span class="mini-title">Muka</span><span class="mini-sub">Сайт у редакційному стилі для ремісничої пекарні</span></span><img class="mini-arrow" src="../../assets/icons/case-link-arrow.svg" alt="" width="16" height="16"></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="contact-place"><img src="../../assets/icons/pin-heart.svg" alt="" width="40" height="40"><span>Живу в Гахенбурзі, Німеччина</span></p>
+          <h2 class="contact-title" id="contact-title" data-split>Проєктуймо для <em>реальних потреб</em></h2>
+          <p class="contact-note" data-rise>Шукаю роботу UX/UI-дизайнерки в Німеччині. Напишіть мені на email, зателефонуйте або напишіть у LinkedIn чи Telegram.</p>
+        </div>
+        <div class="contact-card" data-rise>
+          <div class="contact-row">
+            <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:katiaimamova@gmail.com">katiaimamova@gmail.com</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="katiaimamova@gmail.com" data-copy-kind="Email"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row">
+            <div><span class="contact-label">Телефон</span><a class="contact-value" href="tel:+491757870434">+49 175 7870434</a></div>
+            <button class="btn btn-secondary copy" type="button" data-copy="+49 175 7870434" data-copy-kind="Номер телефону"><span>Копіювати</span><img src="../../assets/icons/copy.svg" alt="" width="24" height="24"></button>
+          </div>
+          <div class="contact-row contact-social">
+            <span class="contact-label">Соцмережі</span>
+            <div class="social">
+              <a class="btn-social" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+              <a class="btn-social" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../assets/img/logo-full.svg" alt="Kateryna Ponomarova, UX/UI-дизайн" width="187" height="89">
+          <p>UX/UI-дизайнерка в Німеччині: дослідження, user flow, прототипи та дизайн-системи.</p>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Меню</span></p>
+          <nav class="footer-nav" aria-label="Нижнє меню">
+            <a href="../index.html#work">Проєкти</a>
+            <a href="../index.html#approach">Як я працюю</a>
+            <a href="#contact">Контакти</a>
+            <div class="lang lang-up" data-lang>
+              <button class="footer-lang" type="button" aria-expanded="false" aria-controls="footer-lang-menu" aria-label="Мова: українська">
+                <img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span translate="no" data-lang-code>UA</span><img class="lang-chev" src="../../assets/icons/chevron.svg" alt="" width="18" height="18">
+              </button>
+              <ul class="lang-menu" id="footer-lang-menu" role="list">
+                <li><a href="../../cases/mayak.html" translate="no" lang="en" hreflang="en" data-code="EN" aria-label="English"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>English</span><b>EN</b></a></li>
+                <li><a href="../../de/cases/mayak.html" translate="no" lang="de" hreflang="de" data-code="DE" aria-label="Deutsch"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Deutsch</span><b>DE</b></a></li>
+                <li><a href="mayak.html" translate="no" lang="uk" hreflang="uk" aria-current="true" data-code="UA" aria-label="Українська"><img src="../../assets/icons/language.svg" alt="" width="18" height="18"><span>Українська</span><b>UA</b></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="eyebrow"><img src="../../assets/icons/eyebrow-star.svg" alt="" width="14" height="14"><span>Соцмережі</span></p>
+          <div class="footer-social">
+            <a class="social-link" href="https://www.linkedin.com/in/kateryna-ponomarova-3b8751386" target="_blank" rel="noopener"><img src="../../assets/icons/linkedin.svg" alt="" width="33" height="33"><span>LinkedIn<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://www.behance.net/katia_ponomariova" target="_blank" rel="noopener"><img src="../../assets/icons/behance.svg" alt="" width="33" height="33"><span>Behance<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+            <a class="social-link" href="https://t.me/katerina_ponomarova" target="_blank" rel="noopener"><img src="../../assets/icons/telegram.svg" alt="" width="33" height="33"><span>Telegram<span class="sr-only"> (відкривається в новій вкладці)</span></span><img class="arrow" src="../../assets/icons/arrow-outward.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kateryna Ponomarova</p>
+        <div><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-mark" aria-hidden="true">✓</span>
+    <span class="toast-text"><b class="toast-title"></b><span class="toast-detail"></span></span>
+  </div>
+
+  <script src="../../assets/vendor/gsap.min.js" defer></script>
+  <script src="../../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../../assets/vendor/SplitText.min.js" defer></script>
+  <script src="../../assets/vendor/Draggable.min.js" defer></script>
+  <script src="../../assets/vendor/InertiaPlugin.min.js" defer></script>
+  <script src="../../assets/vendor/lenis.min.js" defer></script>
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
