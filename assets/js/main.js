@@ -400,6 +400,7 @@ function init() {
     if (document.querySelector('[data-hero]')) heroIntro(gsap, mm);
     else pageIntro(gsap);
     caseFrames(gsap, mm);
+    loopRows(gsap);
     dragCursor();
     swapWords(gsap);
     scrollScenes(gsap);
@@ -508,6 +509,80 @@ function caseFrames(gsap, mm) {
   });
 }
 
+function loopRows(gsap) {
+  document.querySelectorAll('[data-loop]').forEach((box) => {
+    const row = box.querySelector('.mc-row');
+    const track = box.querySelector('.mc-track');
+    if (!row || !track) return;
+    track.classList.add('is-js');
+    let half = track.scrollWidth / 2;
+    let x = 0;
+    let hover = false;
+    let held = false;
+    const setX = gsap.quickSetter(track, 'x', 'px');
+    const place = () => { if (half > 0) x = ((x % half) - half) % half; setX(x); };
+    if ('ResizeObserver' in window) new ResizeObserver(() => { half = track.scrollWidth / 2; place(); }).observe(track);
+    let v = 0;
+    gsap.ticker.add((time, delta) => {
+      if (held || !half) return;
+      const dt = Math.min(delta, 50) / 1000;
+      const target = hover || reduceMotion || box.classList.contains('is-paused') ? 0 : -half / 70;
+      const rate = Math.abs(v - target) > 200 ? 3 : 4;
+      v += (target - v) * (1 - Math.exp(-rate * dt));
+      if (target === 0 && Math.abs(v) < 0.5) v = 0;
+      if (v === 0) return;
+      x += v * dt;
+      place();
+    });
+    row.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hover = true; });
+    row.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hover = false; });
+    const proxy = document.createElement('div');
+    let from = 0;
+    let trail = [];
+    Draggable.create(proxy, {
+      type: 'x',
+      trigger: row,
+      allowNativeTouchScrolling: true,
+      dragClickables: true,
+      cursor: 'grab',
+      activeCursor: 'grabbing',
+      onPress() {
+        gsap.set(proxy, { x: 0 });
+        this.update();
+        from = x;
+        v = 0;
+        trail = [];
+        held = true;
+        row.classList.add('is-dragging');
+      },
+      onDrag() {
+        x = from + this.x;
+        place();
+        const now = performance.now();
+        trail.push([now, this.x]);
+        while (trail.length > 2 && now - trail[0][0] > 100) trail.shift();
+      },
+      onRelease() {
+        row.classList.remove('is-dragging');
+        const last = trail[trail.length - 1];
+        const first = trail[0];
+        const span = last && first ? (last[0] - first[0]) / 1000 : 0;
+        const fresh = last && performance.now() - last[0] < 80;
+        const speed = span > 0.01 && fresh ? (last[1] - first[1]) / span : 0;
+        v = reduceMotion ? 0 : gsap.utils.clamp(-3000, 3000, speed);
+        held = false;
+      },
+    });
+    row.classList.add('is-draggable');
+    row.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      x -= e.deltaX;
+      place();
+    }, { passive: false });
+  });
+}
+
 function dragCursor() {
   if (!finePointer) return;
   const el = document.createElement('div');
@@ -526,14 +601,14 @@ function dragCursor() {
     on = yes;
     el.classList.toggle('is-on', yes);
   };
-  const overFrame = (target) => Boolean(document.querySelector('.case-media.is-dragging') || target?.closest?.('.case-media.is-draggable'));
+  const overFrame = (target) => Boolean(document.querySelector('.case-media.is-dragging, .mc-row.is-dragging') || target?.closest?.('.case-media.is-draggable, .mc-row.is-draggable'));
   document.addEventListener('pointermove', (e) => {
     if (e.pointerType !== 'mouse') return;
     px = e.clientX;
     py = e.clientY;
     place();
     show(overFrame(e.target));
-    el.classList.toggle('is-pressed', Boolean(document.querySelector('.case-media.is-dragging')));
+    el.classList.toggle('is-pressed', Boolean(document.querySelector('.case-media.is-dragging, .mc-row.is-dragging')));
   }, { passive: true });
   document.addEventListener('pointerdown', (e) => { if (on && overFrame(e.target)) el.classList.add('is-pressed'); });
   document.addEventListener('pointerup', () => el.classList.remove('is-pressed'));

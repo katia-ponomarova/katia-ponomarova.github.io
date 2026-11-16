@@ -627,6 +627,12 @@ button { font: inherit; color: inherit; }
 .mc-item .crop { transform-origin: 50% 75%; transition: translate 280ms var(--ease-out), rotate 280ms var(--ease-out); }
 @media (hover: hover) and (pointer: fine) { .mc-item:hover .crop { translate: 0 -10px; rotate: -1.5deg; } }
 @keyframes mc-loop { to { transform: translate3d(-50%, 0, 0); } }
+.mc-track.is-js { animation: none; }
+.mc-row.is-draggable { cursor: grab; -webkit-user-select: none; user-select: none; }
+.mc-row.is-dragging { cursor: grabbing; }
+@media (hover: hover) and (pointer: fine) {
+  .mc-row.is-dragging .mc-item:hover .crop, .mc-row.is-dragging .mc-item:hover .mc-dev { translate: none; rotate: none; }
+}
 
 .cs-section { padding-block: var(--cs-sec); }
 .cs-section h4 { margin: 0; }
