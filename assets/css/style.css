@@ -643,6 +643,9 @@ button, summary, [role="tab"], .btn, .case-media, .mini-case, .lang-menu a { -we
 .mc-track.is-js { animation: none; }
 .mc-row.is-draggable { cursor: grab; -webkit-user-select: none; user-select: none; touch-action: pan-y; -webkit-touch-callout: none; }
 .mc-row.is-dragging { cursor: grabbing; }
+.mc-row.is-scroll { overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scrollbar-width: none; touch-action: pan-x pan-y; cursor: grab; -webkit-user-select: none; user-select: none; }
+.mc-row.is-scroll.is-dragging { cursor: grabbing; }
+.mc-row.is-scroll::-webkit-scrollbar { display: none; }
 @media (hover: hover) and (pointer: fine) {
   .mc-row.is-dragging .mc-item:hover .crop, .mc-row.is-dragging .mc-item:hover .mc-dev { translate: none; rotate: none; }
 }

@@ -515,6 +515,7 @@ function loopRows(gsap) {
     const track = box.querySelector('.mc-track');
     if (!row || !track) return;
     track.classList.add('is-js');
+    if (!finePointer) { touchRow(gsap, box, row, track); return; }
     let half = track.scrollWidth / 2;
     let x = 0;
     let hover = false;
@@ -594,6 +595,107 @@ function loopRows(gsap) {
       x -= e.deltaX;
       place();
     }, { passive: false });
+  });
+}
+
+function touchRow(gsap, box, row, track) {
+  [...track.children].filter((el) => !el.hasAttribute('aria-hidden')).forEach((el) => {
+    const copy = el.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+  });
+  row.classList.add('is-scroll');
+  let set = track.scrollWidth / 3;
+  let pos = set;
+  let v = 0;
+  let finger = false;
+  let busy = false;
+  let idle = 0;
+  const wrap = () => {
+    if (set <= 0) return;
+    while (pos >= 2 * set) pos -= set;
+    while (pos < set) pos += set;
+  };
+  const apply = () => { row.scrollLeft = pos; };
+  requestAnimationFrame(() => { set = track.scrollWidth / 3; pos = set; apply(); });
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(() => {
+      const next = track.scrollWidth / 3;
+      if (!next || next === set) return;
+      pos = (pos / set) * next;
+      set = next;
+      if (!busy) { wrap(); apply(); }
+    }).observe(track);
+  }
+  const settle = () => {
+    clearTimeout(idle);
+    idle = setTimeout(() => { busy = false; pos = row.scrollLeft; wrap(); apply(); }, 180);
+  };
+  row.addEventListener('touchstart', () => { finger = true; busy = true; v = 0; clearTimeout(idle); }, { passive: true });
+  row.addEventListener('touchend', () => { finger = false; settle(); }, { passive: true });
+  row.addEventListener('touchcancel', () => { finger = false; settle(); }, { passive: true });
+  row.addEventListener('scroll', () => {
+    if (!busy) return;
+    pos = row.scrollLeft;
+    if (!finger) settle();
+  }, { passive: true });
+  row.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+    busy = true;
+    v = 0;
+    settle();
+  }, { passive: true });
+  let hover = false;
+  let drag = null;
+  row.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hover = true; });
+  row.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hover = false; });
+  row.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'touch' || e.button !== 0) return;
+    e.preventDefault();
+    clearTimeout(idle);
+    busy = true;
+    finger = true;
+    v = 0;
+    drag = { id: e.pointerId, x0: e.clientX, from: row.scrollLeft, trail: [[performance.now(), e.clientX]] };
+    row.classList.add('is-dragging');
+    try { row.setPointerCapture(e.pointerId); } catch (err) { /* the pointer may already be gone */ }
+  });
+  row.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    row.scrollLeft = drag.from - (e.clientX - drag.x0);
+    pos = row.scrollLeft;
+    const now = performance.now();
+    drag.trail.push([now, e.clientX]);
+    while (drag.trail.length > 2 && now - drag.trail[0][0] > 100) drag.trail.shift();
+  });
+  const letGo = (e, keepSpeed) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const t = drag.trail;
+    const last = t[t.length - 1];
+    const span = (last[0] - t[0][0]) / 1000;
+    const fresh = performance.now() - last[0] < 80;
+    const speed = keepSpeed && span > 0.01 && fresh ? (last[1] - t[0][1]) / span : 0;
+    v = reduceMotion ? 0 : -gsap.utils.clamp(-3000, 3000, speed);
+    drag = null;
+    finger = false;
+    busy = false;
+    pos = row.scrollLeft;
+    row.classList.remove('is-dragging');
+  };
+  row.addEventListener('pointerup', (e) => letGo(e, true));
+  row.addEventListener('pointercancel', (e) => letGo(e, false));
+  row.addEventListener('dragstart', (e) => e.preventDefault());
+  gsap.ticker.add((time, delta) => {
+    if (busy || !set) return;
+    const dt = Math.min(delta, 50) / 1000;
+    const target = hover || reduceMotion || box.classList.contains('is-paused') ? 0 : set / 70;
+    const rate = Math.abs(v - target) > 200 ? 3 : 4;
+    v += (target - v) * (1 - Math.exp(-rate * dt));
+    if (target === 0 && Math.abs(v) < 0.5) v = 0;
+    if (v === 0) return;
+    pos += v * dt;
+    wrap();
+    apply();
   });
 }
 
